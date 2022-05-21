@@ -14,7 +14,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/img/tj.png' }],
   ],
-  base: '/Pagetual/',
+  base: '/PagetualGuide/',
   themeConfig: {
   	locales: {
       '/en/': {
