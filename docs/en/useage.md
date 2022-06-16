@@ -2,7 +2,7 @@
 ## 1 Getting started
 Visit [Google](https://www.google.com/search?q=pagetual) and scroll down, the next page will be stitched automatically.
 
-## 2 Page flip bar
+## 2 Page divider
 When turning pages, there will be space bars between the pages. The Tai Chi icon on the left of the space bar is the button to return to the top of the page, and icon on the right is to go to the end of the page. The word "Page" in the middle is the link of the next page
 
 ## 3 Command menu
@@ -19,4 +19,4 @@ After going to the configuration page, you can make personal settings, such as t
 
 You can import rule links written by other people, or you can just customize the rules in the input box by yourself. The rules from link support sorting and hot update. Click the up and down arrows in front of the link to sort, and click the update time to update the rules.
 
-## 5 [custom rules](/rule)
+## 5 [Custom rules](/rule)
