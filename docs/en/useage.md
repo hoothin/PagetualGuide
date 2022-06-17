@@ -19,4 +19,4 @@ After going to the configuration page, you can make personal settings, such as t
 
 You can import rule links written by other people, or you can just customize the rules in the input box by yourself. The rules from link support sorting and hot update. Click the up and down arrows in front of the link to sort, and click the update time to update the rules.
 
-## 5 [Custom rules](/rule)
+## 5 [Custom rules](/rule.html)
