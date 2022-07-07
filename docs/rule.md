@@ -10,20 +10,23 @@
     "css":".javascript-hide {display: inline-block !important;}"
   },
   {
-    "name":"tieba",
-    "action":1,
-    "url":"^https:\/\/tieba\\.baidu.com\/f\\?kw=",
-    "pageElement":"ul#thread_list>li",
-    "nextLink":".next.pagination-item "
+    "name":"beauty",
+    "url":"^https://www\\.jpmn8\\.com/",
+    "pageElement":"p>img"
   },
   {
     "name":"xxgame",
     "url":"^http://www\\.xxgame\\.net/chinese",
     "pageElement":"div.layui-row>div.layui-col-md4:not(div:nth-child(5),div:nth-child(6),div:nth-child(7))",
-    "nextLinkByUrl":["(http://www\\.xxgame\\.net/chinese/?)(?:\\?page=|$)(\\d*)","$1?page={($2.0||1)+1}"]
+    "nextLinkByUrl":[
+      "(http://www\\.xxgame\\.net/chinese/?)(?:\\?page=|$)(\\d*)",
+      "$1?page={$2+1}"
+    ]
   }
 ]
 ```
+
+[More examples of rule](https://github.com/hoothin/UserScripts/blob/master/Pagetual/pagetualRules.json)
 
 name
 --
@@ -60,6 +63,10 @@ Selector of the element which must not include
 wait
 --
 The time to wait for page ready when you are sure the url match the site, you can also use a js code which return a boolean to check if the page is ready instead
+
+waitElement
+--
+The array["exist", "not exist"] contains "selector of element must exist (for some lazyload element)" & "selector of element must not exist (for some loading placeholder which need scroll into view to load)"
 
 type
 --
@@ -148,3 +155,19 @@ Set to 1 so the document title of next page will be shown on pagebar
 autoClick
 --
 The css selector or xpath of element which you want to click automatically
+
+history
+--
+Set to 0 then history writing will be disable. Set to 1 then history writing will be enable. No matter what value is the general option.
+
+lockScroll
+--
+Set to true if you don't want the page to auto scroll when navigate to next page
+
+wheel
+--
+Set to true so the next page action will only effect when the mouse wheel roll
+
+child script
+--
+If the site has some limit for code eval. You can make a child script with function under object `window`. You should name them start with `pagetual` use camelCase. Like `window.pagetualWait`, `window.pagetualNextLinkByJs`, `window.pagetualPageInit`, `window.pagetualPageAction`, `window.pagetualInit`, `window.pagetualPageBarText`.
