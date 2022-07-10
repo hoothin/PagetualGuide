@@ -168,6 +168,14 @@ wheel
 --
 Set to true so the next page action will only effect when the mouse wheel roll
 
+pageElementCss
+--
+Custom css for pageElement
+
+delay
+--
+The js code to delay next action until return true, use this prop to get complete page elements with lazy load.
+
 manualMode
 --
 Set to true to enable manual mode, then paging will stop, right arrow (or 'pagetual.next' event) will be bound to click next link.
