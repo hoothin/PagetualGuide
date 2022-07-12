@@ -146,7 +146,7 @@ Point the page number with $p in current url, you can use{} to eval result strin
 
 pageBar `(pageBar)`
 --
-The js code to change pageBar
+The js code to change pageBar, 0 means hide
 
 pageBarText
 --
