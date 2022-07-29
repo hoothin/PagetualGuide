@@ -43,7 +43,9 @@ div.jsoneditor textarea.jsoneditor-text {
   background-color: #111111;
   color: #ffffff;
 }
-.validation-error pre,.parse-error pre {
+.validation-error pre,
+.parse-error pre,
+.jsoneditor-tree>tbody>tr {
   background: unset;
 }
 div.jsoneditor-field,
