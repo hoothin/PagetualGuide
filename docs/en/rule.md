@@ -10,9 +10,10 @@
     "css":".javascript-hide {display: inline-block !important;}"
   },
   {
-    "name":"beauty",
-    "url":"^https://www\\.jpmn8\\.com/",
-    "pageElement":"p>img"
+    "name": "so.3dm",
+    "url": "^https://so\\.3dmgame\\.com",
+    "pageElement": "div.content > div.search_wrap > div.search_lis",
+    "action": 1
   },
   {
     "name":"xxgame",
