@@ -114,7 +114,7 @@ div.jsoneditor-value.jsoneditor-invalid {
 }
 </style>
 
-<div id="jsoneditor" style="height:800px"></div>
+<div id="jsoneditor"></div>
 <button id="saveBtn" style="width: 100%; font-size: larger;">Save</button>
 
 name
