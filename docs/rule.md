@@ -135,7 +135,7 @@ RegExp for the url of target site
 
 pinUrl
 --
-Sometimes the next link and page element will be inexistence, set this to true so you can pin the rule just with url
+Sometimes the next link or page element will be inexistence, set this to true so you can pin the rule just with url instead of finding elements by intelligent rules
 
 enable
 --
@@ -143,11 +143,11 @@ enable
 
 include
 --
-Selector of the element which must include
+Selector or xpath of the element which must include
 
 exclude
 --
-Selector of the element which must not include
+Selector or xpath of the element which must not include
 
 wait
 --
@@ -155,11 +155,7 @@ The time to wait for page ready when you are sure the url match the site, you ca
 
 waitElement
 --
-The array["exist", "not exist"] contains "selector of element must exist (for some lazyload element)" & "selector of element must not exist (for some loading placeholder which need scroll into view to load)"
-
-type
---
-0 means xpath, 1 or undefined means css selector
+The array["exist", "not exist"] contains "selector or xpath of element must exist (for some lazyload element)" & "selector or xpath of element must not exist (for some loading placeholder which need scroll into view to load)"
 
 action
 --
@@ -167,7 +163,7 @@ action
 
 nextLink
 --
-Selector of next page link, disable when set to 0
+Selector or xpath of next page link, disable when set to 0, you can let it to be a array to contains multiple next links.
 
 nextLinkByUrl
 --
@@ -179,7 +175,7 @@ Use this to eval javaScript code and return target url of next page with doc (do
 
 pageElement
 --
-Selector of main content which need to insert
+Selector or xpath of main content which need to insert, you can let it to be a array to contains multiple page elements.
 
 pageElementByJs `(over)`
 --
@@ -195,7 +191,7 @@ Add css so you can show some hidden element, start with "inIframe:" then this cs
 
 insert
 --
-Which position you want to insert
+Which position you want to insert, you can let it to be a array to contains multiple positions.
 
 insertPos
 --
@@ -223,7 +219,7 @@ Selector of "load more" button
 
 sleep
 --
-Sleep time (ms) when load next page if site is limited
+Sleep time (ms) when load next page if site is limited by time interval
 
 rate
 --
@@ -256,6 +252,10 @@ Set to true if you don't want the page to auto scroll when navigate to next page
 wheel
 --
 Set to true so the next page action will only effect when the mouse wheel roll
+
+fitWidth
+--
+Set to false if you find the pageElement get the wrong small width
 
 pageElementStyle
 --
