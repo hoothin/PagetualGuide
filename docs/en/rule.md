@@ -92,7 +92,7 @@ div.jsoneditor-value.jsoneditor-invalid {
 [
   {
     "name":"yande",
-    "url":"^https:\/\/yande\\.re\/",
+    "url":"^https://yande\\.re/",
     "pageElement":"ul#post-list-posts>li",
     "nextLink":"a.next_page",
     "css":".javascript-hide {display: inline-block !important;}"
