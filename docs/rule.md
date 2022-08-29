@@ -1,34 +1,5 @@
 # 自定义规则
 
-``` json
-[
-  {
-    "name":"yande",
-    "url":"^https:\/\/yande\\.re\/",
-    "pageElement":"ul#post-list-posts>li",
-    "nextLink":"a.next_page",
-    "css":".javascript-hide {display: inline-block !important;}"
-  },
-  {
-    "name": "so.3dm",
-    "url": "^https://so\\.3dmgame\\.com",
-    "pageElement": "div.content > div.search_wrap > div.search_lis",
-    "action": 1
-  },
-  {
-    "name":"xxgame",
-    "url":"^http://www\\.xxgame\\.net/chinese",
-    "pageElement":"div.layui-row>div.layui-col-md4:not(div:nth-child(5),div:nth-child(6),div:nth-child(7))",
-    "nextLinkByUrl":[
-      "(http://www\\.xxgame\\.net/chinese/?)(?:\\?page=|$)(\\d*)",
-      "$1?page={$2+1}"
-    ]
-  }
-]
-```
-
-[More examples of rule](https://github.com/hoothin/UserScripts/blob/master/Pagetual/pagetualRules.json)
-
 <link href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.9.0/jsoneditor.min.css" rel="stylesheet" type="text/css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.9.0/jsoneditor.min.js"></script>
 <style type="text/css">
@@ -116,6 +87,35 @@ div.jsoneditor-value.jsoneditor-invalid {
 
 <div id="jsoneditor"></div>
 <button id="saveBtn" style="width: 100%; font-size: larger;">保存规则</button>
+
+``` json
+[
+  {
+    "name":"yande",
+    "url":"^https:\/\/yande\\.re\/",
+    "pageElement":"ul#post-list-posts>li",
+    "nextLink":"a.next_page",
+    "css":".javascript-hide {display: inline-block !important;}"
+  },
+  {
+    "name": "so.3dm",
+    "url": "^https://so\\.3dmgame\\.com",
+    "pageElement": "div.content > div.search_wrap > div.search_lis",
+    "action": 1
+  },
+  {
+    "name":"xxgame",
+    "url":"^http://www\\.xxgame\\.net/chinese",
+    "pageElement":"div.layui-row>div.layui-col-md4:not(div:nth-child(5),div:nth-child(6),div:nth-child(7))",
+    "nextLinkByUrl":[
+      "(http://www\\.xxgame\\.net/chinese/?)(?:\\?page=|$)(\\d*)",
+      "$1?page={$2+1}"
+    ]
+  }
+]
+```
+
+[More examples of rule](https://github.com/hoothin/UserScripts/blob/master/Pagetual/pagetualRules.json)
 
 name
 --
