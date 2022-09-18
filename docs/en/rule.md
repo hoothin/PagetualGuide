@@ -238,7 +238,7 @@ pageElementByJs `(over)`
 --
 Use this to eval javaScript code and create the elements whatever you want to insert, a over(eles) is needed to callback with elements array for insert
 ```JSON
-"pageElementByJs": "let src=match[1]+match[3]; img.onload=()=>{over([img])};img.onerror=e=>{over()};img.src=src;"
+"pageElementByJs": "let src=match[1]+match[3];img.onload=()=>{over([img])};img.onerror=e=>{over()};img.src=src;"
 ```
 
 replaceElement
@@ -407,7 +407,7 @@ delay
 --
 The javaScript code to delay next action until return true, use this prop to get complete page elements with lazy load.
 ```JSON
-"delay": "return document.querySelector('#feed_pagenation>li.cur').innerText >= curpage"
+"delay": "return document.querySelector('#feed_pagenation>li.cur').innerText>=curpage"
 ```
 
 manualMode
