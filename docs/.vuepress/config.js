@@ -13,6 +13,7 @@ module.exports = {
   },
   head: [
     ['link', { rel: 'icon', href: '/img/tj.png' }],
+    ['script', {src: '/js/base.js'}]
   ],
   base: '/PagetualGuide/',
   themeConfig: {
