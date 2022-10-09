@@ -1,7 +1,7 @@
 # 自定义规则
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.9.0/jsoneditor.min.css" rel="stylesheet" type="text/css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.9.0/jsoneditor.min.js"></script>
+<link href="jsoneditor/jsoneditor.min.css" rel="stylesheet" type="text/css">
+<script src="jsoneditor/jsoneditor.min.js"></script>
 <style type="text/css">
 div.jsoneditor,
 div.jsoneditor-menu {
