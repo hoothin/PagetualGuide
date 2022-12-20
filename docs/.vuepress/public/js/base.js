@@ -1,7 +1,7 @@
-if (location.href.indexOf('/PagetualGuide') === -1) {
-    document.addEventListener('mousedown', e => {
-        if (e.target.tagName === 'A') {
-            e.target.href = e.target.href.replace('/PagetualGuide/', '/');
-        }
+if (location.hostname === 'pagetual.hoothin.com') {
+    window.addEventListener('pushState', e => {
+        setTimeout(() => {
+            window.history.replaceState(undefined, document.title, location.href.replace("/PagetualGuide", ""));
+        },1);
     });
 }
