@@ -1,0 +1,2 @@
+# child script
+>If the site has some limit for code eval. You can make a child script with function under object window. You should name them start with pagetual use camelCase. Like `window.pagetualWait`, `window.pagetualNextLinkByJs`, `window.pagetualPageInit`, `window.pagetualPageAction`, `window.pagetualInit`, `window.pagetualPageBarText`.
