@@ -1,7 +1,7 @@
 ---   
 home: true
 heroImage: 
-actionText: Get started →
+actionText: Get started
 actionLink: https://pagetual.hoothin.com/en/setup.html
 features:
 - title: brevity comes first

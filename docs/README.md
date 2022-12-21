@@ -1,7 +1,7 @@
 ---   
 home: true
 heroImage: 
-actionText: 快速上手 →
+actionText: 快速上手
 actionLink: https://pagetual.hoothin.com/setup.html
 features:
 - title: 简洁至上
