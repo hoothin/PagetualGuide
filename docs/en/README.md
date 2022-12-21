@@ -2,7 +2,7 @@
 home: true
 heroImage: 
 actionText: Get started →
-actionLink: /en/setup
+actionLink: https://pagetual.hoothin.com/en/setup.html
 features:
 - title: brevity comes first
   details: The least intrusive automatic page-turning solution that helps you focus on web browsing with minimal operations.
