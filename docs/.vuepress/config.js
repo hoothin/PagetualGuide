@@ -8,7 +8,7 @@ module.exports = {
     '/en/':{
       lang: 'en-US',
       title: 'Pagetual',
-      description: 'Most compatible Auto pager script ever! Auto loading paginated web pages for 90% of all sites!'
+      description: 'Most compatible Auto pager script ever! Auto loading paginated web pages for 90% of all sites like google, forums, manga sites and others WITHOUT ANY RULES under most circumstances while turning page with browser.'
     }
   },
   head: [
