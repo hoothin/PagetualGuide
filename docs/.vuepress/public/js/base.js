@@ -8,3 +8,7 @@ if (location.hostname === 'pagetual.hoothin.com') {
         },500);
     });
 }
+window.addEventListener("load", e => {
+    let action = document.querySelector('.action>a');
+    if (action) action.target = '_self';
+});
