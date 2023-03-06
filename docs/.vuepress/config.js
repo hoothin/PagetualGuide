@@ -5,7 +5,7 @@ module.exports = {
       title: '瀏覽器自動翻頁',
       description: '東方永頁機 - 最强的自動翻頁脚本，本工具基於油猴插件，覆蓋了互聯網上90%的網頁翻頁需求，讓你的瀏覽器開挂！'
     },
-    '/cn':{
+    '/cn/':{
       lang: 'zh-CN',
       title: '浏览器自动翻页',
       description: '东方永页机 - 最强的自动翻页脚本，本工具基于油猴插件，覆盖了互联网上90%的网页翻页需求，让你的浏览器开挂！'
@@ -98,18 +98,18 @@ module.exports = {
         selectText: 'Languages',
         label: '简体中文',
         sidebar: {
-          '/': [
+          '/cn/': [
             {
               title: '安装指南',
-              path: '/setup'
+              path: '/cn/setup'
             },
             {
               title: '使用指南',
-              path: '/useage'
+              path: '/cn/useage'
             },
             {
               title: '自定义规则',
-              path: '/rule',
+              path: '/cn/rule',
               collapsable: true,
               children: [
                 '/cn/rules/url',
