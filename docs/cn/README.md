@@ -2,7 +2,7 @@
 home: true
 heroImage: 
 actionText: 快速上手✈️
-actionLink: https://pagetual.hoothin.com/setup.html
+actionLink: https://pagetual.hoothin.com/cn/setup.html
 features:
 - title: 简洁至上
   details: 侵入性极小的自动翻页解决方案，通过最少的操作帮助你专注于网页浏览。
