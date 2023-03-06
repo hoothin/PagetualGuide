@@ -1,4 +1,4 @@
-# 自定義規則
+# 自定义规则
 
 <link href="/PagetualGuide/jsoneditor/jsoneditor.min.css" rel="stylesheet" type="text/css">
 <script src="/PagetualGuide/jsoneditor/jsoneditor.min.js"></script>

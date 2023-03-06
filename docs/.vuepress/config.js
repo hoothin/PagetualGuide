@@ -26,7 +26,7 @@ module.exports = {
   themeConfig: {
   	locales: {
       '/en/': {
-        selectText: '选择语言',
+        selectText: '選擇語言',
         label: 'English',
         ariaLabel: 'Languages',
         sidebar: {
@@ -89,7 +89,7 @@ module.exports = {
           ]
         }
       },
-      '/': {
+      '/cn/': {
         selectText: 'Languages',
         label: '简体中文',
         sidebar: {
@@ -104,6 +104,70 @@ module.exports = {
             },
             {
               title: '自定义规则',
+              path: '/rule',
+              collapsable: true,
+              children: [
+                '/cn/rules/url',
+                '/cn/rules/pinUrl',
+                '/cn/rules/enable',
+                '/cn/rules/include',
+                '/cn/rules/exclude',
+                '/cn/rules/wait',
+                '/cn/rules/waitElement',
+                '/cn/rules/action',
+                '/cn/rules/nextLink',
+                '/cn/rules/nextLinkByUrl',
+                '/cn/rules/nextLinkByJs',
+                '/cn/rules/stopSign',
+                '/cn/rules/pageElement',
+                '/cn/rules/pageElementByJs',
+                '/cn/rules/replaceElement',
+                '/cn/rules/lazyImgSrc',
+                '/cn/rules/css',
+                '/cn/rules/insert',
+                '/cn/rules/insertPos',
+                '/cn/rules/init',
+                '/cn/rules/pagePre',
+                '/cn/rules/pageInit',
+                '/cn/rules/pageAction',
+                '/cn/rules/loadMore',
+                '/cn/rules/sleep',
+                '/cn/rules/rate',
+                '/cn/rules/autoLoadNum',
+                '/cn/rules/listenHashChange',
+                '/cn/rules/refreshByClick',
+                '/cn/rules/pageNum',
+                '/cn/rules/pageBar',
+                '/cn/rules/pageBarText',
+                '/cn/rules/autoClick',
+                '/cn/rules/history',
+                '/cn/rules/lockScroll',
+                '/cn/rules/wheel',
+                '/cn/rules/fitWidth',
+                '/cn/rules/pageElementStyle',
+                '/cn/rules/delay',
+                '/cn/rules/manualMode',
+                '/cn/rules/child-script'
+              ]
+            }
+          ]
+        }
+      },
+      '/': {
+        selectText: 'Languages',
+        label: '正體中文',
+        sidebar: {
+          '/': [
+            {
+              title: '安裝指南',
+              path: '/setup'
+            },
+            {
+              title: '使用指南',
+              path: '/useage'
+            },
+            {
+              title: '自定義規則',
               path: '/rule',
               collapsable: true,
               children: [
