@@ -16,8 +16,8 @@ Example2:
 ```JSON
 "nextLinkByUrl": [
     "page=(\\d+)&pn=(\\d+)",
-    "page={$1+1}&pn={$1+1}",
+    "page={$1+1}&pn={$2*10}",
     ".disable>button"
 ]
 ```
->Create a next link "http://abc.xxx/d?page=2&pn=2" from URL of current page: "http://abc.xxx/d?page=1&pn=1". Stop after a element matches ".disable>button" showed up.
+>Create a next link "http://abc.xxx/d?page=2&pn=10" from URL of current page: "http://abc.xxx/d?page=1&pn=1". Stop after a element matches ".disable>button" showed up.

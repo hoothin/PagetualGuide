@@ -6,3 +6,5 @@ Example:
 ```JSON
 "loadMore": ".loadMore"
 ```
+
+Will click in advance while the button appears after current screen.
