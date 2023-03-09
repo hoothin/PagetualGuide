@@ -12,3 +12,8 @@ features:
   details: 永頁機兼容了 wedata 3800+ 條規則，並做了大量性能優化，同時為高級用戶準備了強大的自定義規則。
 footer: MIT Licensed | Copyright © 2022-present Hoothin
 ---
+<style type="text/css">
+.dropdown-wrapper {
+    display: none;
+}
+</style>

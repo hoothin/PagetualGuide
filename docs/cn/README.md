@@ -12,3 +12,8 @@ features:
   details: 永页机兼容了 wedata 3800+ 条规则，并做了大量性能优化，同时为高级用户准备了强大的自定义规则。
 footer: MIT Licensed | Copyright © 2022-present Hoothin
 ---
+<style type="text/css">
+.dropdown-wrapper {
+    display: none;
+}
+</style>

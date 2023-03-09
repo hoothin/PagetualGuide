@@ -12,3 +12,8 @@ features:
   details: Pagetual is compatible with 3800+ rules of wedata, and has done a lot of performance optimization, while preparing powerful custom rules for advanced users.
 footer: MIT Licensed | Copyright © 2022-present Hoothin
 ---
+<style type="text/css">
+.dropdown-wrapper {
+    display: none;
+}
+</style>
