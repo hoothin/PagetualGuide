@@ -19,6 +19,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/img/tj.png' }],
     ['script', {src: '/js/base.js'}],
+    ['style', {type: 'text/css'}, '.no-sidebar .dropdown-wrapper{display: none}'],
     ['script', 
       {
         "crossorigin": "anonymous",
