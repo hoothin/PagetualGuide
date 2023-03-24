@@ -87,10 +87,17 @@ module.exports = {
                 '/en/rules/lockScroll',
                 '/en/rules/wheel',
                 '/en/rules/fitWidth',
-                '/en/rules/pageElementStyle',
                 '/en/rules/delay',
                 '/en/rules/manualMode',
-                '/en/rules/child-script']
+                '/en/rules/openInNewTab',
+                '/en/rules/pageElementCss',
+                '/en/rules/initRun',
+                '/en/rules/sideController',
+                '/en/rules/listenUrlChange',
+                '/en/rules/clickMode',
+                '/en/rules/preloadImages',
+                '/en/rules/child-script'
+              ]
             }
           ]
         }
@@ -150,9 +157,15 @@ module.exports = {
                 '/cn/rules/lockScroll',
                 '/cn/rules/wheel',
                 '/cn/rules/fitWidth',
-                '/cn/rules/pageElementStyle',
                 '/cn/rules/delay',
                 '/cn/rules/manualMode',
+                '/cn/rules/openInNewTab',
+                '/cn/rules/pageElementCss',
+                '/cn/rules/initRun',
+                '/cn/rules/sideController',
+                '/cn/rules/listenUrlChange',
+                '/cn/rules/clickMode',
+                '/cn/rules/preloadImages',
                 '/cn/rules/child-script'
               ]
             }
@@ -214,9 +227,15 @@ module.exports = {
                 '/rules/lockScroll',
                 '/rules/wheel',
                 '/rules/fitWidth',
-                '/rules/pageElementStyle',
                 '/rules/delay',
                 '/rules/manualMode',
+                '/rules/openInNewTab',
+                '/rules/pageElementCss',
+                '/rules/initRun',
+                '/rules/sideController',
+                '/rules/listenUrlChange',
+                '/rules/clickMode',
+                '/rules/preloadImages',
                 '/rules/child-script'
               ]
             }
