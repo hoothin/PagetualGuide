@@ -465,6 +465,55 @@ Set to true to enable manual mode, then paging will stop, right arrow (or 'paget
 "manualMode": true
 ```
 
+[openInNewTab](rules/openInNewTab)
+--
+Set to true to make all links to open in new tabs, false to make them open in self.
+```JSON
+"openInNewTab": true
+```
+
+[pageElementCss](rules/pageElementCss)
+--
+The style css which you want to set for every page element.
+```JSON
+"pageElementCss": "color: red"
+```
+
+[initRun](rules/initRun)
+--
+Run immediately upon initialization.
+```JSON
+"initRun": true
+```
+
+[sideController](rules/sideController)
+--
+Show or hide toolbar of sideController.
+```JSON
+"sideController": true
+```
+
+[listenUrlChange](rules/listenUrlChange)
+--
+Refresh script after url changed.
+```JSON
+"listenUrlChange": false
+```
+
+[clickMode](rules/clickMode)
+--
+Stop turning page and click nextlink after scrolled to bottom.
+```JSON
+"clickMode": true
+```
+
+[preloadImages(doc)](rules/preloadImages)
+--
+Analyze the page and return an array of image's urls that need to be preloaded.
+```JSON
+"preloadImages": "return ['1.jpg']"
+```
+
 [child script](rules/child-script)
 --
 If the site has some limit for code eval. You can make a child script with function under object `window`. You should name them start with `pagetual` use camelCase. Like `window.pagetualWait`, `window.pagetualNextLinkByJs`, `window.pagetualPageInit`, `window.pagetualPageAction`, `window.pagetualInit`, `window.pagetualPageBarText`.
