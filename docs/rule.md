@@ -443,13 +443,6 @@ Set to false if you find the pageElement get the wrong small width
 "fitWidth": false
 ```
 
-[pageElementStyle](rules/pageElementStyle)
---
-Custom cssText of style for pageElement
-```JSON
-"pageElementStyle": "font-size: xx-large;"
-```
-
 [delay](rules/delay)
 --
 The javaScript code to delay next action until return true, use this prop to get complete page elements with lazy load.
