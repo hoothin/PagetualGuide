@@ -86,7 +86,6 @@ div.jsoneditor-value.jsoneditor-invalid {
 </style>
 
 <div id="jsoneditor"></div>
-<button id="saveBtn" style="width: 100%; font-size: larger;">保存规则</button>
 
 ``` json
 [
