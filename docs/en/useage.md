@@ -13,19 +13,25 @@ Click page divider bar can stop paging.
 
 ## 3 Command menu
 Click on the Tampermonkey icon and you will see three options under "Pagetual".
-### 3.1. Configure
+### 3.1 Configure
 Click to go to the [configuration page](https://github.com/hoothin/UserScripts/tree/master/Pagetual), where personal configuration and rule customization are all there.
-### 3.2. Disable on the site
+### 3.2 Disable on the site
 Click to disable Pagetual on the current website.
-### 3.3. Force to join
+### 3.3 Force to join
 Click this if the smart rule is wrong. The script will turn on the forced splicing mode, all the content on the next page will be spliced ​​to the footer if you choose `join full body`, otherwise pagetual will load dynamic content in a iframe and return them.
-### 3.4. Update online rules
+### 3.4 Update online rules
 Click to update the rule items you have imported online, and the Pagetual will automatically update the online rules every two days by default.
 
 ## 4 Personality Settings
 After going to the configuration page, you can make personal settings, such as the transparent value of the divider, write history, open a new tab page, and double-click whether to hide the divider, etc.
 
 You can import rule links written by other people, or you can just customize the rules in the input box by yourself. The rules from link support sorting and hot update. Click the up and down arrows in front of the link to sort, and click the update time to update the rules.
+### 4.1 Write history
+After this option is turned on, Pagetual will write the URL of the next page into the history record every time the page is turned, so that when you click on the link and return to the previous page, it will return to the page number you browsed last time.
+### 4.2 Open a new tab
+After enabling this option, all links spliced into the current page will be opened in new tabs.
+### 4.3 Pre-load the next page to speed up browsing
+After opening, when reading the current page, Pagetual will pre-load all the pictures in the next page in advance.
 
 ## 5 [Custom rules](/en/rule.html)
 ### 5.1 Visual grab
