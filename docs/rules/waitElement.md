@@ -12,16 +12,12 @@ Example:
 >Repeated checking before ".summary" appeared and "#popular.fade:not(.in)" disappeared.
 
 ```JSON
-"waitElement": [
-    ".summary"
-]
+"waitElement": ".summary"
 ```
 >Repeated checking before ".summary" appeared
 
 ```JSON
-"waitElement": [
-    "!#popular.fade:not(.in)"
-]
+"waitElement": "!#popular.fade:not(.in)"
 
 # same as
 

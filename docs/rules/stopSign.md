@@ -37,6 +37,19 @@ Example3:
         "\\/(\\d+)"
     ]
 ] 
+
+# same as
+
+"stopSign": {
+    "include": "#pagenum",
+    "exclude": ".disable",
+    "pageNum": [
+        "#pagenum",
+        "(\\d+)",
+        "#pagenum",
+        "\\/(\\d+)"
+    ]
+}
 ```
 >Stop when matching rule-1 or rule-2
 
