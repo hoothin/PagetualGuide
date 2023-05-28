@@ -340,10 +340,10 @@ The javaScript code to run with every page inserted with doc:(document of every 
 Filter the elements inserted from next page. 
 ```JSON
 "filter": {
-    count: 20,
-    words: "spams\\d",
-    link: "^https://spams\\.xxx",
-    selector: "div#spam"
+    "count": 20,
+    "words": "spams\\d",
+    "link": "^https://spams\\.xxx",
+    "selector": "div#spam"
 }
 ```
 
