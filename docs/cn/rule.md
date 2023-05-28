@@ -316,9 +316,16 @@ Which position you want to insert, you can let it to be a array to contains mult
 "insertPos": 2
 ```
 
-[init `(doc,win,iframe)`](rules/init)
+[iframeInit `(win, iframe)`](rules/iframeInit)
 --
-The javaScript code to run only once with current main page with doc:(document of main page)
+The javaScript code to run as fast as it can before any code in iframe is running.
+```JSON
+"iframeInit": "win.self=win.top;"
+```
+
+[init `(doc, win, iframe, click, enter, input)`](rules/init)
+--
+The javaScript code to run only once with current main page or every iframe with doc:(document of main page or iframe)
 ```JSON
 "init": "if(doc)doc.querySelector('[data-title=sh]').click();"
 ```
