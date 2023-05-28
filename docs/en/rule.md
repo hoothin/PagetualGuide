@@ -236,21 +236,6 @@ Use this to eval javaScript code and return target url of next page with doc (do
 --
 Stop to load next page when matching this sign
 ```JSON
-"stopSign": ["#pagenum", ".disable"] 
-```
-```JSON
-"stopSign": [
-    [
-        "#pagenum",
-        "(\\d+)"
-    ],
-    [
-        "#pagenum",
-        "\\/(\\d+)"
-    ]
-]
-```
-```JSON
 "stopSign": ["#pagenum", ".disable",
     [
         "#pagenum",
@@ -262,9 +247,7 @@ Stop to load next page when matching this sign
     ]
 ] 
 ```
-```JSON
-"stopSign": "if (doc.querySelector('.disable')) return true; if (nextLink.className === 'disable') return true; return false;" 
-```
+
 
 [pageElement](rules/pageElement)
 --
