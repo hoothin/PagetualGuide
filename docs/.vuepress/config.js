@@ -252,6 +252,7 @@ module.exports = {
     nav:[
       {text: 'Github', link: 'https://github.com/hoothin/UserScripts/tree/master/Pagetual' },
       {text: 'Greasyfork', link: 'https://greasyfork.org/scripts/438684-pagetual'},
+      {text: '愛發電', link: 'https://afdian.net/@hoothin'},
       {text: 'Email', link: 'mailto:rixixi@gmail.com'}      
     ],
     sidebarDepth: 3
