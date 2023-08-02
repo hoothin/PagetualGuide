@@ -21,3 +21,12 @@ Example2:
 ]
 ```
 >Create a next link "http://abc.xxx/d?page=2&pn=10" from URL of current page: "http://abc.xxx/d?page=1&pn=1". Stop after a element matches ".disable>button" showed up.
+
+Example3:
+--
+```JSON
+"nextLinkByUrl": [
+    "\\?(from=(\\d+)&)?",
+    "?from={$2+36}&"
+]
+```
