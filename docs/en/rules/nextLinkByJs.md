@@ -8,4 +8,4 @@ Example:
 ```
 >The params `doc` means document of every page loaded, this code means checking the element "a.curr+a" and return a link from its href when it exists, stop otherwise.
 
->You can construct a post data body using the `#p{x=1&y=2}` approach.
+>You can construct a post data body using the `#p{x=1&y=2}` approach, just like returning `https://www.xxx.com/pageAjax#p{x=1&y=2}`.
