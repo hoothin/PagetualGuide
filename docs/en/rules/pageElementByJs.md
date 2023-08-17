@@ -1,5 +1,5 @@
-# pageElementByJs (over)
->Use this to eval javaScript code and create the elements whatever you want to insert, a over(eles) is needed to callback with elements array for insert.
+# pageElementByJs (over, pageNum)
+>Use this to eval javaScript code and create the elements whatever you want to insert, a over(eles) is needed to callback with elements array for insert. pageNum means the number of current page.
 
 Example:
 --
