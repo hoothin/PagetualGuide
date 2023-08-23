@@ -3,7 +3,7 @@ module.exports = {
     '/':{
       lang: 'zh-TW',
       title: '東方永頁機',
-      description: '最强自動翻頁脚本，基於油猴插件，覆蓋了互聯網上90%的網頁翻頁需求，實乃居家旅行必備工具。'
+      description: '最强自動翻頁脚本，基於油猴插件，覆蓋了互聯網上90%的網頁翻頁需求，實乃居家旅行必備良配。'
     },
     '/cn/':{
       lang: 'zh-CN',
@@ -252,7 +252,7 @@ module.exports = {
     nav:[
       {text: 'Github', link: 'https://github.com/hoothin/UserScripts/tree/master/Pagetual' },
       {text: 'Greasyfork', link: 'https://greasyfork.org/scripts/438684-pagetual'},
-      {text: '爱发电', link: 'https://afdian.net/@hoothin'},
+      {text: '愛發電', link: 'https://afdian.net/@hoothin'},
       {text: 'Email', link: 'mailto:rixixi@gmail.com'}      
     ],
     sidebarDepth: 3
