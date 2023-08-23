@@ -1,5 +1,5 @@
 # nextLink
->Selector or xpath of next page link, disable when set to 0, you can let it to be a array to contains multiple next links.
+>Selector or xpath of next page link, disable when set to 0, you can let it to be a array to contains multiple next links. You may leave it empty because it will be generated automatically.
 
 Example1:
 --

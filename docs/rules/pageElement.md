@@ -1,5 +1,5 @@
 # pageElement
->Selector or xpath of main content which need to insert, you can let it to be a array to contains multiple page elements.
+>Selector or xpath of main content which need to insert, you can let it to be a array to contains multiple page elements. You may leave it empty because it will be generated automatically.
 
 Example1:
 --
