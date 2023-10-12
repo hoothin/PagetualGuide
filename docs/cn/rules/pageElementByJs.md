@@ -4,8 +4,8 @@
 Example:
 --
 ```JSON
-"pageElementByJs": "let src=match[1]+match[3];img.onload=()=>{over([img])};img.onerror=e=>{over()};img.src=src;"
+"pageElementByJs": "fetch(url.replace(/&offset=\\d+/,'') + '&offset=' + (pageNum + 1), {headers:{'X-Requested-With': 'XMLHttpRequest'}}).then(res => res.json()).then(res => {over(eles)})"
 ```
->Create image elements and use `over` to return them after loaded.
+>Create elements and use `over` to return them after loaded.
 
 *When there are no next link on current page, you can set this prop to create new elements for inserting into.*
