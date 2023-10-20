@@ -29,6 +29,8 @@ Example 1: Single rule for current site
     }
 })();
 ```
+>You can omit the url with single rule since the script itself already includes the filtering.
+
 
 Example 2: Rules collection for sites
 --
