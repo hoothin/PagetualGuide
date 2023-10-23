@@ -3,7 +3,6 @@
 <link href="/PagetualGuide/jsoneditor/jsoneditor.min.css" rel="stylesheet" type="text/css">
 <script src="/PagetualGuide/jsoneditor/jsoneditor.min.js"></script>
 <style type="text/css">
-<style type="text/css">
 div.jsoneditor,
 div.jsoneditor-menu {
   border-color: #4b4b4b;
@@ -92,23 +91,23 @@ div.jsoneditor-value.jsoneditor-invalid {
 [
   {
     "name":"yande",
-    "url":"^https://yande\\.re/",
+    "url":"^https://yande-demo\\.re/",
     "pageElement":"ul#post-list-posts>li",
     "nextLink":"a.next_page",
     "css":".javascript-hide {display: inline-block !important;}"
   },
   {
     "name": "so.3dm",
-    "url": "^https://so\\.3dmgame\\.com",
+    "url": "^https://so\\.3dmgame-demo\\.com",
     "pageElement": "div.content > div.search_wrap > div.search_lis",
     "action": 1
   },
   {
     "name":"xxgame",
-    "url":"^http://www\\.xxgame\\.net/chinese",
+    "url":"^http://www\\.xxgame-demo\\.net/chinese",
     "pageElement":"div.layui-row>div.layui-col-md4:not(div:nth-child(5),div:nth-child(6),div:nth-child(7))",
     "nextLinkByUrl":[
-      "(http://www\\.xxgame\\.net/chinese/?)(?:\\?page=|$)(\\d*)",
+      "(http://www\\.xxgame-demo\\.net/chinese/?)(?:\\?page=|$)(\\d*)",
       "$1?page={$2+1}"
     ]
   }
@@ -247,7 +246,6 @@ Stop to load next page when matching this sign
     ]
 ] 
 ```
-
 
 [pageElement](rules/pageElement)
 --
