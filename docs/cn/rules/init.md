@@ -1,4 +1,4 @@
-# init (doc, win, iframe, click, enter, input)
+# init (doc, win, iframe, click, enter, input, sleep)
 >The javaScript code to run only once with current main page or every iframe with doc:(document of main page or iframe). If you want to run some code only once, or you want to mirror your status on main page to iframe, try this.
 
 Example:
