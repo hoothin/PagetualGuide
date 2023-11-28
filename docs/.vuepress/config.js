@@ -98,6 +98,7 @@ module.exports = {
                 '/en/rules/listenUrlChange',
                 '/en/rules/clickMode',
                 '/en/rules/preloadImages',
+                '/en/rules/hookUrl',
                 '/en/rules/child-script'
               ]
             }
@@ -170,6 +171,7 @@ module.exports = {
                 '/cn/rules/listenUrlChange',
                 '/cn/rules/clickMode',
                 '/cn/rules/preloadImages',
+                '/cn/rules/hookUrl',
                 '/cn/rules/child-script'
               ]
             }
@@ -242,6 +244,7 @@ module.exports = {
                 '/rules/listenUrlChange',
                 '/rules/clickMode',
                 '/rules/preloadImages',
+                '/rules/hookUrl',
                 '/rules/child-script'
               ]
             }
