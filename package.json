@@ -17,7 +17,6 @@
     "docs:build": "vuepress build docs",
     "generate:articles": "node scripts/generateArticleList.js"
   },
-  "packageManager": "yarn@4.0.2",
   "dependencies": {
     "default-passive-events": "^2.0.0"
   }
