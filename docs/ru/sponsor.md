@@ -29,8 +29,8 @@ sidebar: false
 Если у вас есть вопросы о уровнях, процессе оплаты или данных о спонсорской поддержке, пожалуйста, свяжитесь с [rixixi@gmail.com](mailto:rixixi@gmail.com).
 
 ## Текущие спонсоры
-<embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="/sponsors.svg">
+<embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="https://hoothin.com/pagetual/sponsors.svg">
 
 <component :is="'script'">
-	document.getElementById("sponsors").src=`https://pagetual.hoothin.com/sponsors.svg?${ parseInt(new Date().getTime()/3600000) }`;
+	document.getElementById("sponsors").src=`https://hoothin.com/pagetual/sponsors.svg?${ parseInt(new Date().getTime()/3600000) }`;
 </component>

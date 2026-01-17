@@ -25,7 +25,7 @@ footer: MIT Licensed | Copyright © 2022-present Hoothin
 
 <p style="text-align: center;"><img src="/img/example.jpg"></p>
 
-<p class="sponsors"><embed wmode="transparent" id="sponsors" src="/homesponsors.svg"></p>
+<p class="sponsors"><embed wmode="transparent" id="sponsors" src="https://hoothin.com/pagetual/homesponsors.svg"></p>
 
 ## Pagetual: Giải pháp tự động tải trang, vượt trội hơn cả Autopagerize, cho trải nghiệm cuộn trang bất tận
 

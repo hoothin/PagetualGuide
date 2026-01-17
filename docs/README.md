@@ -25,7 +25,7 @@ footer: MIT Licensed | Copyright © 2022-present Hoothin
 
 <p style="text-align: center;"><img src="/img/example.jpg"></p>
 
-<p class="sponsors"><embed wmode="transparent" id="sponsors" src="/homesponsors.svg"></p>
+<p class="sponsors"><embed wmode="transparent" id="sponsors" src="https://hoothin.com/pagetual/homesponsors.svg"></p>
 
 ## Tired of clicking 'Next Page' until your finger cramps up? Meet this Autopagerize Alternative
 

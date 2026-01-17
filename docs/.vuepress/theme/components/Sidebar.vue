@@ -10,7 +10,7 @@ defineSlots<{
 
 <template>
   <aside class="sidebar">
-    <p><embed wmode="transparent" src="/titlesponsors.svg"></p>
+    <p><embed wmode="transparent" src="https://hoothin.com/pagetual/titlesponsors.svg"></p>
     <NavbarItems />
     <slot name="top" />
     <SidebarItems />

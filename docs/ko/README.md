@@ -25,7 +25,7 @@ footer: MIT 라이선스 | Copyright © 2022-현재 Hoothin
 
 <p style="text-align: center;"><img src="/img/example.jpg"></p>
 
-<p class="sponsors"><embed wmode="transparent" id="sponsors" src="/homesponsors.svg"></p>
+<p class="sponsors"><embed wmode="transparent" id="sponsors" src="https://hoothin.com/pagetual/homesponsors.svg"></p>
 
 ## 끝없는 스크롤을 위한 최고의 자동 페이지 솔루션, Autopagerize를 능가하다
 

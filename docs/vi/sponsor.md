@@ -32,5 +32,5 @@ If you have questions about tiers, payment process, or sponsorship exposure data
 <embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="/sponsors.svg">
 
 <component :is="'script'">
-	document.getElementById("sponsors").src=`https://pagetual.hoothin.com/sponsors.svg?${ parseInt(new Date().getTime()/3600000) }`;
+	document.getElementById("sponsors").src=`https://hoothin.com/pagetual/sponsors.svg?${ parseInt(new Date().getTime()/3600000) }`;
 </component>

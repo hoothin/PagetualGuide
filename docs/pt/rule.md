@@ -115,7 +115,7 @@ div.jsoneditor-value.jsoneditor-invalid {
         <th colspan="3">Feito com ❤️ por <a href="https://github.com/hoothin">Hoothin</a></th>
     </tr>
     <tr>
-        <th colspan="5"><embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="/sponsors.svg"></th>
+        <th colspan="5"><embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="https://hoothin.com/pagetual/sponsors.svg"></th>
     </tr>
 </table>
 

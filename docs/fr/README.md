@@ -25,7 +25,7 @@ footer: Sous licence MIT | Copyright © 2022-présent Hoothin
 
 <p style="text-align: center;"><img src="/img/example.jpg"></p>
 
-<p class="sponsors"><embed wmode="transparent" id="sponsors" src="/homesponsors.svg"></p>
+<p class="sponsors"><embed wmode="transparent" id="sponsors" src="https://hoothin.com/pagetual/homesponsors.svg"></p>
 
 ## Solution définitive de pagination automatique pour un défilement illimité, surpassant Autopagerize
 

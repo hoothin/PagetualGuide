@@ -29,8 +29,8 @@ If you are an individual user and are satisfied with the convenience brought by 
 If you have questions about tiers, payment process, or sponsorship exposure data, please contact [rixixi@gmail.com](mailto:rixixi@gmail.com).
 
 ## Current Sponsors
-<embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="/sponsors.svg">
+<embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="https://hoothin.com/pagetual/sponsors.svg">
 
 <component :is="'script'">
-	document.getElementById("sponsors").src=`https://pagetual.hoothin.com/sponsors.svg?${ parseInt(new Date().getTime()/3600000) }`;
+	document.getElementById("sponsors").src=`https://hoothin.com/pagetual/sponsors.svg?${ parseInt(new Date().getTime()/3600000) }`;
 </component>

@@ -29,8 +29,8 @@ sidebar: false
 もしランク、支払い手続き、またはスポンサーシップの露出について疑問がある場合は、[rixixi@gmail.com](mailto:rixixi@gmail.com)までお問い合わせください。
 
 ## 現在のスポンサー
-<embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="/sponsors.svg">
+<embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="https://hoothin.com/pagetual/sponsors.svg">
 
 <component :is="'script'">
-	document.getElementById("sponsors").src=`https://pagetual.hoothin.com/sponsors.svg?${ parseInt(new Date().getTime()/3600000) }`;
+	document.getElementById("sponsors").src=`https://hoothin.com/pagetual/sponsors.svg?${ parseInt(new Date().getTime()/3600000) }`;
 </component>

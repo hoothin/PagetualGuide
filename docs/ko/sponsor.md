@@ -29,8 +29,8 @@ sidebar: false
 등급, 결제 과정 또는 후원 노출 데이터에 대해 궁금한 점이 있으시면 [rixixi@gmail.com](mailto:rixixi@gmail.com)으로 문의하십시오.
 
 ## 현재 스폰서
-<embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="/sponsors.svg">
+<embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="https://hoothin.com/pagetual/sponsors.svg">
 
 <component :is="'script'">
-	document.getElementById("sponsors").src=`https://pagetual.hoothin.com/sponsors.svg?${ parseInt(new Date().getTime()/3600000) }`;
+	document.getElementById("sponsors").src=`https://hoothin.com/pagetual/sponsors.svg?${ parseInt(new Date().getTime()/3600000) }`;
 </component>

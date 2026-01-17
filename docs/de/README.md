@@ -23,7 +23,7 @@ features:
 footer: MIT-Lizenz | Copyright © 2022-jetzt Hoothin
 ---
 
-<p class="sponsors"><embed wmode="transparent" id="sponsors" src="/homesponsors.svg"></p>
+<p class="sponsors"><embed wmode="transparent" id="sponsors" src="https://hoothin.com/pagetual/homesponsors.svg"></p>
 
 ## Unendliche Scrolllösung für eine nahtlose Benutzererfahrung
 

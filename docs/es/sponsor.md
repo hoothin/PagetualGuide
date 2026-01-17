@@ -29,8 +29,8 @@ Si eres un usuario individual y estás satisfecho con la comodidad que te brinda
 Si tienes preguntas sobre los niveles, el proceso de pago o los datos de exposición del patrocinio, ponte en contacto con [rixixi@gmail.com](mailto:rixixi@gmail.com).
 
 ## Patrocinadores Actuales
-<embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="/sponsors.svg">
+<embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="https://hoothin.com/pagetual/sponsors.svg">
 
 <component :is="'script'">
-	document.getElementById("sponsors").src=`https://pagetual.hoothin.com/sponsors.svg?${ parseInt(new Date().getTime()/3600000) }`;
+	document.getElementById("sponsors").src=`https://hoothin.com/pagetual/sponsors.svg?${ parseInt(new Date().getTime()/3600000) }`;
 </component>

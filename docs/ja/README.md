@@ -18,7 +18,7 @@ footer: MIT Licensed | Copyright © 2022-present Hoothin
 
 <p style="text-align: center;"><img src="/img/example.jpg"></p>
 
-<p class="sponsors"><embed wmode="transparent" id="sponsors" src="/homesponsors.svg"></p>
+<p class="sponsors"><embed wmode="transparent" id="sponsors" src="https://hoothin.com/pagetual/homesponsors.svg"></p>
 
 ## もうクリックは不要！無限スクロール時代の決定版、Autopagerizeを超えた存在。
 
