@@ -3,6 +3,6 @@
 
 Example:
 --
-```JSON
+```json
 "insert": "ul#feed-main"
 ```

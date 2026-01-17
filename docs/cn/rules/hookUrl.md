@@ -3,7 +3,7 @@
 
 Example:
 --
-```JSON
+```json
 "hookUrl": "#click-to-open"
 ```
 >Keep the click-to-open function of elements `#click-to-open`.

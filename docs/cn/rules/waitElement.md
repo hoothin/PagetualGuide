@@ -3,7 +3,7 @@
 
 Example:
 --
-```JSON
+```json
 "waitElement": [
     ".summary",
     "#popular.fade:not(.in)"
@@ -11,12 +11,12 @@ Example:
 ```
 >Repeated checking before ".summary" appeared and "#popular.fade:not(.in)" disappeared.
 
-```JSON
+```json
 "waitElement": ".summary"
 ```
 >Repeated checking before ".summary" appeared
 
-```JSON
+```json
 "waitElement": "!#popular.fade:not(.in)"
 
 # same as

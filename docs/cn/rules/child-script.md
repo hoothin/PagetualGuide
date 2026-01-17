@@ -3,7 +3,7 @@
 
 Example 1: Single rule for current site
 --
-```JS
+```js
 // ==UserScript==
 // @name         Rule for Pagetual
 // @namespace    hoothin
@@ -34,7 +34,7 @@ Example 1: Single rule for current site
 
 Example 2: Rules collection for sites
 --
-```JS
+```js
 // ==UserScript==
 // @name         Rules collection for Pagetual
 // @namespace    hoothin

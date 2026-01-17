@@ -1,0 +1,90 @@
+---
+sidebarDepth: 3
+next: usage
+head:
+  - - meta
+    - name: description
+      content: 웹사이트에 무한 스크롤을 추가하는 방법? 생산성을 위한 최고의 Greasemonkey 스크립트
+  - - meta
+    - name: keywords
+      content: 자동 페이지 넘기기, 무한 스크롤, 페이지 로드 자동화, 콘텐츠 가져오기, 자동 페이지 로딩
+---
+# 5초 만에 설치
+
+<img src="https://s2.loli.net/2024/09/11/qeM1ZQjRXvaJnSf.gif" alt="pagetual install" width=740 height=524 />
+
+## 1. 스크립트 관리자 설치 - 3초
+Pagetual은 Greasemonkey 기반이므로 실행하려면 스크립트 관리자가 필요합니다👇.
+
+### 🛠️ 스크립트 관리자 예시
+
+확장 프로그램의 MV3 버전에서 사용자 스크립트 허용을 활성화해야 합니다.
+
+<table>
+  <tbody>
+    <td>
+      <details open>
+        <summary style="cursor:pointer;">🖥️ 데스크톱</summary>
+        <ul>
+          <li>Chrome: <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> | <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a></li>
+          <li>Firefox: <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a> | <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a> | <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a></li>
+          <li>Safari: <a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> | <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
+          <li>Microsoft Edge: <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd">Tampermonkey</a> | <a href="https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao">Violentmonkey</a></li>
+          <li>Opera: <a href="https://addons.opera.com/extensions/details/tampermonkey-beta/">Tampermonkey</a> | <a href="https://violentmonkey.github.io/get-it/">Violentmonkey</a></li>
+          <li>Maxthon: <a href="http://extension.maxthon.com/detail/index.php?view_id=1680">Violentmonkey</a></li>
+          <li><a href="https://adguard.com/">AdGuard</a></li>
+        </ul>
+      </details>
+    </td>
+    <td>
+      <details>
+        <summary style="cursor:pointer;">📱 모바일 (Android)</summary>
+        <ul>
+          <li>Firefox: <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a> | <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a> | <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a></li>
+          <li>Maxthon: <a href="http://extension.maxthon.com/detail/index.php?view_id=1680">Violentmonkey</a></li>
+          <li>Dolphin: <a href="https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin">Tampermonkey</a></li>
+          <li>UC: <a href="https://www.tampermonkey.net/?browser=ucweb&ext=dhdg">Tampermonkey</a></li>
+          <li>Kiwi: <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> | <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a></li>
+          <li><a href="https://www.xbext.com/">XBrowser</a></li>
+        </ul>
+      </details>
+    </td>
+    <td>
+      <details>
+        <summary style="cursor:pointer;">🍎 모바일 (iOS)</summary>
+        <ul>
+          <li>Safari: <a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> | <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
+          <li><a href="https://gear4.app/">Gear</a></li>
+        </ul>
+      </details>
+    </td>
+  </tbody>
+</table>
+
+
+## 2. Pagetual 설치 - 2초
+<div style="display: flex"><a style="transition: box-shadow .2s; display: inline-block; background-color: #005200; padding: 0.7rem 1.1rem; color: #fff; text-decoration: none; font-weight: 700; height: fit-content; margin: 6px 0 0 10px;" href="https://greasyfork.org/en/scripts/438684-pagetual">📲 Greasyfork에서 설치</a><a style="transition: box-shadow .2s; display: inline-block; background-color: #e2510a; padding: 0.7rem 1.1rem; color: #fff; text-decoration: none; font-weight: 700; height: fit-content; margin: 6px 0 0 10px;" href="https://hoothin.github.io/UserScripts/Pagetual/pagetual.user.js">Github</a></div>
+
+::: details 💡 Q: "브라우저 Greasemonkey 스크립트"란 무엇인가요?
+A: "Greasemonkey"는 브라우저에서 스크립트를 실행하고 관리하는 플러그인입니다. 스크립트는 웹 브라우징 경험을 최적화하는 코드 조각입니다. 일단 설치되면, 일부 스크립트는 사이트에 새로운 기능을 추가하고, 일부는 사이트 인터페이스를 더 사용하기 쉽게 만들며, 일부는 사이트의 성가신 광고를 숨깁니다.
+:::
+
+::: details 💡 Q: Pagetual이 확장 기능 대신 사용자 스크립트로 작성된 이유는 무엇인가요?
+A: Pagetual은 페이징 규칙을 구현하기 위한 강력한 사용자 정의 코드 실행 기능을 가지고 있으며, 확장 기능은 보안상의 이유로 사용자 정의 코드 실행 기능에 제한이 있기 때문입니다. 또한, 사용자 스크립트는 더 유연하며 Windows/MAC/iOS/Android와 같은 거의 모든 운영 체제에서 실행될 수 있습니다.
+:::
+
+::: details 💡 Q: 사용자 스크립트는 안전한가요?
+A: 사용자 스크립트 자체는 악성 코드가 아니지만, 보안은 설치하기로 선택한 스크립트에 따라 달라집니다. 신뢰할 수 있는 소스에서만 스크립트를 얻고 스크립트 코드를 주의 깊게 읽는 것이 좋습니다. 그리고 물론, 저를 믿으셔도 됩니다. 저는 10년 동안 오픈 소스 커뮤니티에 기여해 왔습니다.
+:::
+
+::: details 💡 Q: 사용자 스크립트를 설치하는 방법은 무엇인가요?
+A: 먼저, 브라우저에 스크립트 관리자 플러그인(예: Tampermonkey)을 설치해야 합니다. 그런 다음 플러그인 관리 인터페이스에서 사용자 스크립트를 설치하고 관리할 수 있습니다.
+:::
+
+::: details 💡 Q: 모바일 장치에서 사용자 스크립트를 사용할 수 있나요?
+A: 일반적으로 모바일 장치의 기본 브라우저는 사용자 스크립트를 지원하지 않습니다. 그러나 일부 특정 브라우저는 관련 기능이 있는 플러그인 또는 확장 기능을 제공합니다.
+:::
+
+::: details 💡 Q: 사용자 스크립트를 비활성화하거나 삭제하는 방법은 무엇인가요?
+A: 사용자 스크립트 플러그인 관리 인터페이스에서 특정 Grease Monkey 스크립트를 비활성화하거나 삭제할 수 있습니다. 또한 전체 스크립트 관리자 플러그인을 일시적으로 비활성화하여 모든 스크립트 실행을 중지할 수도 있습니다.
+:::

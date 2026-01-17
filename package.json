@@ -1,10 +1,24 @@
 {
+  "name": "newGuide",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "hoothin <rixixi@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.9.7"
+    "@vuepress/plugin-google-analytics": "^2.0.0-rc.0",
+    "vuepress": "^2.0.0-rc.0",
+    "vuepress-plugin-canonical": "^1.0.0",
+    "vuepress-plugin-google-adsense2": "^1.0.3",
+    "vuepress-plugin-seo2": "^2.0.0-rc.1",
+    "vuepress-plugin-sitemap2": "^2.0.0-rc.5"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "generate:articles": "node scripts/generateArticleList.js"
+  },
+  "packageManager": "yarn@4.0.2",
+  "dependencies": {
+    "default-passive-events": "^2.0.0"
   }
 }

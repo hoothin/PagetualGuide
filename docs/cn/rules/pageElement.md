@@ -3,13 +3,13 @@
 
 Example1:
 --
-```JSON
+```json
 "pageElement": ".Context>.Article"
 ```
 
 Example2:
 --
-```JSON
+```json
 "pageElement": [
     ".Context1>.Article",
     ".Context2>.Article",

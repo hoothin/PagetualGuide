@@ -3,7 +3,7 @@
 
 Example:
 --
-```JSON
+```json
 "autoLoadNum": 5
 ```
 >Auto load next 5 pages after page opening.

@@ -1,8 +1,11 @@
-# 自定义规则
-
-<link href="/PagetualGuide/jsoneditor/jsoneditor.min.css" rel="stylesheet" type="text/css">
-<script src="/PagetualGuide/jsoneditor/jsoneditor.min.js"></script>
-<style type="text/css">
+# 高级自定义
+<p name="click2import"></p>
+<pre name="pagetual" style="display: none;">
+https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json
+</pre>
+<component :is="'script'" src = "/jsoneditor/jsoneditor.min.js">
+</component>
+<component :is="'style'" type="text/css">
 div.jsoneditor,
 div.jsoneditor-menu {
   border-color: #4b4b4b;
@@ -83,11 +86,41 @@ div.jsoneditor-value.jsoneditor-null {
 div.jsoneditor-value.jsoneditor-invalid {
   color: white;
 }
-</style>
+</component>
+
+[![discord](/img/discord.png) Discord](https://discord.com/invite/keqypXC6wD "欢迎加入 Discord 群") [![github](/img/github.png) Github](https://github.com/hoothin/UserScripts "点亮 Github 小星星") [![wechat](/img/wechat.png) 关注我的微信公众号](/cn/sponsor.html#关注我的微信公众号↓) [![twitter](/img/twitter.png) Twitter](https://twitter.com/intent/follow?screen_name=HoothinDev "在推特上关注我")
 
 <div id="jsoneditor"></div>
 
-``` json
+<table>
+    <tr>
+        <th colspan="5">若您发现永页机有用且有余力，请杯咖啡将令我不胜感激。如果没有，也不用担心 - 开源万岁！💞</th>
+    </tr>
+    <tr>
+        <th><a href="https://paypal.me/hoothin"><img src="https://www.paypal.me/favicon.ico"><br>PayPal</a></th>
+        <th><a href="https://ko-fi.com/hoothin"><img src="https://ko-fi.com/favicon-32x32.png"><br>Ko-fi</a></th>
+        <th><a href="https://afdian.com/@hoothin"><img src="https://static.afdiancdn.com/favicon.ico"><br>爱发电</a></th>
+        <th rowspan="4" width="42%"><img src="https://s2.loli.net/2023/02/06/afTMxeASm48z5vE.jpg" alt="donate"></th>
+        <th rowspan="4" width="23%"><img alt="reward" src="https://s2.loli.net/2024/07/04/1CIsVfT9rxjKwRU.jpg"></th>
+    </tr>
+    <tr>
+        <th colspan="3"><a href="https://discord.com/invite/keqypXC6wD">💬Discord群</a></th>
+    </tr>
+    <tr>
+        <th colspan="3"><a href="https://twitter.com/intent/follow?screen_name=HoothinDev">🕊️twitter</a></th>
+    </tr>
+    <tr>
+        <th colspan="3"><a href="mailto:rixixi@gmail.com">📧E-mail</a></th>
+    </tr>
+    <tr>
+        <th colspan="3">Made with ❤️ by <a href="https://github.com/hoothin">Hoothin</a></th>
+    </tr>
+    <tr>
+        <th colspan="5"><embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="/sponsors.svg"></th>
+    </tr>
+</table>
+
+```json
 [
   {
     "name":"yande",
@@ -114,93 +147,105 @@ div.jsoneditor-value.jsoneditor-invalid {
 ]
 ```
 
-[More examples of rule](https://github.com/hoothin/UserScripts/blob/master/Pagetual/pagetualRules.json)
+[更多规则示例](https://github.com/hoothin/UserScripts/blob/master/Pagetual/pagetualRules.json)
 
-name
---
-Name of the target site
-```JSON
+## name
+
+目标网站的名称
+
+```json
 "name": "Site name"
 ```
 
-author
---
-Author of this rule
-```JSON
+## author
+
+此规则的作者
+
+```json
 "author": "Hoothin"
 ```
 
-example
---
-Example url of this rule
-```JSON
+## example
+
+此规则的示例网址
+
+```json
 "example": "https://abc.com"
 ```
 
-[url](rules/url)
---
-RegExp for the url of target site
-```JSON
+## [url](rules/url)
+
+目标网站网址的正则表达式
+
+```json
 "url": "^https://abc\\.com/\\d+"
 ```
 
-[pinUrl](rules/pinUrl)
---
-Sometimes the next link or page element will be inexistence, set this to true so you can pin the rule just with url instead of finding elements by intelligent rules
-```JSON
+## [pinUrl](rules/pinUrl)
+
+有时下一个链接或页面元素可能不存在，将其设置为 true 就可以仅通过 url 固定规则，而非通过规则查找到元素才确认用此规则
+
+```json
 "pinUrl": true
 ```
 
-[enable](rules/enable)
---
-0 means stop action when all matched
-```JSON
+## [enable](rules/enable)
+
+0 表示所有条件都匹配时停止翻页
+
+```json
 "enable": 0
 ```
 
-[include](rules/include)
---
-Selector or xpath of the element which must include
-```JSON
+## [include](rules/include)
+
+此规则必须包含的元素的 Selector 或 xpath
+
+```json
 "include": "div.content"
 ```
 
-[exclude](rules/exclude)
---
-Selector or xpath of the element which must not include
-```JSON
+## [exclude](rules/exclude)
+
+此规则必须不包含的元素的 Selector 或 xpath
+
+```json
 "exclude": "div.content"
 ```
 
-[wait](rules/wait)
---
-The time to wait for page ready when you are sure the url match the site, you can also use a javaScript code which return a boolean to check if the page is ready instead
-```JSON
+## [wait](rules/wait)
+
+当你确定 url 匹配网站时，等待页面就绪的时间。你也可以使用返回布尔值的 JavaScript 代码来检查页面是否已就绪
+
+```json
 "wait": 500
 "wait": "let img=doc.querySelector('ul.list img');return img!=null"
 ```
 
-[waitElement](rules/waitElement)
---
-The array["exist", "not exist"] contains "selector or xpath of element must exist (for some lazyload element)" & "selector or xpath of element must not exist (for some loading placeholder which need scroll into view to load)"
-```JSON
+## [waitElement](rules/waitElement)
+
+这个数组["exist", "not exist"]包含 "必须存在的元素的 Selector 或 xpath (用于某些懒加载元素)" & "必须不存在的元素的 Selector 或 xpath (用于一些需要滚动到视图中才能加载的占位符)"
+
+```json
 "waitElement": [
     ".summary",
     "#popular.fade:not(.in)"
 ]
 ```
 
-[action](rules/action)
---
-0 means load url and insert with static html, 1 means load by iframe so that dynamic javaScript code on page may effect, 2 means force insert iframe to bottom
-```JSON
+## [action](rules/action)
+
+0 表示加载 url 并使用静态 html 插入，1 表示通过 iframe 加载，以便使得页面上的动态 JavaScript 代码尽可能生效，2 表示强制将 iframe 插入到底部
+
+```json
 "action": 1
 ```
 
-[nextLink](rules/nextLink)
---
-Selector or xpath of next page link, disable when set to 0, you can let it to be a array to contains multiple next links.
-```JSON
+## [nextLink](rules/nextLink)
+
+下一页链接的 Selector 或 xpath，设置为 0 时禁用，你可以将其设置为一个数组以包含多个下一页链接。
+
+```json
 "nextLink": ".page-next>a"
 "nextLink": [
     ".page1-next>a",
@@ -209,10 +254,11 @@ Selector or xpath of next page link, disable when set to 0, you can let it to be
 ]
 ```
 
-[nextLinkByUrl](rules/nextLinkByUrl)
---
-If there is no next element, you can use this to generate a href from current url, [0] means RegExp string, [1] means replace string, [2] means selector or xpath of the element which must include, [3] means selector or xpath of the element which must not include, you can use {} to eval simple code
-```JSON
+## [nextLinkByUrl](rules/nextLinkByUrl)
+
+如果没有下一个元素，你可以使用它从当前 url 生成一个 href，[0]表示正则表达式字符串，[1]表示替换字符串，[2]表示必须包含的元素的 Selector 或 xpath，[3]表示必须不包含的元素的 Selector 或 xpath，你可以使用{}来执行简单的代码
+
+```json
 "nextLinkByUrl": [
     "(&page=(\\d+))?$",
     "&page={$2+1}"
@@ -224,17 +270,19 @@ If there is no next element, you can use this to generate a href from current ur
 ]
 ```
 
-[nextLinkByJs `(doc)`](rules/nextLinkByJs)
---
-Use this to eval javaScript code and return target url of next page with doc (document of every page loaded)
-```JSON
+## [nextLinkByJs `(doc)`](rules/nextLinkByJs)
+
+使用它来执行 JavaScript 代码并返回下一页的目标 url，doc 为每页加载的 document
+
+```json
 "nextLinkByJs": "let n=doc.querySelector('a.curr+a');if(n)return n.href.replace(/^javascript:.*\\((\\d+)'\\);/,'$1_.html');"
 ```
 
-[stopSign](rules/stopSign)
---
-Stop to load next page when matching this sign
-```JSON
+## [stopSign](rules/stopSign)
+
+当匹配到此标记时停止加载下一页
+
+```json
 "stopSign": ["#pagenum", ".disable",
     [
         "#pagenum",
@@ -244,99 +292,112 @@ Stop to load next page when matching this sign
         "#pagenum",
         "\\/(\\d+)"
     ]
-] 
+]
 ```
 
-[pageElement](rules/pageElement)
---
-Selector or xpath of main content which need to insert, you can let it to be a array to contains multiple page elements.
-```JSON
+## [pageElement](rules/pageElement)
+
+需要插入的主内容的 Selector 或 xpath，你可以将其设置为一个数组以包含多个页面元素。
+
+```json
 "pageElement": ".Context>.Article"
 ```
 
-[pageElementByJs `(over)`](rules/pageElementByJs)
---
-Use this to eval javaScript code and create the elements whatever you want to insert, a over(eles) is needed to callback with elements array for insert
-```JSON
+## [pageElementByJs `(over)`](rules/pageElementByJs)
+
+使用它来执行 JavaScript 代码并创建你想要插入的元素，需要使用一个 over(eles) 来回调元素数组以进行插入
+
+```json
 "pageElementByJs": "let src=match[1]+match[3];img.onload=()=>{over([img])};img.onerror=e=>{over()};img.src=src;"
 ```
 
-[replaceElement](rules/replaceElement)
---
-Selector or xpath of element which you want to replace with new one, can be a array
-```JSON
+## [replaceElement](rules/replaceElement)
+
+你想用新元素替换的元素的 Selector 或 xpath，可以是一个数组
+
+```json
 "replaceElement": "#page"
 "replaceElement": ["#page1", "#page2"]
 ```
 
-[lazyImgSrc](rules/lazyImgSrc)
---
-The attr of image which target to real src, can be set by ["lazysrc", "removeProp1,removeProp2"] to remove props of image
-```JSON
+## [lazyImgSrc](rules/lazyImgSrc)
+
+指向真实 src 的图像属性，可以设置为 ["lazysrc", "removeProp1,removeProp2"] 以删除图像的属性
+
+```json
 "lazyImgSrc": "data-cfsrc"
 "lazyImgSrc": ["data-lazy-src", "removeProp1,removeProp2"]
 ```
 
-[css](rules/css)
---
-Add css so you can show some hidden element, start with "inIframe:" then this css will effect only in next iframe page
-```JSON
+## [css](rules/css)
+
+添加 css，以便可以显示一些隐藏的元素，以 "inIframe:" 开头，则此 css 仅在下一个 iframe 页面中生效
+
+```json
 "css": ".card-lazy{display:none}"
 ```
 
-[insert](rules/insert)
---
-Which position you want to insert, you can let it to be a array to contains multiple positions.
-```JSON
+## [insert](rules/insert)
+
+你想要插入的位置，你可以将其设置为一个数组以包含多个位置。
+
+```json
 "insert": "ul#feed-main"
 ```
 
-[insertPos](rules/insertPos)
---
-1 means insert before, 2 means just append to the bottom of target
-```JSON
+## [insertPos](rules/insertPos)
+
+1 表示在前面插入，2 表示直接追加到目标底部
+
+```json
 "insertPos": 2
 ```
 
-[iframeInit `(win, iframe)`](rules/iframeInit)
---
-The javaScript code to run as fast as it can before any code in iframe is running.
-```JSON
+## [iframeInit `(win, iframe)`](rules/iframeInit)
+
+在 iframe 中的任何代码运行之前，尽可能快地运行的 JavaScript 代码。
+
+```json
 "iframeInit": "win.self=win.top;"
 ```
 
-[init `(doc, win, iframe, click, enter, input)`](rules/init)
---
-The javaScript code to run only once with current main page or every iframe with doc:(document of main page or iframe)
-```JSON
+## [init `(doc, win, iframe, click, enter, input)`](rules/init)
+
+只在当前主页或每个 iframe 中运行一次的 JavaScript 代码，doc:(主页或 iframe 的 document)
+
+```json
 "init": "if(doc)doc.querySelector('[data-title=sh]').click();"
 ```
 
-[pagePre `(response)`](rules/pagePre)
---
-The javaScript code to run after get response from URL of next link, you can modify the response content and return it
-```JSON
+## [pagePre `(response)`](rules/pagePre)
+
+从下一页的 URL 获取响应后运行的 JavaScript 代码，你可以修改响应内容并返回它
+
+```json
 "pagePre": "return decodeURI(response).replace(/[\\\\]/g,'')"
 ```
 
-[pageInit `(doc, eles)`](rules/pageInit)
---
-The javaScript code to run with every page inserted with doc:(document of every page loaded) and eles:(elements found with rule), run before inserted, you can trigger event like onView()
-```JSON
+## [pageInit `(doc, eles)`](rules/pageInit)
+
+每页插入时运行的 JavaScript 代码，doc:(每页加载的 document)，eles:(根据规则找到的元素)，在插入之前运行，你可以触发像 onView() 这样的事件
+
+```json
 "pageInit": "let ops=doc.querySelectorAll('op');[].forEach.call(ops,op=>{img.src=op.value;imgCon.appendChild(img)})"
 ```
 
-[pageAction `(doc, eles)`](rules/pageAction)
---
-The javaScript code to run with every page inserted with doc:(document of every page loaded) and eles:(elements found with rule), run after inserted, you can add functions like click()
-```JSON
+## [pageAction `(doc, eles)`](rules/pageAction)
+
+每页插入时运行的 JavaScript 代码，doc:(每页加载的 document)，eles:(根据规则找到的元素)，在插入之后运行，你可以添加像 click() 这样的函数
+
+```json
 "pageAction": "let j=document.querySelector('.lazy');eles.forEach(i=>{i.src=i.dataset.srcset;})"
 ```
 
-[filter](rules/filter)
---
-Filter the elements inserted from next page. 
-```JSON
+## [filter](rules/filter)
+
+筛选从下一页插入的元素。
+
+```json
 "filter": {
     "count": 20,
     "words": "spams\\d",
@@ -345,167 +406,190 @@ Filter the elements inserted from next page.
 }
 ```
 
-[loadMore](rules/loadMore)
---
-Selector of "load more" button 
-```JSON
+## [loadMore](rules/loadMore)
+
+“加载更多”按钮的 Selector
+
+```json
 "loadMore": ".loadMore"
 ```
 
-[sleep](rules/sleep)
---
-Sleep time (ms) when load next page if site is limited by time interval
-```JSON
+## [sleep](rules/sleep)
+
+如果网站受时间间隔限制，加载下一页时的休眠时间（毫秒）
+
+```json
 "sleep": 1000
 ```
 
-[rate](rules/rate)
---
-The multi-windowHeight which you can set to 2 or 3 while some sites load next page slowly 
-```JSON
+## [rate](rules/rate)
+
+页面高度的倍数，如果有些网站加载下一页很慢，可以将其设置为 2 或 3
+
+```json
 "rate": 3
 ```
 
-[autoLoadNum](rules/autoLoadNum)
---
-The amount of pages for auto turning after page opening
-```JSON
+## [autoLoadNum](rules/autoLoadNum)
+
+页面打开后自动加载的页数
+
+```json
 "autoLoadNum": 5
 ```
 
-[listenHashChange](rules/listenHashChange)
---
-Set this to true so pagetual will restart when hash changed
-```JSON
+## [listenHashChange](rules/listenHashChange)
+
+将其设置为 true，则当哈希值更改时 Pagetual 将重新启动
+
+```json
 "listenHashChange": true
 ```
 
-[refreshByClick](rules/refreshByClick)
---
-If the site reload content without changing url when click a submit button. Set this with the selector of the target button, pagetual will reset after click it.
-```JSON
+## [refreshByClick](rules/refreshByClick)
+
+如果点击提交按钮时网站在不更改 url 的情况下重新加载内容。将其设置为目标按钮的 Selector，点击后 Pagetual 将重置。
+
+```json
 "refreshByClick": "#sreach"
 ```
 
-[pageNum](rules/pageNum)
---
-Point the page number with $p in current url, you can use{} to eval result string from page number, like {$p\*25+1}
-```JSON
+## [pageNum](rules/pageNum)
+
+用 $p 指向当前 url 中的页码，你可以使用{}来计算页码结果字符串，例如 {$p\*25+1}
+
+```json
 "pageNum": "&start={15*($p-1)}"
 ```
 
-[pageBar `(pageBar)`](rules/pageBar)
---
-The javaScript code to change pageBar, 0 means hide
-```JSON
+## [pageBar `(pageBar)`](rules/pageBar)
+
+用于更改 pageBar 的 JavaScript 代码，0 表示隐藏
+
+```json
 "pageBar": "pageBar.classList.add('j_thread_list');"
 ```
 
-[pageBarText](rules/pageBarText)
---
-Set to 1 so the document title of next page will be shown on pagebar
-```JSON
+## [pageBarText](rules/pageBarText)
+
+将其设置为 1，则下一页的文档标题将显示在 pagebar 上
+
+```json
 "pageBarText": 1
 ```
 
-[autoClick](rules/autoClick)
---
-The css selector or xpath of element which you want to click automatically
-```JSON
+## [autoClick](rules/autoClick)
+
+你想要自动点击的元素的 css selector 或 xpath
+
+```json
 "autoClick": "#btn-sky"
 ```
 
-[history](rules/history)
---
-Set to 0 then history writing will be disable. Set to 1 then history writing will be enable. Set to 2 then history writing will action immediately after splicing. No matter what value is the general option.
-```JSON
+## [history](rules/history)
+
+设置为 0 则禁用历史记录写入。设置为 1 则启用历史记录写入。设置为 2 则在拼接后立即进行历史记录写入。与通用选项的值无关。
+
+```json
 "history": 1
 ```
 
-[lockScroll](rules/lockScroll)
---
-Set to true if you don't want the page to auto scroll when navigate to next page
-```JSON
+## [lockScroll](rules/lockScroll)
+
+如果你不希望页面在导航到下一页时自动滚动，则将其设置为 true
+
+```json
 "lockScroll": true
 ```
 
-[wheel](rules/wheel)
---
-Set to true so the next page action will only effect when the mouse wheel roll
-```JSON
+## [wheel](rules/wheel)
+
+将其设置为 true，则只有当鼠标滚轮滚动时，下一页操作才会生效
+
+```json
 "wheel": true
 ```
 
-[fitWidth](rules/fitWidth)
---
-Set to false if you find the pageElement get the wrong small width
-```JSON
+## [fitWidth](rules/fitWidth)
+
+如果你发现 pageElement 获得了错误的窄宽度，则将其设置为 false
+
+```json
 "fitWidth": false
 ```
 
-[delay](rules/delay)
---
-The javaScript code to delay next action until return true, use this prop to get complete page elements with lazy load.
-```JSON
+## [delay](rules/delay)
+
+延迟下一页操作的 JavaScript 代码，直到返回 true，使用此属性可以获取带有懒加载的完整页面元素。
+
+```json
 "delay": "return document.querySelector('#feed_pagenation>li.cur').innerText>=curpage"
 ```
 
-[manualMode](rules/manualMode)
---
-Set to true to enable manual mode, then paging will stop, right arrow (or 'pagetual.next' event) will be bound to click next link.
-```JSON
+## [manualMode](rules/manualMode)
+
+设置为 true 以启用手动模式，则分页将停止，右箭头（或 'pagetual.next' 事件）将绑定到点击下一页链接。
+
+```json
 "manualMode": true
 ```
 
-[openInNewTab](rules/openInNewTab)
---
-Set to true to make all links to open in new tabs, false to make them open in self.
-```JSON
+## [openInNewTab](rules/openInNewTab)
+
+将其设置为 true 以使所有链接在新标签页中打开，设置为 false 则在当前标签页中打开。
+
+```json
 "openInNewTab": true
 ```
 
-[pageElementCss](rules/pageElementCss)
---
-The style css which you want to set for every page element.
-```JSON
+## [pageElementCss](rules/pageElementCss)
+
+你想要为每个页面元素设置的 css 样式。
+
+```json
 "pageElementCss": "color: red"
 ```
 
-[initRun](rules/initRun)
---
-Run immediately upon initialization.
-```JSON
+## [initRun](rules/initRun)
+
+初始化后立即运行。
+
+```json
 "initRun": true
 ```
 
-[sideController](rules/sideController)
---
-Show or hide toolbar of sideController.
-```JSON
+## [sideController](rules/sideController)
+
+显示或隐藏侧边控制器的工具栏。
+
+```json
 "sideController": true
 ```
 
-[listenUrlChange](rules/listenUrlChange)
---
-Refresh script after url changed.
-```JSON
+## [listenUrlChange](rules/listenUrlChange)
+
+url 更改后刷新脚本。
+
+```json
 "listenUrlChange": false
 ```
 
-[clickMode](rules/clickMode)
---
-Stop turning page and click nextlink after scrolled to bottom.
-```JSON
+## [clickMode](rules/clickMode)
+
+滚动到底部后停止翻页并点击下一页链接。
+
+```json
 "clickMode": true
 ```
 
-[preloadImages(doc)](rules/preloadImages)
---
-Analyze the page and return an array of image's urls that need to be preloaded.
-```JSON
+## [preloadImages(doc)](rules/preloadImages)
+
+分析页面并返回需要预加载的图片 URL 数组。
+
+```json
 "preloadImages": "return ['1.jpg']"
 ```
 
-[child script](rules/child-script)
---
-If the site has some limit for code eval. You can make a child script with function under object `window`. You should name them start with `pagetual` use camelCase. Like `window.pagetualWait`, `window.pagetualNextLinkByJs`, `window.pagetualPageInit`, `window.pagetualPageAction`, `window.pagetualInit`, `window.pagetualPageBarText`.
+## [child script](rules/child-script)
+
+如果网站对代码执行有限制。你可以在 `window` 对象下创建一个带有函数的子脚本。你应该将它们命名为以 `pagetual` 开头的驼峰命名法。例如 `window.pagetualWait`、`window.pagetualNextLinkByJs`、`window.pagetualPageInit`、`window.pagetualPageAction`、`window.pagetualInit`、`window.pagetualPageBarText`。

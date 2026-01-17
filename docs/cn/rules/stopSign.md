@@ -3,14 +3,14 @@
 
 Example1:
 --
-```JSON
+```json
 "stopSign": ["#pagenum", ".disable"] 
 ```
 >Stop when "#pagenum" don't exist or ".disable" exist.
 
 Example2:
 --
-```JSON
+```json
 "stopSign": [
     [
         "#pagenum",
@@ -26,7 +26,7 @@ Example2:
 
 Example3:
 --
-```JSON
+```json
 "stopSign": ["#pagenum", ".disable",
     [
         "#pagenum",
@@ -55,7 +55,7 @@ Example3:
 
 Example4:
 --
-```JSON
+```json
 "stopSign": "if (doc.querySelector('.disable')) return true; if (nextLink.className === 'disable') return true; return false;" 
 ```
 >Stop when stopSign(doc, nextLink) return true

@@ -3,17 +3,17 @@
 
 Example:
 --
-```JSON
+```json
 "filter": "20"
 ```
 >Remove elements when the count of inner words is less than 20.
 
-```JSON
+```json
 "filter": "😈"
 ```
 >Remove elements when the inner words contains 😈.
 
-```JSON
+```json
 "filter": {
     "count": 20,
     "words": "spams\\d",

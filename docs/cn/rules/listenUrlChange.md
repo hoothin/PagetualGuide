@@ -3,7 +3,7 @@
 
 Example:
 --
-```JSON
+```json
 "listenUrlChange": false
 ```
 

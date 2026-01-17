@@ -3,7 +3,7 @@
 
 Example:
 --
-```JSON
+```json
 "refreshByClick": "#sreach"
 ```
 >Restart pagetual when element "#sreach" is clicked.

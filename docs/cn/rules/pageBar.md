@@ -3,14 +3,14 @@
 
 Example1:
 --
-```JSON
+```json
 "pageBar": "pageBar.classList.add('j_thread_list');"
 ```
 >Add class "j_thread_list" to all page bars.
 
 Example2:
 --
-```JSON
+```json
 "pageBar": 0
 ```
 >Hide all page bars.

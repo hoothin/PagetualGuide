@@ -3,7 +3,7 @@
 
 Example:
 --
-```JSON
+```json
 "pageNum": "&start={15*($p-1)}"
 ```
 >Count page num as 2 when url is "&start=15"

@@ -3,7 +3,7 @@
 
 Example:
 --
-```JSON
+```json
 "pageElementStyle": "font-size: xx-large;"
 ```
 

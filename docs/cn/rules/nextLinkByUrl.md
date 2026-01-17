@@ -3,30 +3,22 @@
 
 Example1:
 --
-```JSON
+```json
 "nextLinkByUrl": [
-    "page=(\\d+)",
-    "page={$1+1}"
+    "&page=(\\d+)",
+    "&page={$1+1}"
 ]
 ```
 >Create a next link "http://abc.xxx/d?page=2" from URL of current page: "http://abc.xxx/d?page=1"
 
 Example2:
 --
-```JSON
+```json
 "nextLinkByUrl": [
-    "page=(\\d+)&pn=(\\d+)",
-    "page={$1+1}&pn={$2*10}",
+    "&page=(\\d+)&pn=(\\d+)",
+    "&page={$1+1}&pn={$2*10}",
+    ".article>.item",
     ".disable>button"
 ]
 ```
->Create a next link "http://abc.xxx/d?page=2&pn=10" from URL of current page: "http://abc.xxx/d?page=1&pn=1". Stop after a element matches ".disable>button" showed up.
-
-Example3:
---
-```JSON
-"nextLinkByUrl": [
-    "\\?(from=(\\d+)&)?",
-    "?from={$2+36}&"
-]
-```
+>Create a next link "http://abc.xxx/d?page=2&pn=10" from URL of current page: "http://abc.xxx/d?page=1&pn=1". Stop if element '.article>.item' is not found or '.disable>button' is encountered.

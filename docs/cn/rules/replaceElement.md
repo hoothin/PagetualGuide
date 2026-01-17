@@ -3,13 +3,13 @@
 
 Example1:
 --
-```JSON
+```json
 "replaceElement": "#page"
 ```
 
 
 Example2:
 --
-```JSON
+```json
 "replaceElement": ["#page1", "#page2"]
 ```

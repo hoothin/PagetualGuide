@@ -3,14 +3,14 @@
 
 Example1:
 --
-```JSON
+```json
 "exclude": "div.content"
 ```
 >Ignore current rule when the site include the element `div.content`
 
 Example2:
 --
-```JSON
+```json
 "exclude": "//a[contains(@href,'-') and text()='next']"
 ```
 >Ignore current rule when the site include the element `//a[contains(@href,'-') and text()='next']`

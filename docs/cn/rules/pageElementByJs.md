@@ -3,7 +3,7 @@
 
 Example:
 --
-```JSON
+```json
 "pageElementByJs": "fetch(url.replace(/&offset=\\d+/,'') + '&offset=' + (pageNum + 1), {headers:{'X-Requested-With': 'XMLHttpRequest'}}).then(res => res.json()).then(res => {over(eles)})"
 ```
 >Create elements and use `over` to return them after loaded.

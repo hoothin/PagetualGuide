@@ -3,6 +3,6 @@
 
 Example:
 --
-```JSON
+```json
 "initRun": true
 ```

@@ -3,14 +3,14 @@
 
 Example1:
 --
-```JSON
+```json
 "nextLink": ".page-next>a"
 ```
 
 
 Example2:
 --
-```JSON
+```json
 "nextLink": [
     ".page1-next>a",
     ".page2-next>a",

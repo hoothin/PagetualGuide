@@ -3,7 +3,7 @@
 
 Example:
 --
-```JSON
+```json
 "init": "if (iframe == null) return; await click('#btn'); await input('#input', 'here you are'); await enter('#input');"
 ```
 >While extracting content in mirror iframe, first click '#btn', then input words 'here you are' to '#input', press 'enter' on '#input' at last.

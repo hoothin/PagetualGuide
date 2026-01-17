@@ -3,6 +3,6 @@
 
 Example:
 --
-```JSON
+```json
 "pageAction": "let j=document.querySelector('.lazy');eles.forEach(i=>{i.src=i.dataset.srcset;})"
 ```

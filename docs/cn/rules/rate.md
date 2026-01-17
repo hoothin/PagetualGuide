@@ -3,7 +3,7 @@
 
 Example:
 --
-```JSON
+```json
 "rate": 3
 ```
 >Start to load next page when the height between scrollTop of page body and bottom of page less than 3 * windowHeight.

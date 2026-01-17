@@ -3,7 +3,7 @@
 
 Example:
 --
-```JSON
+```json
 "pinUrl": true
 ```
 >When the url matches the RegExp you set before, current rule will take effect no matter the element matches your rule or not.

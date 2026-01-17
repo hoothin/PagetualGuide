@@ -3,6 +3,6 @@
 
 Example:
 --
-```JSON
+```json
 "pageInit": "let ops=doc.querySelectorAll('op');[].forEach.call(ops,op=>{img.src=op.value;imgCon.appendChild(img)})"
 ```

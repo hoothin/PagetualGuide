@@ -3,14 +3,14 @@
 
 Example1:
 --
-```JSON
+```json
 "lazyImgSrc": "data-cfsrc"
 ```
 >Get the url from "data-cfsrc" and set it to src of target image.
 
 Example2:
 --
-```JSON
+```json
 "lazyImgSrc": ["data-lazy-src", "removeProp1,removeProp2"]
 ```
 >Sometimes when you set the right src, it will recover from a prop which is needed to be removed.

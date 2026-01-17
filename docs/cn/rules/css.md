@@ -3,20 +3,20 @@
 
 Example1:
 --
-```JSON
+```json
 "css": ".card-lazy{display:none}"
 ```
 
 Example2:
 --
-```JSON
+```json
 "css": "inIframe:.card-lazy{display:none}"
 ```
 >Add css to next iframes only.
 
 Example3:
 --
-```JSON
+```json
 "css": ".card-lazy{display:block}inIframe:.card-lazy{display:none}"
 ```
 >Add `.card-lazy{display:block}` to current page and add `.card-lazy{display:none}` to next iframes.

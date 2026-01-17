@@ -3,7 +3,7 @@
 
 Example:
 --
-```JSON
+```json
 "preloadImages": "return ['1.jpg']"
 ```
 

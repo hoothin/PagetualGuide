@@ -3,6 +3,6 @@
 
 Example:
 --
-```JSON
+```json
 "sleep": 1000
 ```

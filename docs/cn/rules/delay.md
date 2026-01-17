@@ -3,7 +3,7 @@
 
 Example:
 --
-```JSON
+```json
 "delay": "return document.querySelector('#feed_pagenation>li.cur').innerText>=curpage"
 ```
 

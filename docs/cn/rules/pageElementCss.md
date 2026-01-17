@@ -3,6 +3,6 @@
 
 Example:
 --
-```JSON
+```json
 "pageElementCss": "color: red"
 ```
