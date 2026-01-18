@@ -73,8 +73,9 @@ class Spirit {
         this.ctx = ctx;
         this.options = options;
         this.x = this.randomX();
-        this.y = -random() * 400;
-        this.vy = 1.2 + random();
+        this.y = -random() * 600;
+        this.vy = 2.5 + random();
+        this.vx = 2 * random() - 1;
         this.img = new Image();
         this.img.src = imgs[floor(random() * 11)];
         this.angle = 0;
@@ -95,6 +96,7 @@ class Spirit {
     update() {
         if (this.stop) return;
         this.y += this.vy;
+        this.x += this.vx;
         this.angle += this.vangle;
     }
     randomX() {
@@ -103,4 +105,4 @@ class Spirit {
     }
 }
 
-new Fireworks(document.body, {number: 15, delay: 0.5});
+new Fireworks(document.body, {number: 50, delay: 0.3});
