@@ -13,3 +13,4 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BUILD_SCRIPT: npm install && npm run docs:build
         BUILD_DIR: docs/.vuepress/dist/
+        CNAME: pagetual.hoothin.com
