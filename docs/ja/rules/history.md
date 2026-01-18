@@ -1,7 +1,7 @@
 # history
->Set to 0 then history writing will be disable. Set to 1 then history writing will be enable. Set to 2 then history writing will action immediately after splicing. No matter what value is the general option.
+>0 で history 書き込みを無効、1 で有効、2 で結合直後に即時書き込み。どの値でもグローバル設定です。
 
-Example:
+例：
 --
 ```json
 "history": 1

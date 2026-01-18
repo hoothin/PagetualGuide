@@ -1,11 +1,11 @@
 # nextLinkByJs (doc)
->Use this to eval javaScript code and return target url of next page with doc (document of every page loaded)
+>Usa esto para evaluar JavaScript y devolver la URL objetivo de la siguiente página con doc (documento de cada página cargada).
 
-Example:
+Ejemplo:
 --
 ```json
 "nextLinkByJs": "let n=doc.querySelector('a.curr+a');if(n)return n.href.replace(/^javascript:.*\\((\\d+)'\\);/,'$1_.html');"
 ```
->The params `doc` means document of every page loaded, this code means checking the element "a.curr+a" and return a link from its href when it exists, stop otherwise.
+>`doc` significa el documento de cada página cargada. Este código comprueba `a.curr+a` y devuelve un enlace desde su href si existe; de lo contrario, se detiene.
 
->You can construct a post data body using the `#p{x=1&y=2}` approach, just like returning `https://www.xxx.com/pageAjax#p{x=1&y=2}`.
+>Puedes construir un cuerpo POST usando el formato `#p{x=1&y=2}`, como devolver `https://www.xxx.com/pageAjax#p{x=1&y=2}`.

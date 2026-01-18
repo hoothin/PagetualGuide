@@ -1,7 +1,7 @@
 # insert
->Which position you want to insert, you can let it to be a array to contains multiple positions.
+>Vị trí để chèn. Có thể là mảng nhiều vị trí.
 
-Example:
+Ví dụ:
 --
 ```json
 "insert": "ul#feed-main"

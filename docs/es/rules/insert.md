@@ -1,7 +1,7 @@
 # insert
->Which position you want to insert, you can let it to be a array to contains multiple positions.
+>Posición donde se insertará. Puede ser un arreglo con varias posiciones.
 
-Example:
+Ejemplo:
 --
 ```json
 "insert": "ul#feed-main"

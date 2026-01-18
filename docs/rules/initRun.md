@@ -1,5 +1,5 @@
 # initRun
->Run immediately upon initialization.
+>Run immediately on initialization.
 
 Example:
 --

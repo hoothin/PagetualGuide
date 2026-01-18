@@ -1,10 +1,10 @@
 # preloadImages(doc)
->Analyze the page and return an array of image's urls that need to be preloaded.
+>ページを解析し、事前読み込みしたい画像 URL の配列を返します。
 
-Example:
+例：
 --
 ```json
 "preloadImages": "return ['1.jpg']"
 ```
 
-*Make sure you have enabled preload option*
+*preload オプションが有効であることを確認してください*

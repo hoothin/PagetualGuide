@@ -1,10 +1,10 @@
 # preloadImages(doc)
->Analyze the page and return an array of image's urls that need to be preloaded.
+>分析页面并返回需要预加载的图片 URL 数组。
 
-Example:
+示例：
 --
 ```json
 "preloadImages": "return ['1.jpg']"
 ```
 
-*Make sure you have enabled preload option*
+*请确保已开启 preload 选项*

@@ -1,9 +1,9 @@
 # hookUrl
->Some non-link elements will open a URL after clicked, they will lose functionality after being inserted into current page. Use this attribute to bind a selector, and the corresponding element will keep the click-to-open function.
+>Einige Nicht‑Link‑Elemente öffnen per Klick eine URL und verlieren diese Funktion nach dem Einfügen. Mit selector‑Bindung bleibt die Klick‑Funktion erhalten.
 
-Example:
+Beispiel:
 --
 ```json
 "hookUrl": "#click-to-open"
 ```
->Keep the click-to-open function of elements `#click-to-open`.
+>Behält die Klick‑Funktion für `#click-to-open`.

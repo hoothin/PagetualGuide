@@ -1,5 +1,5 @@
 # manualMode
->Set to true to enable manual mode, then paging will stop, right arrow (or 'pagetual.next' event) will be bound to click next link.
+>Set to true to enable manual mode. Paging stops, and the right arrow (or `pagetual.next` event) is bound to click nextLink.
 
 Example:
 --

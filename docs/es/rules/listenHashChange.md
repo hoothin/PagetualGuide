@@ -1,9 +1,9 @@
 # listenHashChange
->Set this to true so pagetual will restart when hash changed
+>Establécelo en true para que Pagetual se reinicie cuando cambie el hash.
 
-Example:
+Ejemplo:
 --
 ```json
 "listenHashChange": true
 ```
->Restart pagetual when url change from 'http://abc.xxx/#123' to 'http://abc.xxx/#456'
+>Reinicia Pagetual cuando la URL cambia de `http://abc.xxx/#123` a `http://abc.xxx/#456`.

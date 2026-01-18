@@ -1,9 +1,8 @@
 # pageBarText
->Set to 1 so the document title of next page will be shown on pagebar
+>Auf 1 setzen, damit der document title der nächsten Seite im pageBar angezeigt wird.
 
-Example:
+Beispiel:
 --
 ```json
 "pageBarText": 1
 ```
-

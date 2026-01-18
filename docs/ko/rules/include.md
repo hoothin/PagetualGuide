@@ -1,18 +1,18 @@
 # include
->반드시 포함해야 하는 요소의 선택자 또는 xpath
+>반드시 존재해야 하는 요소(selector 또는 XPath).
 
-예시1:
+예시 1:
 --
 ```json
 "include": "div.content"
 ```
->사이트에 `div.content` 요소가 포함되어 있지 않으면 현재 규칙을 무시합니다.
+>페이지에 `div.content`가 없으면 이 규칙을 무시합니다.
 
-예시2:
+예시 2:
 --
 ```json
 "include": "//a[contains(@href,'-') and text()='next']"
 ```
->사이트에 `//a[contains(@href,'-') and text()='next']` 요소가 포함되어 있지 않으면 현재 규칙을 무시합니다.
+>페이지에 `//a[contains(@href,'-') and text()='next']`가 없으면 이 규칙을 무시합니다.
 
-*때로는 사이트에 동적 콘텐츠가 있어 다음 링크가 달라질 수 있습니다. 이러한 상황에서는 "include"를 추가할 수 있습니다.*
+*동적 콘텐츠로 nextLink가 바뀌는 사이트에서는 include로 조건을 좁힐 수 있습니다.*

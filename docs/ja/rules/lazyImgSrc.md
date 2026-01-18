@@ -1,16 +1,16 @@
 # lazyImgSrc
->The attr of image which target to real src, can be set by ["lazysrc", "removeProp1,removeProp2"] to remove props of image.
+>画像の実 URL を持つ属性名。`["lazysrc", "removeProp1,removeProp2"]` の形で画像の属性を削除できます。
 
-Example1:
+例 1：
 --
 ```json
 "lazyImgSrc": "data-cfsrc"
 ```
->Get the url from "data-cfsrc" and set it to src of target image.
+>`data-cfsrc` から URL を取得し、画像の src に設定します。
 
-Example2:
+例 2：
 --
 ```json
 "lazyImgSrc": ["data-lazy-src", "removeProp1,removeProp2"]
 ```
->Sometimes when you set the right src, it will recover from a prop which is needed to be removed.
+>正しい src を設定しても、別の属性で上書きされる場合があります。その場合は該当属性を削除します。

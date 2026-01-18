@@ -1,9 +1,9 @@
 # rate
->The multi-windowHeight which you can set to 2 or 3 while some sites load next page slowly
+>Hệ số nhân windowHeight. Có thể đặt 2 hoặc 3 khi site tải trang tiếp theo chậm.
 
-Example:
+Ví dụ:
 --
 ```json
 "rate": 3
 ```
->Start to load next page when the height between scrollTop of page body and bottom of page less than 3 * windowHeight.
+>Bắt đầu tải trang tiếp theo khi khoảng cách giữa scrollTop và đáy trang nhỏ hơn `3 * windowHeight`.

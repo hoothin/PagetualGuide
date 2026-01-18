@@ -1,7 +1,7 @@
 # clickMode
->Stop turning page and click nextlink after scrolled to bottom.
+>捲動到頁面底部後停止自動翻頁，改為點擊 nextLink。
 
-Example:
+範例：
 --
 ```json
 "clickMode": true

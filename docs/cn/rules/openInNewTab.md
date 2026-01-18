@@ -1,7 +1,7 @@
 # openInNewTab
->Set to true to make all links to open in new tabs, false to make them open in self.
+>设为 true 时所有链接在新标签页打开；设为 false 则在当前页打开。
 
-Example:
+示例：
 --
 ```json
 "openInNewTab": true

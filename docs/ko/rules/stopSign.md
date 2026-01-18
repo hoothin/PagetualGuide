@@ -1,14 +1,14 @@
 # stopSign
->이 표시에 일치하면 다음 페이지 로드를 중지합니다.
+>조건에 일치하면 다음 페이지 로드를 중지합니다.
 
-예시1:
+예시 1:
 --
 ```json
-"stopSign": ["#pagenum", ".disable"]
+"stopSign": ["#pagenum", ".disable"] 
 ```
->"#pagenum"이 없거나 ".disable"이 있으면 중지합니다.
+>`#pagenum`이 없거나 `.disable`이 있으면 중지합니다.
 
-예시2:
+예시 2:
 --
 ```json
 "stopSign": [
@@ -22,9 +22,9 @@
     ]
 ]
 ```
->RegExp에 의해 `(\\d+)`의 첫 번째 그룹과 일치하는 "#pagenum"의 숫자가 `\\/(\\d+)`의 첫 번째 그룹과 일치하는 숫자와 같을 때 중지합니다.
+>`#pagenum`의 `(\\d+)` 1번 그룹과 `\\/(\\d+)` 1번 그룹이 같으면 중지합니다.
 
-예시3:
+예시 3:
 --
 ```json
 "stopSign": ["#pagenum", ".disable",
@@ -36,9 +36,9 @@
         "#pagenum",
         "\\/(\\d+)"
     ]
-]
+] 
 
-# 동일
+# same as
 
 "stopSign": {
     "include": "#pagenum",
@@ -51,13 +51,11 @@
     ]
 }
 ```
->규칙-1 또는 규칙-2와 일치할 때 중지
+>규칙 1 또는 규칙 2에 해당하면 중지합니다.
 
-예시4:
+예시 4:
 --
 ```json
-"stopSign": "if (doc.querySelector('.disable')) return true; if (nextLink.className === 'disable') return true; return false;"
+"stopSign": "if (doc.querySelector('.disable')) return true; if (nextLink.className === 'disable') return true; return false;" 
 ```
->stopSign(doc, nextLink)가 true를 반환하면 중지합니다.
-
-```
+>stopSign(doc, nextLink)이 true를 반환하면 중지합니다.

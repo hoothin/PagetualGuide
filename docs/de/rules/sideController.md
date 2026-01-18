@@ -1,7 +1,7 @@
 # sideController
->Show or hide toolbar of sideController.
+>Zeigt die sideController‑Toolbar an oder blendet sie aus.
 
-Example:
+Beispiel:
 --
 ```json
 "sideController": true

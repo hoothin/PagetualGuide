@@ -1,10 +1,10 @@
 # listenUrlChange
->Refresh script after url changed.
+>Actualiza el script después de cambiar la URL.
 
-Example:
+Ejemplo:
 --
 ```json
 "listenUrlChange": false
 ```
 
-*Useful for singlePage app*
+*Útil para aplicaciones de una sola página (SPA)*

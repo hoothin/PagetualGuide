@@ -1,7 +1,7 @@
 # nextLinkByUrl
->If there is no next element, you can use this to generate a href from current url, [0] means RegExp string, [1] means replace string, [2] means selector or xpath of the element which must include, [3] means selector or xpath of the element which must not include, you can use {} to eval simple code like + - * /.
+>Se não houver elemento next, você pode gerar um href a partir da URL atual. [0] é a string RegExp, [1] a string de substituição, [2] o selector/XPath que deve existir, [3] o selector/XPath que NÃO deve existir. Você pode usar {} para cálculos simples (+ - * /).
 
-Example1:
+Exemplo 1:
 --
 ```json
 "nextLinkByUrl": [
@@ -9,9 +9,9 @@ Example1:
     "&page={$1+1}"
 ]
 ```
->Create a next link "http://abc.xxx/d?page=2" from URL of current page: "http://abc.xxx/d?page=1"
+>Cria o próximo link `http://abc.xxx/d?page=2` a partir da URL atual `http://abc.xxx/d?page=1`.
 
-Example2:
+Exemplo 2:
 --
 ```json
 "nextLinkByUrl": [
@@ -21,4 +21,4 @@ Example2:
     ".disable>button"
 ]
 ```
->Create a next link "http://abc.xxx/d?page=2&pn=10" from URL of current page: "http://abc.xxx/d?page=1&pn=1". Stop if element '.article>.item' is not found or '.disable>button' is encountered.
+>Cria `http://abc.xxx/d?page=2&pn=10` a partir de `http://abc.xxx/d?page=1&pn=1`. Para se `.article>.item` não existir ou se `.disable>button` aparecer.

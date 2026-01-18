@@ -1,5 +1,5 @@
 # preloadImages(doc)
->Analyze the page and return an array of image's urls that need to be preloaded.
+>Analyze the page and return an array of image URLs to preload.
 
 Example:
 --
@@ -7,4 +7,4 @@ Example:
 "preloadImages": "return ['1.jpg']"
 ```
 
-*Make sure you have enabled preload option*
+*Make sure the preload option is enabled*

@@ -1,10 +1,10 @@
 # wheel
->Set to true so the next page action will only effect when the mouse wheel roll
+>Définissez à true pour que l’action de la page suivante ne s’exécute que lorsque la molette de la souris tourne.
 
-Example:
+Exemple :
 --
 ```json
 "wheel": true
 ```
 
-*Sometimes the page will auto scroll to bottom when click load more button, and then repeat over and over, set wheel to true so you can prevent it*
+*Parfois la page défile automatiquement en cliquant sur « charger plus » et boucle indéfiniment ; activez wheel pour éviter cela.*

@@ -1,18 +1,18 @@
 # include
->Selector or xpath of the element which must include
+>必ず存在してほしい要素（selector または XPath）。
 
-Example1:
+例 1：
 --
 ```json
 "include": "div.content"
 ```
->Ignore current rule when the site don't include the element `div.content`
+>ページに `div.content` が含まれない場合はこのルールを無視します。
 
-Example2:
+例 2：
 --
 ```json
 "include": "//a[contains(@href,'-') and text()='next']"
 ```
->Ignore current rule when the site don't include the element `//a[contains(@href,'-') and text()='next']`
+>ページに `//a[contains(@href,'-') and text()='next']` が含まれない場合はこのルールを無視します。
 
-*Sometimes a site has dynamic content, the next link will be different. You can add the "include" on this situation.*
+*動的コンテンツで nextLink が変化するサイトでは include で条件を絞れます。*

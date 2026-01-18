@@ -1,5 +1,5 @@
 # sleep
->Sleep time (ms) when load next page if site is limited by time interval
+>Sleep time (ms) before loading the next page if the site enforces an interval.
 
 Example:
 --

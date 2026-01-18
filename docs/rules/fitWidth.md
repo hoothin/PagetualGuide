@@ -1,5 +1,5 @@
 # fitWidth
->Set to false if you find the pageElement get the wrong small width
+>Set to false if pageElement ends up with an incorrect small width.
 
 Example:
 --
@@ -7,4 +7,4 @@ Example:
 "fitWidth": false
 ```
 
-*Effect only when action==2*
+*Only effective when action==2*

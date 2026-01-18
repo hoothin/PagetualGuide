@@ -1,18 +1,18 @@
 # exclude
->Selector or xpath of the element which must not include
+>Selector oder XPath eines Elements, das nicht vorhanden sein darf.
 
-Example1:
+Beispiel 1:
 --
 ```json
 "exclude": "div.content"
 ```
->Ignore current rule when the site include the element `div.content`
+>Ignoriere die Regel, wenn `div.content` vorhanden ist.
 
-Example2:
+Beispiel 2:
 --
 ```json
 "exclude": "//a[contains(@href,'-') and text()='next']"
 ```
->Ignore current rule when the site include the element `//a[contains(@href,'-') and text()='next']`
+>Ignoriere die Regel, wenn `//a[contains(@href,'-') and text()='next']` vorhanden ist.
 
-*Sometimes a site has dynamic content, the next link will be different. You can add the "exclude" on this situation.*
+*Bei dynamischen Inhalten, bei denen nextLink wechselt, ist exclude hilfreich.*

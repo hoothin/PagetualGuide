@@ -1,10 +1,10 @@
 # autoClick
->The css selector or xpath of element which you want to click automatically
+>CSS selector oder XPath des Elements, das automatisch geklickt werden soll.
 
-Example:
+Beispiel:
 --
 ```json
 "autoClick": "#btn-sky"
 ```
 
-*Will click only once*
+*Wird nur einmal geklickt*

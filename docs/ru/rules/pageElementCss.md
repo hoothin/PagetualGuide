@@ -1,7 +1,7 @@
 # pageElementCss
->The style css which you want to set for every page element.
+>CSS‑стиль, который нужно применить к каждому pageElement.
 
-Example:
+Пример:
 --
 ```json
 "pageElementCss": "color: red"

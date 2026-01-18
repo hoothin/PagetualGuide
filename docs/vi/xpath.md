@@ -1,52 +1,52 @@
-# Xpath Cheat Sheet
+# Bảng tra nhanh XPath
 
-## Selectors
+## Bộ chọn
 
-### Descendant selectors
+### Bộ chọn hậu duệ
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1`                         | `//h1`                                                   | [?](#prefixes)          |
-| `div p`                      | `//div//p`                                               | [?](#axes)              |
-| `ul > li`                    | `//ul/li`                                                | [?](#axes)              |
+| `h1`                         | `//h1`                                                   | [?](#tiền-tố)           |
+| `div p`                      | `//div//p`                                               | [?](#trục)              |
+| `ul > li`                    | `//ul/li`                                                | [?](#trục)              |
 | `ul > li > a`                | `//ul/li/a`                                              |                         |
 | `div > *`                    | `//div/*`                                                |                         |
-| `:root`                      | `/`                                                      | [?](#prefixes)          |
+| `:root`                      | `/`                                                      | [?](#tiền-tố)           |
 | `:root > body`               | `/body`                                                  |                         |
 
 
-### Attribute selectors
+### Bộ chọn thuộc tính
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `#id`                        | `//*[@id="id"]`                                           | [?](#predicates)        |
-| `.class`                     | `//*[@class="class"]` *...[kinda](#class-check)*          |                         |
+| `#id`                        | `//*[@id="id"]`                                        | [?](#mệnh-đề)          |
+| `.class`                     | `//*[@class="class"]` *...[kinda](#class-check)*        |                         |
 | `input[type="submit"]`       | `//input[@type="submit"]`                                |                         |
-| `a#abc[for="xyz"]`           | `//a[@id="abc"][@for="xyz"]`                             | [?](#chaining-order)    |
+| `a#abc[for="xyz"]`           | `//a[@id="abc"][@for="xyz"]`                             | [?](#thứ-tự-chaining)  |
 | `a[rel]`                     | `//a[@rel]`                                              |                         |
-| `a[href^='/']`               | `//a[starts-with(@href, '/')]`                           | [?](#string-functions)  |
+| `a[href^='/']`               | `//a[starts-with(@href, '/')]`                           | [?](#hàm-chuỗi)         |
 | `a[href$='pdf']`             | `//a[ends-with(@href, '.pdf')]`                          |                         |
 | `a[href*='://']`             | `//a[contains(@href, '://')]`                            |                         |
 | `a[rel~='help']`             | `//a[contains(@rel, 'help')]` *...[kinda](#class-check)* |                         |
 
 
-### Order selectors
+### Bộ chọn thứ tự
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `ul > li:first-of-type`      | `//ul/li[1]`                                             | [?](#indexing)          |
+| `ul > li:first-of-type`      | `//ul/li[1]`                                             | [?](#đánh-số)           |
 | `ul > li:nth-of-type(2)`     | `//ul/li[2]`                                             |                         |
 | `ul > li:last-of-type`       | `//ul/li[last()]`                                        |                         |
-| `li#id:first-of-type`        | `//li[1][@id="id"]`                                      | [?](#chaining-order)    |
+| `li#id:first-of-type`        | `//li[1][@id="id"]`                                      | [?](#thứ-tự-chaining)  |
 | `a:first-child`              | `//*[1][name()="a"]`                                     |                         |
 | `a:last-child`               | `//*[last()][name()="a"]`                                |                         |
 
 
-### Siblings
+### Anh em (siblings)
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1 ~ ul`                    | `//h1/following-sibling::ul`                             | [?](#using-axes)        |
+| `h1 ~ ul`                    | `//h1/following-sibling::ul`                             | [?](#dùng-trục)         |
 | `h1 + ul`                    | `//h1/following-sibling::ul[1]`                          |                         |
 | `h1 ~ #id`                   | `//h1/following-sibling::[@id="id"]`                     |                         |
 
@@ -55,24 +55,24 @@
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `$('ul > li').parent()`      | `//ul/li/..`                                             | [?](#other-axes)        |
+| `$('ul > li').parent()`      | `//ul/li/..`                                             | [?](#các-trục-khác)     |
 | `$('li').closest('section')` | `//li/ancestor-or-self::section`                         |                         |
-| `$('a').attr('href')`        | `//a/@href`                                              | [?](#steps)             |
+| `$('a').attr('href')`        | `//a/@href`                                              | [?](#bước)              |
 | `$('span').text()`           | `//span/text()`                                          |                         |
 
 
-### Other things
+### Khác
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1:not([id])`               | `//h1[not(@id)]`                                         | [?](#boolean-functions) |
-| Text match                   | `//button[text()="Submit"]`                              | [?](#operators)         |
-| Text match (substring)       | `//button[contains(text(),"Go")]`                        |                         |
-| Arithmetic                   | `//product[@price > 2.50]`                               |                         |
-| Has children                 | `//ul[*]`                                                |                         |
-| Has children (specific)      | `//ul[li]`                                               |                         |
-| Or logic                     | `//a[@name or @href]`                                    | [?](#operators)         |
-| Union (joins results)        | `//a \| //div`                                           | [?](#unions)            |
+| `h1:not([id])`               | `//h1[not(@id)]`                                         | [?](#hàm-bool)          |
+| So khớp văn bản              | `//button[text()="Submit"]`                              | [?](#toán-tử)           |
+| So khớp (chuỗi con)          | `//button[contains(text(),"Go")]`                        |                         |
+| So sánh số                   | `//product[@price > 2.50]`                               |                         |
+| Có con                       | `//ul[*]`                                                |                         |
+| Có con (cụ thể)              | `//ul[li]`                                               |                         |
+| OR logic                     | `//a[@name or @href]`                                    | [?](#toán-tử)           |
+| Union (gộp kết quả)          | `//a \| //div`                                           | [?](#hợp)               |
 
 
 <style>
@@ -89,39 +89,39 @@ table.xp tr>:nth-child(3) {width: 10%; text-align:right;}
 //div[contains(concat(' ',normalize-space(@class),' '),' foobar ')]
 ```
 
-Xpath doesn't have the "check if part of space-separated list" operator, so this is the workaround.
+Xpath không có toán tử “kiểm tra phần tử trong danh sách phân tách bằng khoảng trắng”, nên đây là cách thường dùng.
 
-Expressions
+Biểu thức
 -----------
 
-### Steps and axes
+### Bước và trục
 
 | `//` | `ul` | `/`  | `a[@id='link']` |
 | ---  | ---  | ---  | ---             |
-| Axis | Step | Axis | Step            |
+| Trục | Bước | Trục | Bước            |
 
-### Prefixes
+### Tiền tố
 
-| Prefix | Example               | What     |
-| ---    | ---                   | ---      |
-| `//`   | `//hr[@class='edge']` | Anywhere |
-| `./`   | `./a`                 | Relative |
-| `/`    | `/html/body/div`      | Root     |
-
-
-Begin your expression with any of these.
-
-### Axes
-
-| Axis | Example             | What       |
-| ---  | ---                 | ---        |
-| `/`  | `//ul/li/a`         | Child      |
-| `//` | `//[@id="list"]//a` | Descendant |
+| Tiền tố | Ví dụ                 | Ý nghĩa   |
+| ---     | ---                   | ---       |
+| `//`    | `//hr[@class='edge']` | Bất kỳ đâu |
+| `./`    | `./a`                 | Tương đối |
+| `/`     | `/html/body/div`      | Gốc       |
 
 
-Separate your steps with `/`. Use two (`//`) if you don't want to select direct children.
+Bạn có thể bắt đầu biểu thức bằng bất kỳ tiền tố nào ở trên.
 
-### Steps
+### Trục
+
+| Trục | Ví dụ                | Ý nghĩa   |
+| ---  | ---                  | ---       |
+| `/`  | `//ul/li/a`          | Con       |
+| `//` | `//[@id="list"]//a` | Hậu duệ   |
+
+
+Tách các bước bằng `/`. Dùng `//` nếu không muốn chỉ chọn con trực tiếp.
+
+### Bước
 
 ```bash
 //div
@@ -129,8 +129,8 @@ Separate your steps with `/`. Use two (`//`) if you don't want to select direct 
 //[@id='link']
 ```
 
-A step may have an element name (`div`) and [predicates](#predicates) (`[...]`). Both are optional.
-They can also be these other things:
+Một bước có thể gồm tên phần tử (`div`) và [mệnh đề](#mệnh-đề) (`[...]`). Cả hai đều có thể bỏ.
+Cũng có thể là:
 
 ```bash
 //a/text()     #=> "Go home"
@@ -138,10 +138,10 @@ They can also be these other things:
 //a/*          #=> All a's child elements
 ```
 
-Predicates
+Mệnh đề
 ----------
 
-### Predicates
+### Mệnh đề
 
 ```bash
 //div[true()]
@@ -149,9 +149,9 @@ Predicates
 //div[@class="head"][@id="top"]
 ```
 
-Restricts a nodeset only if some condition is true. They can be chained.
+Chỉ giữ nodeset khi điều kiện đúng. Có thể xếp chuỗi nhiều mệnh đề.
 
-### Operators
+### Toán tử
 
 ```bash
 # Comparison
@@ -166,9 +166,9 @@ Restricts a nodeset only if some condition is true. They can be chained.
 //div[(x and y) or not(z)]
 ```
 
-Use comparison and logic operators to make conditionals.
+Dùng toán tử so sánh và logic để tạo điều kiện.
 
-### Using nodes
+### Dùng node
 
 ```bash
 # Use them inside functions
@@ -181,9 +181,9 @@ Use comparison and logic operators to make conditionals.
 //ul[li]
 ```
 
-You can use nodes inside predicates.
+Có thể dùng node trực tiếp trong mệnh đề.
 
-### Indexing
+### Đánh số
 
 ```bash
 //a[1]                  # first <a>
@@ -193,29 +193,29 @@ You can use nodes inside predicates.
 //ol/li[position()>1]   # :not(:first-of-type)
 ```
 
-Use `[]` with a number, or `last()` or `position()`.
+Dùng `[]` với số, `last()` hoặc `position()`.
 
-### Chaining order
+### Thứ tự chaining
 
 ```bash
 a[1][@href='/']
 a[@href='/'][1]
 ```
 
-Order is significant, these two are different.
+Thứ tự quan trọng; hai biểu thức này khác nhau.
 
-### Nesting predicates
+### Lồng mệnh đề
 
 ```
 //section[.//h1[@id='hi']]
 ```
 
-This returns `<section>` if it has an `<h1>` descendant with `id='hi'`.
+Trả về `<section>` nếu có hậu duệ `<h1>` với id='hi'.
 
-Functions
+Hàm
 ---------
 
-### Node functions
+### Hàm node
 
 ```bash
 name()                     # //[starts-with(name(), 'h')]
@@ -230,13 +230,13 @@ count()                    # //table[count(tr)=1]
 position()                 # //ol/li[position()=2]
 ```
 
-### Boolean functions
+### Hàm bool
 
 ```bash
 not(expr)                  # button[not(starts-with(text(),"Submit"))]
 ```
 
-### String functions
+### Hàm chuỗi
 
 ```bash
 contains()                 # font[contains(@class,"head")]
@@ -254,7 +254,7 @@ normalize-space()
 string-length()
 ```
 
-### Type conversion
+### Chuyển kiểu
 
 ```bash
 string()
@@ -262,10 +262,10 @@ number()
 boolean()
 ```
 
-Axes
+Trục
 ----
 
-### Using axes
+### Dùng trục
 
 ```bash
 //ul/li                       # ul > li
@@ -275,13 +275,13 @@ Axes
 //ul/ancestor-or-self::li     # $('ul').closest('li')
 ```
 
-Steps of an expression are separated by `/`, usually used to pick child nodes. That's not always true: you can specify a different "axis" with `::`.
+Các bước thường dùng `/` để chọn con, nhưng có thể chỉ định trục khác với `::`.
 
 | `//` | `ul` | `/child::` | `li` |
 | ---  | ---  | ---        | ---  |
-| Axis | Step | Axis       | Step |
+| Trục | Bước | Trục       | Bước |
 
-### Child axis
+### Trục child
 
 ```bash
 # both the same
@@ -289,7 +289,7 @@ Steps of an expression are separated by `/`, usually used to pick child nodes. T
 //child::ul/child::li/child::a
 ```
 
-`child::` is the default axis. This makes `//a/b/c` work.
+`child::` là trục mặc định. Vì vậy `//a/b/c` hoạt động.
 
 ```bash
 # both the same
@@ -304,7 +304,7 @@ Steps of an expression are separated by `/`, usually used to pick child nodes. T
 //ul[count(child::li) > 2]
 ```
 
-### Descendant-or-self axis
+### Trục descendant-or-self
 
 ```bash
 # both the same
@@ -312,7 +312,7 @@ Steps of an expression are separated by `/`, usually used to pick child nodes. T
 //div/descendant-or-self::h4
 ```
 
-`//` is short for the `descendant-or-self::` axis.
+`//` là dạng rút gọn của trục `descendant-or-self::`.
 
 ```bash
 # both the same
@@ -320,38 +320,38 @@ Steps of an expression are separated by `/`, usually used to pick child nodes. T
 //ul/descendant-or-self::[last()]
 ```
 
-### Other axes
+### Các trục khác
 
-| Axis                 | Abbrev | Notes                                            |
-| ---                  | ---    | ---                                              |
-| `ancestor`           |        |                                                  |
-| `ancestor-or-self`   |        |                                                  |
-| `attribute`          | `@`    | `@href` is short for `attribute::href`           |
-| `child`              |        | `div` is short for `child::div`                  |
-| `descendant`         |        |                                                  |
-| `descendant-or-self` | `//`   | `//` is short for `/descendant-or-self::node()/` |
-| `namespace`          |        |                                                  |
-| `self`               | `.`    | `.` is short for `self::node()`                  |
-| `parent`             | `..`   | `..` is short for `parent::node()`               |
-| `following`          |        |                                                  |
-| `following-sibling`  |        |                                                  |
-| `preceding`          |        |                                                  |
-| `preceding-sibling`  |        |                                                  |
+| Trục                | Viết tắt | Ghi chú                                           |
+| ---                 | ---      | ---                                              |
+| `ancestor`          |          |                                                  |
+| `ancestor-or-self`  |          |                                                  |
+| `attribute`         | `@`      | `@href` là viết tắt của `attribute::href`       |
+| `child`             |          | `div` là viết tắt của `child::div`              |
+| `descendant`        |          |                                                  |
+| `descendant-or-self`| `//`     | `//` là viết tắt của `/descendant-or-self::node()/` |
+| `namespace`         |          |                                                  |
+| `self`              | `.`      | `.` là viết tắt của `self::node()`               |
+| `parent`            | `..`     | `..` là viết tắt của `parent::node()`            |
+| `following`         |          |                                                  |
+| `following-sibling` |          |                                                  |
+| `preceding`         |          |                                                  |
+| `preceding-sibling` |          |                                                  |
 
-There are other axes you can use.
+Còn có nhiều trục khác có thể dùng.
 
-### Unions
+### Hợp
 
 ```bash
 //a | //span
 ```
 
-Use `|` to join two expressions.
+Dùng `|` để gộp hai biểu thức.
 
-More examples
+Ví dụ thêm
 -------------
 
-### Examples
+### Ví dụ
 
 ```bash
 //*                 # all elements
@@ -362,19 +362,19 @@ count(//*)          # count all elements
 //ul/li/..          # use .. to select a parent
 ```
 
-### Find a parent
+### Tìm phần tử cha
 
 ```bash
 //section[h1[@id='section-name']]
 ```
-Finds a `<section>` that directly contains `h1#section-name`
+Tìm `<section>` chứa trực tiếp `h1#section-name`.
 
 ```bash
 //section[//h1[@id='section-name']]
 ```
 
-Finds a `<section>` that contains `h1#section-name`.
-(Same as above, but uses descendant-or-self instead of child)
+Tìm `<section>` chứa `h1#section-name`.
+(Giống ở trên, nhưng dùng descendant-or-self thay vì child)
 
 ### Closest
 
@@ -382,19 +382,19 @@ Finds a `<section>` that contains `h1#section-name`.
 ./ancestor-or-self::[@class="box"]
 ```
 
-Works like jQuery's `$().closest('.box')`.
+Tương tự `$().closest('.box')` của jQuery.
 
-### Attributes
+### Thuộc tính
 
 ```bash
 //item[@price > 2*@discount]
 ```
 
-Finds `<item>` and check its attributes
+Tìm `<item>` và kiểm tra thuộc tính.
 
-## Testing
+## Kiểm thử
 
-### Browser console
+### Console trình duyệt
 
 ```js
 $x("//div")

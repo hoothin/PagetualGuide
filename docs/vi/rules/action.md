@@ -1,15 +1,15 @@
 # action
->0 means load url and insert with static html, 1 means load by iframe so that dynamic javaScript code on page may effect, 2 means force insert iframe to bottom
+>0 là tải URL và chèn HTML tĩnh; 1 là tải bằng iframe để chạy JavaScript động của trang; 2 là ép chèn iframe đầy đủ xuống cuối trang.
 
-Example:
+Ví dụ:
 --
 ```json
 "action": 1
 ```
 
 + action: 0
-Fetch the url of next link and get the static html without any dynamic handling, it's the default action and the most fast action.
+Lấy URL của nextLink và chèn HTML tĩnh, không xử lý động. Đây là mặc định và nhanh nhất.
 + action: 1
-Load url in a iframe and get content after loading completed, it's for the situation when contents are loaded after page open.
+Tải URL trong iframe, lấy nội dung sau khi tải xong. Phù hợp khi nội dung được render sau khi mở trang.
 + action: 2
-Create a iframe of full page of next link. Trim the page and insert into current page.
+Tạo iframe toàn trang của nextLink, cắt gọn và chèn vào cuối trang hiện tại.

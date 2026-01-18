@@ -1,9 +1,9 @@
 # autoLoadNum
->The amount of pages for auto turning after page opening
+>Số trang tự động tải sau khi mở trang.
 
-Example:
+Ví dụ:
 --
 ```json
 "autoLoadNum": 5
 ```
->Auto load next 5 pages after page opening.
+>Sau khi mở trang, tự động tải 5 trang tiếp theo.

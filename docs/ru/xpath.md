@@ -1,4 +1,4 @@
-# Шпаргалка по Xpath
+# Быстрый справочник XPath
 
 ## Селекторы
 
@@ -6,47 +6,47 @@
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1`                         | `//h1`                                                   | [?](#prefixes)          |
-| `div p`                      | `//div//p`                                               | [?](#axes)              |
-| `ul > li`                    | `//ul/li`                                                | [?](#axes)              |
+| `h1`                         | `//h1`                                                   | [?](#префиксы)          |
+| `div p`                      | `//div//p`                                               | [?](#оси)               |
+| `ul > li`                    | `//ul/li`                                                | [?](#оси)               |
 | `ul > li > a`                | `//ul/li/a`                                              |                         |
 | `div > *`                    | `//div/*`                                                |                         |
-| `:root`                      | `/`                                                      | [?](#prefixes)          |
+| `:root`                      | `/`                                                      | [?](#префиксы)          |
 | `:root > body`               | `/body`                                                  |                         |
 
 
-### Селекторы атрибутов
+### Атрибутные селекторы
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `#id`                        | `//*[@id="id"]`                                           | [?](#predicates)        |
-| `.class`                     | `//*[@class="class"]` *...[вроде](#class-check)*          |                         |
+| `#id`                        | `//*[@id="id"]`                                        | [?](#предикаты)         |
+| `.class`                     | `//*[@class="class"]` *...[kinda](#class-check)*        |                         |
 | `input[type="submit"]`       | `//input[@type="submit"]`                                |                         |
-| `a#abc[for="xyz"]`           | `//a[@id="abc"][@for="xyz"]`                             | [?](#chaining-order)    |
+| `a#abc[for="xyz"]`           | `//a[@id="abc"][@for="xyz"]`                             | [?](#порядок-цепочек)    |
 | `a[rel]`                     | `//a[@rel]`                                              |                         |
-| `a[href^='/']`               | `//a[starts-with(@href, '/')]`                           | [?](#string-functions)  |
+| `a[href^='/']`               | `//a[starts-with(@href, '/')]`                           | [?](#строковые-функции) |
 | `a[href$='pdf']`             | `//a[ends-with(@href, '.pdf')]`                          |                         |
 | `a[href*='://']`             | `//a[contains(@href, '://')]`                            |                         |
-| `a[rel~='help']`             | `//a[contains(@rel, 'help')]` *...[вроде](#class-check)* |                         |
+| `a[rel~='help']`             | `//a[contains(@rel, 'help')]` *...[kinda](#class-check)* |                         |
 
 
 ### Селекторы порядка
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `ul > li:first-of-type`      | `//ul/li[1]`                                             | [?](#indexing)          |
+| `ul > li:first-of-type`      | `//ul/li[1]`                                             | [?](#индексация)        |
 | `ul > li:nth-of-type(2)`     | `//ul/li[2]`                                             |                         |
 | `ul > li:last-of-type`       | `//ul/li[last()]`                                        |                         |
-| `li#id:first-of-type`        | `//li[1][@id="id"]`                                      | [?](#chaining-order)    |
+| `li#id:first-of-type`        | `//li[1][@id="id"]`                                      | [?](#порядок-цепочек)    |
 | `a:first-child`              | `//*[1][name()="a"]`                                     |                         |
 | `a:last-child`               | `//*[last()][name()="a"]`                                |                         |
 
 
-### Соседние элементы
+### Соседи
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1 ~ ul`                    | `//h1/following-sibling::ul`                             | [?](#using-axes)        |
+| `h1 ~ ul`                    | `//h1/following-sibling::ul`                             | [?](#использование-осей) |
 | `h1 + ul`                    | `//h1/following-sibling::ul[1]`                          |                         |
 | `h1 ~ #id`                   | `//h1/following-sibling::[@id="id"]`                     |                         |
 
@@ -55,24 +55,24 @@
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `$('ul > li').parent()`      | `//ul/li/..`                                             | [?](#other-axes)        |
+| `$('ul > li').parent()`      | `//ul/li/..`                                             | [?](#другие-оси)         |
 | `$('li').closest('section')` | `//li/ancestor-or-self::section`                         |                         |
-| `$('a').attr('href')`        | `//a/@href`                                              | [?](#steps)             |
+| `$('a').attr('href')`        | `//a/@href`                                              | [?](#шаги)               |
 | `$('span').text()`           | `//span/text()`                                          |                         |
 
 
-### Другие вещи
+### Прочее
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1:not([id])`               | `//h1[not(@id)]`                                         | [?](#boolean-functions) |
-| Совпадение текста            | `//button[text()="Submit"]`                              | [?](#operators)         |
-| Совпадение текста (подстрока)| `//button[contains(text(),"Go")]`                        |                         |
+| `h1:not([id])`               | `//h1[not(@id)]`                                         | [?](#булевы-функции)     |
+| Точное совпадение текста     | `//button[text()="Submit"]`                              | [?](#операторы)         |
+| Совпадение текста (часть)    | `//button[contains(text(),"Go")]`                        |                         |
 | Арифметика                   | `//product[@price > 2.50]`                               |                         |
-| Имеет дочерние элементы      | `//ul[*]`                                                |                         |
-| Имеет дочерние элементы (специфичные)| `//ul[li]`                                               |                         |
-| Логика ИЛИ                   | `//a[@name or @href]`                                    | [?](#operators)         |
-| Объединение (объединяет результаты)| `//a \| //div`                                           | [?](#unions)            |
+| Есть дети                    | `//ul[*]`                                                |                         |
+| Есть конкретные дети         | `//ul[li]`                                               |                         |
+| Логика OR                    | `//a[@name or @href]`                                    | [?](#операторы)         |
+| Объединение (union)          | `//a \| //div`                                           | [?](#объединения)       |
 
 
 <style>
@@ -89,7 +89,7 @@ table.xp tr>:nth-child(3) {width: 10%; text-align:right;}
 //div[contains(concat(' ',normalize-space(@class),' '),' foobar ')]
 ```
 
-Xpath doesn't have the "check if part of space-separated list" operator, so this is the workaround.
+В XPath нет оператора «проверить вхождение в список, разделённый пробелами». Это стандартный обходной вариант.
 
 Выражения
 -----------
@@ -100,29 +100,26 @@ Xpath doesn't have the "check if part of space-separated list" operator, so this
 | ---  | ---  | ---  | ---             |
 | Ось  | Шаг  | Ось  | Шаг             |
 
-
-Начинайте выражение с любого из них.
-
 ### Префиксы
 
-| Префикс | Пример                | Что      |
-| ---     | ---                   | ---      |
-| `//`    | `//hr[@class='edge']` | Везде    |
-| `./`    | `./a`                 | Относительно |
-| `/`     | `/html/body/div`      | Корень   |
+| Префикс | Пример                | Значение  |
+| ---     | ---                   | ---       |
+| `//`    | `//hr[@class='edge']` | Где угодно |
+| `./`    | `./a`                 | Относительный |
+| `/`     | `/html/body/div`      | Корень    |
 
 
-Начинайте выражение с любого из них.
+Начинать выражение можно с любого из этих префиксов.
 
 ### Оси
 
-| Ось | Пример              | Что        |
-| --- | ---                 | ---        |
-| `/` | `//ul/li/a`         | Дочерний   |
+| Ось | Пример               | Значение   |
+| --- | ---                  | ---        |
+| `/` | `//ul/li/a`          | Дочерний   |
 | `//`| `//[@id="list"]//a` | Потомок    |
 
 
-Разделяйте шаги с помощью `/`. Используйте два (`//`), если вы не хотите выбирать прямых потомков.
+Разделяйте шаги с помощью `/`. Используйте `//`, если не нужны только прямые дети.
 
 ### Шаги
 
@@ -132,8 +129,8 @@ Xpath doesn't have the "check if part of space-separated list" operator, so this
 //[@id='link']
 ```
 
-Шаг может иметь имя элемента (`div`) и [предикаты](#predicates) (`[...]`). Оба необязательны.
-Они также могут быть следующими:
+Шаг может иметь имя элемента (`div`) и [предикаты](#предикаты) (`[...]`). Оба необязательны.
+Также можно использовать:
 
 ```bash
 //a/text()     #=> "Go home"
@@ -152,7 +149,7 @@ Xpath doesn't have the "check if part of space-separated list" operator, so this
 //div[@class="head"][@id="top"]
 ```
 
-Ограничивает набор узлов только в том случае, если некоторое условие истинно. Их можно объединять в цепочки.
+Ограничивают набор узлов, если условие истинно. Предикаты можно цепочить.
 
 ### Операторы
 
@@ -169,7 +166,7 @@ Xpath doesn't have the "check if part of space-separated list" operator, so this
 //div[(x and y) or not(z)]
 ```
 
-Используйте операторы сравнения и логические операторы для создания условий.
+Используйте сравнение и логические операторы для условий.
 
 ### Использование узлов
 
@@ -184,28 +181,28 @@ Xpath doesn't have the "check if part of space-separated list" operator, so this
 //ul[li]
 ```
 
-Вы можете использовать узлы внутри предикатов.
+Узлы можно использовать внутри предикатов.
 
 ### Индексация
 
 ```bash
-//a[1]                  # первый <a>
-//a[last()]             # последний <a>
-//ol/li[2]              # второй <li>
-//ol/li[position()=2]   # то же, что и выше
+//a[1]                  # first <a>
+//a[last()]             # last <a>
+//ol/li[2]              # second <li>
+//ol/li[position()=2]   # same as above
 //ol/li[position()>1]   # :not(:first-of-type)
 ```
 
-Используйте `[]` с числом, или `last()` или `position()`.
+Используйте `[]` с числом, `last()` или `position()`.
 
-### Порядок цепочки
+### Порядок цепочек
 
 ```bash
 a[1][@href='/']
 a[@href='/'][1]
 ```
 
-Порядок имеет значение, эти два выражения отличаются.
+Порядок важен: эти выражения разные.
 
 ### Вложенные предикаты
 
@@ -213,7 +210,7 @@ a[@href='/'][1]
 //section[.//h1[@id='hi']]
 ```
 
-Это возвращает `<section>`, если у него есть потомок `<h1>` с `id='hi'`.
+Возвращает `<section>`, если внутри есть потомок `<h1>` с id='hi'.
 
 Функции
 ---------
@@ -233,7 +230,7 @@ count()                    # //table[count(tr)=1]
 position()                 # //ol/li[position()=2]
 ```
 
-### Логические функции
+### Булевы функции
 
 ```bash
 not(expr)                  # button[not(starts-with(text(),"Submit"))]
@@ -278,7 +275,7 @@ boolean()
 //ul/ancestor-or-self::li     # $('ul').closest('li')
 ```
 
-Шаги выражения разделяются символом `/`, обычно используемым для выбора дочерних узлов. Это не всегда так: вы можете указать другую "ось" с помощью `::`.
+Шаги обычно разделяются `/` и выбирают детей, но можно указать другую ось через `::`.
 
 | `//` | `ul` | `/child::` | `li` |
 | ---  | ---  | ---        | ---  |
@@ -292,7 +289,7 @@ boolean()
 //child::ul/child::li/child::a
 ```
 
-`child::` — это ось по умолчанию. Это позволяет работать `//a/b/c`.
+`child::` — ось по умолчанию. Поэтому `//a/b/c` работает.
 
 ```bash
 # both the same
@@ -307,7 +304,7 @@ boolean()
 //ul[count(child::li) > 2]
 ```
 
-### Ось потомок-или-сам
+### Ось descendant-or-self
 
 ```bash
 # both the same
@@ -315,7 +312,7 @@ boolean()
 //div/descendant-or-self::h4
 ```
 
-`//` — это сокращение для оси `descendant-or-self::`.
+`//` — сокращение для оси `descendant-or-self::`.
 
 ```bash
 # both the same
@@ -325,23 +322,23 @@ boolean()
 
 ### Другие оси
 
-| Ось                  | Сокращение | Примечания                                       |
-| ---                  | ---        | ---                                              |
-| `ancestor`           |            |                                                  |
-| `ancestor-or-self`   |            |                                                  |
-| `attribute`          | `@`        | `@href` — это сокращение от `attribute::href`    |
-| `child`              |            | `div` — это сокращение от `child::div`           |
-| `descendant`         |            |                                                  |
-| `descendant-or-self` | `//`       | `//` — это сокращение от `/descendant-or-self::node()/` |
-| `namespace`          |            |                                                  |
-| `self`               | `.`        | `.` — это сокращение от `self::node()`           |
-| `parent`             | `..`       | `..` — это сокращение от `parent::node()`        |
-| `following`          |            |                                                  |
-| `following-sibling`  |            |                                                  |
-| `preceding`          |            |                                                  |
-| `preceding-sibling`  |            |                                                  |
+| Ось                 | Сокр | Примечания                                      |
+| ---                 | ---  | ---                                              |
+| `ancestor`          |      |                                                  |
+| `ancestor-or-self`  |      |                                                  |
+| `attribute`         | `@`  | `@href` — сокращение `attribute::href`           |
+| `child`             |      | `div` — сокращение `child::div`                  |
+| `descendant`        |      |                                                  |
+| `descendant-or-self`| `//` | `//` — сокращение `/descendant-or-self::node()/` |
+| `namespace`         |      |                                                  |
+| `self`              | `.`  | `.` — сокращение `self::node()`                  |
+| `parent`            | `..` | `..` — сокращение `parent::node()`               |
+| `following`         |      |                                                  |
+| `following-sibling` |      |                                                  |
+| `preceding`         |      |                                                  |
+| `preceding-sibling` |      |                                                  |
 
-Вы можете использовать другие оси.
+Есть и другие оси.
 
 ### Объединения
 
@@ -349,7 +346,7 @@ boolean()
 //a | //span
 ```
 
-Используйте `|` для объединения двух выражений.
+`|` объединяет два выражения.
 
 Больше примеров
 -------------
@@ -357,12 +354,12 @@ boolean()
 ### Примеры
 
 ```bash
-//*                 # все элементы
-count(//*)          # подсчитать все элементы
-(//h1)[1]/text()    # текст первого заголовка h1
-//li[span]          # найти <li> с <span> внутри него
-                    # ...разворачивается в //li[child::span]
-//ul/li/..          # использовать .. для выбора родителя
+//*                 # all elements
+count(//*)          # count all elements
+(//h1)[1]/text()    # text of the first h1 heading
+//li[span]          # find a <li> with an <span> inside it
+                    # ...expands to //li[child::span]
+//ul/li/..          # use .. to select a parent
 ```
 
 ### Найти родителя
@@ -370,22 +367,22 @@ count(//*)          # подсчитать все элементы
 ```bash
 //section[h1[@id='section-name']]
 ```
-Находит `<section>`, который непосредственно содержит `h1#section-name`.
+Находит `<section>`, который напрямую содержит `h1#section-name`.
 
 ```bash
 //section[//h1[@id='section-name']]
 ```
 
-Находит `<section>`, который содержит `h1#section-name`.
-(То же самое, что и выше, но использует `descendant-or-self` вместо `child`)
+Находит `<section>`, содержащий `h1#section-name`.
+(То же самое, но с descendant-or-self вместо child)
 
-### Ближайший
+### Closest
 
 ```bash
 ./ancestor-or-self::[@class="box"]
 ```
 
-Работает как jQuery's `$().closest('.box')`.
+Похоже на `$().closest('.box')` в jQuery.
 
 ### Атрибуты
 

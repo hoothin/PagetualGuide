@@ -1,9 +1,9 @@
 # rate
->The multi-windowHeight which you can set to 2 or 3 while some sites load next page slowly
+>觸發載入下一頁的距離門檻（以 windowHeight 為單位）。部分站點載入較慢時可設為 2 或 3。
 
-Example:
+範例：
 --
 ```json
 "rate": 3
 ```
->Start to load next page when the height between scrollTop of page body and bottom of page less than 3 * windowHeight.
+>當頁面 scrollTop 到底部的距離小於 `3 * windowHeight` 時開始載入下一頁。

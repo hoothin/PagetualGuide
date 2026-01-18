@@ -1,5 +1,5 @@
 # insertPos
->1 means insert before, 2 or "in" means just append to the bottom of target, default value is 1
+>1 means insert before; 2 or "in" means append to the bottom of the target. Default is 1.
 
 Example:
 --
@@ -7,4 +7,4 @@ Example:
 "insertPos": "in"
 ```
 
-*Effect after `insert` is set*
+*Effective after `insert` is set*

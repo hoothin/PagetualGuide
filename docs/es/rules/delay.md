@@ -1,10 +1,10 @@
 # delay
->The javaScript code to delay next action until return true, use this prop to get complete page elements with lazy load.
+>Código JavaScript para retrasar la siguiente acción hasta que devuelva true. Úsalo para obtener elementos completos con carga perezosa.
 
-Example:
+Ejemplo:
 --
 ```json
 "delay": "return document.querySelector('#feed_pagenation>li.cur').innerText>=curpage"
 ```
 
-*Sometimes the next page won't load content completely, but half before scroll, use this to check if the page is loaded completely, check only when scrolled to bottom*
+*A veces la siguiente página no termina de cargar el contenido (por ejemplo, hasta hacer scroll). Usa esto para comprobar que está completa; solo se verifica al llegar al final.*

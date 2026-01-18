@@ -1,9 +1,9 @@
 # pageNum
->Point the page number with $p in current url, you can use{} to eval result string from page number, like {$p*25+1}
+>Indique le numéro de page avec $p dans l’URL courante. Vous pouvez utiliser {} pour évaluer une chaîne résultante, comme {$p*25+1}.
 
-Example:
+Exemple :
 --
 ```json
 "pageNum": "&start={15*($p-1)}"
 ```
->Count page num as 2 when url is "&start=15"
+>Considère la page comme 2 quand l’URL est "&start=15".

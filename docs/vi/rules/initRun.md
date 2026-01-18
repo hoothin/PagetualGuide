@@ -1,7 +1,7 @@
 # initRun
->Run immediately upon initialization.
+>Chạy ngay khi khởi tạo.
 
-Example:
+Ví dụ:
 --
 ```json
 "initRun": true

@@ -1,7 +1,7 @@
 # initRun
->Run immediately upon initialization.
+>Executa imediatamente após a inicialização.
 
-Example:
+Exemplo:
 --
 ```json
 "initRun": true

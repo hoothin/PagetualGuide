@@ -1,17 +1,17 @@
 # filter
->Filter the elements inserted from next page.
+>Lọc các phần tử chèn từ trang tiếp theo.
 
-Example:
+Ví dụ:
 --
 ```json
 "filter": "20"
 ```
->Remove elements when the count of inner words is less than 20.
+>Xoá phần tử nếu số từ nhỏ hơn 20.
 
 ```json
 "filter": "😈"
 ```
->Remove elements when the inner words contains 😈.
+>Xoá phần tử nếu nội dung chứa 😈.
 
 ```json
 "filter": {
@@ -21,4 +21,4 @@ Example:
     "selector": "div#spam"
 }
 ```
->Remove elements when the inner words matched `/spams\d/`, or the count of inner words is less than 20, or the links insert matched `/^https:\/\/spams\.xxx/`, or there is child matched selector "div#spam".
+>Xoá phần tử nếu chuỗi khớp `/spams\d/`, hoặc số từ < 20, hoặc link chèn khớp `/^https:\/\/spams\.xxx/`, hoặc có con khớp `div#spam`.

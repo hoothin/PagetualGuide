@@ -1,11 +1,11 @@
 # pinUrl
->Sometimes the next link or page element will be inexistence, set this to true so you can pin the rule just with url instead of finding elements by intelligent rules
+>Sometimes nextLink or pageElement doesn’t exist. Set this to true to pin the rule by url only instead of relying on intelligent matching.
 
 Example:
 --
 ```json
 "pinUrl": true
 ```
->When the url matches the RegExp you set before, current rule will take effect no matter the element matches your rule or not.
+>When the URL matches the RegExp you set, the rule applies even if elements don’t match.
 
-*For example, when the site shows next link only when you scrolled something or clicked something, you should set pinUrl to true.*
+*For example, if nextLink appears only after scrolling or clicking, set pinUrl to true.*

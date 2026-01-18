@@ -1,5 +1,5 @@
 # listenUrlChange
->URL 변경 후 스크립트 새로고침.
+>URL 변경 후 스크립트를 새로고침합니다.
 
 예시:
 --
@@ -7,4 +7,4 @@
 "listenUrlChange": false
 ```
 
-*단일 페이지 앱에 유용함*
+*SPA(단일 페이지 앱)에 유용*

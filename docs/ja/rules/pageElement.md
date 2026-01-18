@@ -1,13 +1,13 @@
 # pageElement
->Selector or xpath of main content which need to insert, you can let it to be a array to contains multiple page elements. You may leave it empty because it will be generated automatically.
+>挿入したい主要コンテンツの selector または XPath。配列で複数指定できます。空なら自動生成されます。
 
-Example1:
+例 1：
 --
 ```json
 "pageElement": ".Context>.Article"
 ```
 
-Example2:
+例 2：
 --
 ```json
 "pageElement": [
@@ -16,4 +16,4 @@ Example2:
     ".Context3>.Article"
 ]
 ```
->When there are multiple nextLinks and multiple pageElements on one page, you can use a array to include all of them. And switch them by click "switch next link".
+>同一ページに複数の nextLink と pageElement がある場合、配列でまとめて「switch next link」で切り替えます。

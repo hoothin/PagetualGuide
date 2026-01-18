@@ -1,52 +1,52 @@
-# 常用 Xpath 选择器速查表
+# Xpath 选择器速查表
 
-## Selectors
+## 选择器
 
-### Descendant selectors
+### 后代选择器
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1`                         | `//h1`                                                   | [?](#prefixes)          |
-| `div p`                      | `//div//p`                                               | [?](#axes)              |
-| `ul > li`                    | `//ul/li`                                                | [?](#axes)              |
+| `h1`                         | `//h1`                                                   | [?](#前缀)              |
+| `div p`                      | `//div//p`                                               | [?](#轴)                |
+| `ul > li`                    | `//ul/li`                                                | [?](#轴)                |
 | `ul > li > a`                | `//ul/li/a`                                              |                         |
 | `div > *`                    | `//div/*`                                                |                         |
-| `:root`                      | `/`                                                      | [?](#prefixes)          |
+| `:root`                      | `/`                                                      | [?](#前缀)              |
 | `:root > body`               | `/body`                                                  |                         |
 
 
-### Attribute selectors
+### 属性选择器
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `#id`                        | `//*[@id="id"]`                                           | [?](#predicates)        |
-| `.class`                     | `//*[@class="class"]` *...[kinda](#class-check)*          |                         |
+| `#id`                        | `//*[@id="id"]`                                        | [?](#谓词)              |
+| `.class`                     | `//*[@class="class"]` *...[kinda](#class-check)*        |                         |
 | `input[type="submit"]`       | `//input[@type="submit"]`                                |                         |
-| `a#abc[for="xyz"]`           | `//a[@id="abc"][@for="xyz"]`                             | [?](#chaining-order)    |
+| `a#abc[for="xyz"]`           | `//a[@id="abc"][@for="xyz"]`                             | [?](#链式顺序)          |
 | `a[rel]`                     | `//a[@rel]`                                              |                         |
-| `a[href^='/']`               | `//a[starts-with(@href, '/')]`                           | [?](#string-functions)  |
+| `a[href^='/']`               | `//a[starts-with(@href, '/')]`                           | [?](#字符串函数)        |
 | `a[href$='pdf']`             | `//a[ends-with(@href, '.pdf')]`                          |                         |
 | `a[href*='://']`             | `//a[contains(@href, '://')]`                            |                         |
 | `a[rel~='help']`             | `//a[contains(@rel, 'help')]` *...[kinda](#class-check)* |                         |
 
 
-### Order selectors
+### 顺序选择器
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `ul > li:first-of-type`      | `//ul/li[1]`                                             | [?](#indexing)          |
+| `ul > li:first-of-type`      | `//ul/li[1]`                                             | [?](#索引)              |
 | `ul > li:nth-of-type(2)`     | `//ul/li[2]`                                             |                         |
 | `ul > li:last-of-type`       | `//ul/li[last()]`                                        |                         |
-| `li#id:first-of-type`        | `//li[1][@id="id"]`                                      | [?](#chaining-order)    |
+| `li#id:first-of-type`        | `//li[1][@id="id"]`                                      | [?](#链式顺序)          |
 | `a:first-child`              | `//*[1][name()="a"]`                                     |                         |
 | `a:last-child`               | `//*[last()][name()="a"]`                                |                         |
 
 
-### Siblings
+### 兄弟节点
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1 ~ ul`                    | `//h1/following-sibling::ul`                             | [?](#using-axes)        |
+| `h1 ~ ul`                    | `//h1/following-sibling::ul`                             | [?](#使用轴)            |
 | `h1 + ul`                    | `//h1/following-sibling::ul[1]`                          |                         |
 | `h1 ~ #id`                   | `//h1/following-sibling::[@id="id"]`                     |                         |
 
@@ -55,24 +55,24 @@
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `$('ul > li').parent()`      | `//ul/li/..`                                             | [?](#other-axes)        |
+| `$('ul > li').parent()`      | `//ul/li/..`                                             | [?](#其他轴)            |
 | `$('li').closest('section')` | `//li/ancestor-or-self::section`                         |                         |
-| `$('a').attr('href')`        | `//a/@href`                                              | [?](#steps)             |
+| `$('a').attr('href')`        | `//a/@href`                                              | [?](#步骤)              |
 | `$('span').text()`           | `//span/text()`                                          |                         |
 
 
-### Other things
+### 其他
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1:not([id])`               | `//h1[not(@id)]`                                         | [?](#boolean-functions) |
-| Text match                   | `//button[text()="Submit"]`                              | [?](#operators)         |
-| Text match (substring)       | `//button[contains(text(),"Go")]`                        |                         |
-| Arithmetic                   | `//product[@price > 2.50]`                               |                         |
-| Has children                 | `//ul[*]`                                                |                         |
-| Has children (specific)      | `//ul[li]`                                               |                         |
-| Or logic                     | `//a[@name or @href]`                                    | [?](#operators)         |
-| Union (joins results)        | `//a \| //div`                                            | [?](#unions)            |
+| `h1:not([id])`               | `//h1[not(@id)]`                                         | [?](#布尔函数)          |
+| 文本匹配                     | `//button[text()="Submit"]`                              | [?](#运算符)            |
+| 文本匹配（包含）             | `//button[contains(text(),"Go")]`                        |                         |
+| 数值比较                     | `//product[@price > 2.50]`                               |                         |
+| 含子元素                     | `//ul[*]`                                                |                         |
+| 含特定子元素                 | `//ul[li]`                                               |                         |
+| 或逻辑                       | `//a[@name or @href]`                                    | [?](#运算符)            |
+| 并集（合并结果）             | `//a \| //div`                                           | [?](#并集)              |
 
 
 <style>
@@ -89,39 +89,39 @@ table.xp tr>:nth-child(3) {width: 10%; text-align:right;}
 //div[contains(concat(' ',normalize-space(@class),' '),' foobar ')]
 ```
 
-Xpath doesn't have the "check if part of space-separated list" operator, so this is the workaround.
+Xpath 没有“判断是否包含空格分隔列表项”的内置运算符，这是常用的替代写法。
 
-Expressions
+表达式
 -----------
 
-### Steps and axes
+### 步骤与轴
 
 | `//` | `ul` | `/`  | `a[@id='link']` |
 | ---  | ---  | ---  | ---             |
-| Axis | Step | Axis | Step            |
+| 轴   | 步骤 | 轴   | 步骤            |
 
-### Prefixes
+### 前缀
 
-| Prefix | Example               | What     |
-| ---    | ---                   | ---      |
-| `//`   | `//hr[@class='edge']` | Anywhere |
-| `./`   | `./a`                 | Relative |
-| `/`    | `/html/body/div`      | Root     |
-
-
-Begin your expression with any of these.
-
-### Axes
-
-| Axis | Example             | What       |
-| ---  | ---                 | ---        |
-| `/`  | `//ul/li/a`         | Child      |
-| `//` | `//[@id="list"]//a` | Descendant |
+| 前缀 | 示例                    | 含义     |
+| ---  | ---                    | ---      |
+| `//` | `//hr[@class='edge']`  | 任意位置 |
+| `./` | `./a`                  | 相对路径 |
+| `/`  | `/html/body/div`       | 根节点   |
 
 
-Separate your steps with `/`. Use two (`//`) if you don't want to select direct children.
+表达式可以从任意前缀开始。
 
-### Steps
+### 轴
+
+| 轴  | 示例                  | 含义      |
+| --- | ---                  | ---       |
+| `/` | `//ul/li/a`          | 子节点    |
+| `//`| `//[@id="list"]//a` | 后代节点  |
+
+
+用 `/` 分隔步骤；如果不想只选直接子节点，用 `//`。
+
+### 步骤
 
 ```bash
 //div
@@ -129,8 +129,8 @@ Separate your steps with `/`. Use two (`//`) if you don't want to select direct 
 //[@id='link']
 ```
 
-A step may have an element name (`div`) and [predicates](#predicates) (`[...]`). Both are optional.
-They can also be these other things:
+一个步骤可以包含元素名（如 `div`）和[谓词](#谓词)（`[...]`），二者都可省略。
+还可以是以下形式：
 
 ```bash
 //a/text()     #=> "Go home"
@@ -138,10 +138,10 @@ They can also be these other things:
 //a/*          #=> All a's child elements
 ```
 
-Predicates
+谓词
 ----------
 
-### Predicates
+### 谓词
 
 ```bash
 //div[true()]
@@ -149,9 +149,9 @@ Predicates
 //div[@class="head"][@id="top"]
 ```
 
-Restricts a nodeset only if some condition is true. They can be chained.
+只有条件为真时才保留节点集。谓词可以链式叠加。
 
-### Operators
+### 运算符
 
 ```bash
 # Comparison
@@ -166,9 +166,9 @@ Restricts a nodeset only if some condition is true. They can be chained.
 //div[(x and y) or not(z)]
 ```
 
-Use comparison and logic operators to make conditionals.
+用比较和逻辑运算符构造条件。
 
-### Using nodes
+### 使用节点
 
 ```bash
 # Use them inside functions
@@ -181,9 +181,9 @@ Use comparison and logic operators to make conditionals.
 //ul[li]
 ```
 
-You can use nodes inside predicates.
+节点可以直接用于谓词判断。
 
-### Indexing
+### 索引
 
 ```bash
 //a[1]                  # first <a>
@@ -193,29 +193,29 @@ You can use nodes inside predicates.
 //ol/li[position()>1]   # :not(:first-of-type)
 ```
 
-Use `[]` with a number, or `last()` or `position()`.
+在 `[]` 中使用数字、`last()` 或 `position()` 进行索引。
 
-### Chaining order
+### 链式顺序
 
 ```bash
 a[1][@href='/']
 a[@href='/'][1]
 ```
 
-Order is significant, these two are different.
+顺序不同，结果也不同。
 
-### Nesting predicates
+### 嵌套谓词
 
 ```
 //section[.//h1[@id='hi']]
 ```
 
-This returns `<section>` if it has an `<h1>` descendant with `id='hi'`.
+当 `<section>` 含有 id='hi' 的 `<h1>` 后代时匹配。
 
-Functions
+函数
 ---------
 
-### Node functions
+### 节点函数
 
 ```bash
 name()                     # //[starts-with(name(), 'h')]
@@ -230,13 +230,13 @@ count()                    # //table[count(tr)=1]
 position()                 # //ol/li[position()=2]
 ```
 
-### Boolean functions
+### 布尔函数
 
 ```bash
 not(expr)                  # button[not(starts-with(text(),"Submit"))]
 ```
 
-### String functions
+### 字符串函数
 
 ```bash
 contains()                 # font[contains(@class,"head")]
@@ -254,7 +254,7 @@ normalize-space()
 string-length()
 ```
 
-### Type conversion
+### 类型转换
 
 ```bash
 string()
@@ -262,10 +262,10 @@ number()
 boolean()
 ```
 
-Axes
+轴
 ----
 
-### Using axes
+### 使用轴
 
 ```bash
 //ul/li                       # ul > li
@@ -275,13 +275,13 @@ Axes
 //ul/ancestor-or-self::li     # $('ul').closest('li')
 ```
 
-Steps of an expression are separated by `/`, usually used to pick child nodes. That's not always true: you can specify a different "axis" with `::`.
+表达式的步骤通常用 `/` 分隔来选择子节点，但也可以用 `::` 指定不同的轴。
 
 | `//` | `ul` | `/child::` | `li` |
 | ---  | ---  | ---        | ---  |
-| Axis | Step | Axis       | Step |
+| 轴   | 步骤 | 轴         | 步骤 |
 
-### Child axis
+### 子轴
 
 ```bash
 # both the same
@@ -289,7 +289,7 @@ Steps of an expression are separated by `/`, usually used to pick child nodes. T
 //child::ul/child::li/child::a
 ```
 
-`child::` is the default axis. This makes `//a/b/c` work.
+`child::` 是默认轴，因此 `//a/b/c` 能正常工作。
 
 ```bash
 # both the same
@@ -304,7 +304,7 @@ Steps of an expression are separated by `/`, usually used to pick child nodes. T
 //ul[count(child::li) > 2]
 ```
 
-### Descendant-or-self axis
+### 后代或自身轴
 
 ```bash
 # both the same
@@ -312,7 +312,7 @@ Steps of an expression are separated by `/`, usually used to pick child nodes. T
 //div/descendant-or-self::h4
 ```
 
-`//` is short for the `descendant-or-self::` axis.
+`//` 是 `descendant-or-self::` 轴的简写。
 
 ```bash
 # both the same
@@ -320,38 +320,38 @@ Steps of an expression are separated by `/`, usually used to pick child nodes. T
 //ul/descendant-or-self::[last()]
 ```
 
-### Other axes
+### 其他轴
 
-| Axis                 | Abbrev | Notes                                            |
-| ---                  | ---    | ---                                              |
-| `ancestor`           |        |                                                  |
-| `ancestor-or-self`   |        |                                                  |
-| `attribute`          | `@`    | `@href` is short for `attribute::href`           |
-| `child`              |        | `div` is short for `child::div`                  |
-| `descendant`         |        |                                                  |
-| `descendant-or-self` | `//`   | `//` is short for `/descendant-or-self::node()/` |
-| `namespace`          |        |                                                  |
-| `self`               | `.`    | `.` is short for `self::node()`                  |
-| `parent`             | `..`   | `..` is short for `parent::node()`               |
-| `following`          |        |                                                  |
-| `following-sibling`  |        |                                                  |
-| `preceding`          |        |                                                  |
-| `preceding-sibling`  |        |                                                  |
+| 轴                   | 缩写 | 说明                                            |
+| ---                  | ---  | ---                                              |
+| `ancestor`           |      |                                                  |
+| `ancestor-or-self`   |      |                                                  |
+| `attribute`          | `@`  | `@href` 是 `attribute::href` 的简写              |
+| `child`              |      | `div` 是 `child::div` 的简写                     |
+| `descendant`         |      |                                                  |
+| `descendant-or-self` | `//` | `//` 是 `/descendant-or-self::node()/` 的简写    |
+| `namespace`          |      |                                                  |
+| `self`               | `.`  | `.` 是 `self::node()` 的简写                     |
+| `parent`             | `..` | `..` 是 `parent::node()` 的简写                  |
+| `following`          |      |                                                  |
+| `following-sibling`  |      |                                                  |
+| `preceding`          |      |                                                  |
+| `preceding-sibling`  |      |                                                  |
 
-There are other axes you can use.
+还有更多轴可用。
 
-### Unions
+### 并集
 
 ```bash
 //a | //span
 ```
 
-Use `|` to join two expressions.
+使用 `|` 合并两个表达式结果。
 
-More examples
+更多示例
 -------------
 
-### Examples
+### 示例
 
 ```bash
 //*                 # all elements
@@ -362,39 +362,39 @@ count(//*)          # count all elements
 //ul/li/..          # use .. to select a parent
 ```
 
-### Find a parent
+### 查找父级
 
 ```bash
 //section[h1[@id='section-name']]
 ```
-Finds a `<section>` that directly contains `h1#section-name`
+查找直接包含 `h1#section-name` 的 `<section>`。
 
 ```bash
 //section[//h1[@id='section-name']]
 ```
 
-Finds a `<section>` that contains `h1#section-name`.
-(Same as above, but uses descendant-or-self instead of child)
+查找包含 `h1#section-name` 的 `<section>`。
+（与上面类似，但使用 descendant-or-self 而不是 child）
 
-### Closest
+### 最近祖先
 
 ```bash
 ./ancestor-or-self::[@class="box"]
 ```
 
-Works like jQuery's `$().closest('.box')`.
+类似于 jQuery 的 `$().closest('.box')`。
 
-### Attributes
+### 属性
 
 ```bash
 //item[@price > 2*@discount]
 ```
 
-Finds `<item>` and check its attributes
+查找 `<item>` 并检查其属性。
 
-## Testing
+## 测试
 
-### Browser console
+### 浏览器控制台
 
 ```js
 $x("//div")

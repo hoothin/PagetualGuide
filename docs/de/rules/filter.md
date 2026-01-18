@@ -1,17 +1,17 @@
 # filter
->Filter the elements inserted from next page.
+>Filtert die aus der nächsten Seite eingefügten Elemente.
 
-Example:
+Beispiel:
 --
 ```json
 "filter": "20"
 ```
->Remove elements when the count of inner words is less than 20.
+>Entfernt Elemente, wenn die Wortanzahl unter 20 liegt.
 
 ```json
 "filter": "😈"
 ```
->Remove elements when the inner words contains 😈.
+>Entfernt Elemente, wenn der Text 😈 enthält.
 
 ```json
 "filter": {
@@ -21,4 +21,4 @@ Example:
     "selector": "div#spam"
 }
 ```
->Remove elements when the inner words matched `/spams\d/`, or the count of inner words is less than 20, or the links insert matched `/^https:\/\/spams\.xxx/`, or there is child matched selector "div#spam".
+>Entfernt Elemente, wenn der Text `/spams\d/` entspricht, oder die Wortanzahl unter 20 liegt, oder eingefügte Links `/^https:\/\/spams\.xxx/` entsprechen, oder ein Kindelement `div#spam` entspricht.

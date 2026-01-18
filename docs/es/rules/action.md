@@ -1,15 +1,15 @@
 # action
->0 means load url and insert with static html, 1 means load by iframe so that dynamic javaScript code on page may effect, 2 means force insert iframe to bottom
+>0 significa cargar la URL e insertar HTML estático; 1 significa cargar con iframe para ejecutar el JavaScript dinámico de la página; 2 significa insertar a la fuerza un iframe completo al final de la página.
 
-Example:
+Ejemplo:
 --
 ```json
 "action": 1
 ```
 
 + action: 0
-Fetch the url of next link and get the static html without any dynamic handling, it's the default action and the most fast action.
+Obtiene la URL de nextLink e inserta HTML estático sin manejo dinámico. Es el valor por defecto y el más rápido.
 + action: 1
-Load url in a iframe and get content after loading completed, it's for the situation when contents are loaded after page open.
+Carga la URL en un iframe y toma el contenido tras completarse la carga. Útil cuando el contenido se renderiza después de abrir la página.
 + action: 2
-Create a iframe of full page of next link. Trim the page and insert into current page.
+Crea un iframe de la página completa del nextLink, lo recorta y lo inserta al final de la página actual.

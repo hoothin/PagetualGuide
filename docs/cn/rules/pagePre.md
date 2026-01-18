@@ -1,10 +1,10 @@
 # pagePre (response, doc)
->The javaScript code to run after get response from URL of next link, you can modify the text response content and return it, You can also return an array of pageElement directly
+>从 nextLink 获取响应后执行的 JavaScript。可修改响应文本并返回，也可直接返回 pageElement 数组。
 
-Example:
+示例：
 --
 ```json
 "pagePre": "return decodeURI(response).replace(/[\\\\]/g,'')"
 ```
 
-*Only effect when `action`==0 or `action`==1*
+*仅在 `action`==0 或 `action`==1 时生效*

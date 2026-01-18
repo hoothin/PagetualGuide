@@ -1,5 +1,5 @@
 # autoClick
->The css selector or xpath of element which you want to click automatically
+>The CSS selector or XPath of the element you want to click automatically.
 
 Example:
 --
@@ -7,4 +7,4 @@ Example:
 "autoClick": "#btn-sky"
 ```
 
-*Will click only once*
+*Clicks only once*

@@ -1,5 +1,5 @@
 # pageElementStyle
->pageElement의 사용자 지정 cssText 스타일
+>pageElement의 사용자 정의 style.cssText.
 
 예시:
 --
@@ -7,4 +7,4 @@
 "pageElementStyle": "font-size: xx-large;"
 ```
 
-*현재 페이지의 주요 콘텐츠 스타일을 변경하는 데 사용합니다. 예를 들어, 주요 콘텐츠의 글꼴 크기를 늘릴 수 있습니다.*
+*현재 페이지의 주요 콘텐츠 스타일을 변경할 때 사용합니다(예: 글자 크기 확대).*

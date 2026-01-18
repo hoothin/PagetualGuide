@@ -1,9 +1,9 @@
 # refreshByClick
->If the site reload content without changing url when click a submit button. Set this with the selector of the target button, pagetual will listen the change and reset after you click the button.
+>有些站點點擊提交按鈕後會更新內容但不改變 URL，可設定按鈕 selector 監聽點擊並重置 Pagetual。
 
-Example:
+範例：
 --
 ```json
 "refreshByClick": "#sreach"
 ```
->Restart pagetual when element "#sreach" is clicked.
+>點擊元素 `#sreach` 時重啟 Pagetual。

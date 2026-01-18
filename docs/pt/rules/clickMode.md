@@ -1,7 +1,7 @@
 # clickMode
->Stop turning page and click nextlink after scrolled to bottom.
+>Para de virar página e clica no nextLink quando chegar ao final.
 
-Example:
+Exemplo:
 --
 ```json
 "clickMode": true

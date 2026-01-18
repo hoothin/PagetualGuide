@@ -1,7 +1,7 @@
 # pageAction (doc, eles)
->The javaScript code to run with every page inserted with doc:(document of every page loaded) and eles:(elements found with rule), run after inserted, you can add functions like click()
+>JavaScript, das nach dem Einfügen jeder Seite ausgeführt wird, mit doc (document der geladenen Seite) und eles (Elemente aus der Regel). Hier kannst du click() usw. aufrufen.
 
-Example:
+Beispiel:
 --
 ```json
 "pageAction": "let j=document.querySelector('.lazy');eles.forEach(i=>{i.src=i.dataset.srcset;})"

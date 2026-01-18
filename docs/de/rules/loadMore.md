@@ -1,10 +1,10 @@
 # loadMore
->Selector of "load more" button you want to auto click
+>Selector des „load more“‑Buttons, der automatisch geklickt werden soll.
 
-Example:
+Beispiel:
 --
 ```json
 "loadMore": ".loadMore"
 ```
 
-Will click in advance while the button appears after current screen.
+Klickt vorab, sobald der Button unterhalb des aktuellen Bildschirms erscheint.

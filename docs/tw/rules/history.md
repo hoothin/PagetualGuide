@@ -1,7 +1,7 @@
 # history
->Set to 0 then history writing will be disable. Set to 1 then history writing will be enable. Set to 2 then history writing will action immediately after splicing. No matter what value is the general option.
+>設為 0 關閉 history 寫入；設為 1 開啟；設為 2 在拼接完成後立即寫入。無論取值為何，都是全域選項。
 
-Example:
+範例：
 --
 ```json
 "history": 1

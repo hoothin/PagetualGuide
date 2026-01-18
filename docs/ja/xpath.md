@@ -1,52 +1,52 @@
-# 共通 Xpath セレクターのチートシート
+# Xpath 早見表
 
-## Selectors
+## セレクタ
 
-### Descendant selectors
+### 子孫セレクタ
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1`                         | `//h1`                                                   | [?](#prefixes)          |
-| `div p`                      | `//div//p`                                               | [?](#axes)              |
-| `ul > li`                    | `//ul/li`                                                | [?](#axes)              |
+| `h1`                         | `//h1`                                                   | [?](#前置き)            |
+| `div p`                      | `//div//p`                                               | [?](#軸)                |
+| `ul > li`                    | `//ul/li`                                                | [?](#軸)                |
 | `ul > li > a`                | `//ul/li/a`                                              |                         |
 | `div > *`                    | `//div/*`                                                |                         |
-| `:root`                      | `/`                                                      | [?](#prefixes)          |
+| `:root`                      | `/`                                                      | [?](#前置き)            |
 | `:root > body`               | `/body`                                                  |                         |
 
 
-### Attribute selectors
+### 属性セレクタ
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `#id`                        | `//*[@id="id"]`                                           | [?](#predicates)        |
-| `.class`                     | `//*[@class="class"]` *...[kinda](#class-check)*          |                         |
+| `#id`                        | `//*[@id="id"]`                                        | [?](#述語)              |
+| `.class`                     | `//*[@class="class"]` *...[kinda](#class-check)*        |                         |
 | `input[type="submit"]`       | `//input[@type="submit"]`                                |                         |
-| `a#abc[for="xyz"]`           | `//a[@id="abc"][@for="xyz"]`                             | [?](#chaining-order)    |
+| `a#abc[for="xyz"]`           | `//a[@id="abc"][@for="xyz"]`                             | [?](#連結順序)          |
 | `a[rel]`                     | `//a[@rel]`                                              |                         |
-| `a[href^='/']`               | `//a[starts-with(@href, '/')]`                           | [?](#string-functions)  |
+| `a[href^='/']`               | `//a[starts-with(@href, '/')]`                           | [?](#文字列関数)        |
 | `a[href$='pdf']`             | `//a[ends-with(@href, '.pdf')]`                          |                         |
 | `a[href*='://']`             | `//a[contains(@href, '://')]`                            |                         |
 | `a[rel~='help']`             | `//a[contains(@rel, 'help')]` *...[kinda](#class-check)* |                         |
 
 
-### Order selectors
+### 順序セレクタ
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `ul > li:first-of-type`      | `//ul/li[1]`                                             | [?](#indexing)          |
+| `ul > li:first-of-type`      | `//ul/li[1]`                                             | [?](#インデックス)      |
 | `ul > li:nth-of-type(2)`     | `//ul/li[2]`                                             |                         |
 | `ul > li:last-of-type`       | `//ul/li[last()]`                                        |                         |
-| `li#id:first-of-type`        | `//li[1][@id="id"]`                                      | [?](#chaining-order)    |
+| `li#id:first-of-type`        | `//li[1][@id="id"]`                                      | [?](#連結順序)          |
 | `a:first-child`              | `//*[1][name()="a"]`                                     |                         |
 | `a:last-child`               | `//*[last()][name()="a"]`                                |                         |
 
 
-### Siblings
+### 兄弟要素
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1 ~ ul`                    | `//h1/following-sibling::ul`                             | [?](#using-axes)        |
+| `h1 ~ ul`                    | `//h1/following-sibling::ul`                             | [?](#軸の使い方)        |
 | `h1 + ul`                    | `//h1/following-sibling::ul[1]`                          |                         |
 | `h1 ~ #id`                   | `//h1/following-sibling::[@id="id"]`                     |                         |
 
@@ -55,24 +55,24 @@
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `$('ul > li').parent()`      | `//ul/li/..`                                             | [?](#other-axes)        |
+| `$('ul > li').parent()`      | `//ul/li/..`                                             | [?](#その他の軸)        |
 | `$('li').closest('section')` | `//li/ancestor-or-self::section`                         |                         |
-| `$('a').attr('href')`        | `//a/@href`                                              | [?](#steps)             |
+| `$('a').attr('href')`        | `//a/@href`                                              | [?](#ステップ)          |
 | `$('span').text()`           | `//span/text()`                                          |                         |
 
 
-### Other things
+### その他
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1:not([id])`               | `//h1[not(@id)]`                                         | [?](#boolean-functions) |
-| Text match                   | `//button[text()="Submit"]`                              | [?](#operators)         |
-| Text match (substring)       | `//button[contains(text(),"Go")]`                        |                         |
-| Arithmetic                   | `//product[@price > 2.50]`                               |                         |
-| Has children                 | `//ul[*]`                                                |                         |
-| Has children (specific)      | `//ul[li]`                                               |                         |
-| Or logic                     | `//a[@name or @href]`                                    | [?](#operators)         |
-| Union (joins results)        | `//a \| //div`                                            | [?](#unions)            |
+| `h1:not([id])`               | `//h1[not(@id)]`                                         | [?](#ブール関数)        |
+| テキスト一致                 | `//button[text()="Submit"]`                              | [?](#演算子)            |
+| テキスト一致（部分）         | `//button[contains(text(),"Go")]`                        |                         |
+| 数値比較                     | `//product[@price > 2.50]`                               |                         |
+| 子要素あり                   | `//ul[*]`                                                |                         |
+| 特定子要素あり               | `//ul[li]`                                               |                         |
+| OR ロジック                  | `//a[@name or @href]`                                    | [?](#演算子)            |
+| 和集合（結果結合）           | `//a \| //div`                                           | [?](#和集合)            |
 
 
 <style>
@@ -89,39 +89,39 @@ table.xp tr>:nth-child(3) {width: 10%; text-align:right;}
 //div[contains(concat(' ',normalize-space(@class),' '),' foobar ')]
 ```
 
-Xpath doesn't have the "check if part of space-separated list" operator, so this is the workaround.
+Xpath には「空白区切りのクラス名に含まれるか」を直接判定する演算子がないため、上記の書き方を使います。
 
-Expressions
+式
 -----------
 
-### Steps and axes
+### ステップと軸
 
 | `//` | `ul` | `/`  | `a[@id='link']` |
 | ---  | ---  | ---  | ---             |
-| Axis | Step | Axis | Step            |
+| 軸   | ステップ | 軸 | ステップ         |
 
-### Prefixes
+### 前置き
 
-| Prefix | Example               | What     |
+| 前置き | 例                     | 意味     |
 | ---    | ---                   | ---      |
-| `//`   | `//hr[@class='edge']` | Anywhere |
-| `./`   | `./a`                 | Relative |
-| `/`    | `/html/body/div`      | Root     |
+| `//`   | `//hr[@class='edge']` | 任意位置 |
+| `./`   | `./a`                 | 相対     |
+| `/`    | `/html/body/div`      | ルート   |
 
 
-Begin your expression with any of these.
+式はどの前置きから始めても構いません。
 
-### Axes
+### 軸
 
-| Axis | Example             | What       |
-| ---  | ---                 | ---        |
-| `/`  | `//ul/li/a`         | Child      |
-| `//` | `//[@id="list"]//a` | Descendant |
+| 軸  | 例                    | 意味      |
+| --- | ---                  | ---       |
+| `/` | `//ul/li/a`          | 子要素    |
+| `//`| `//[@id="list"]//a` | 子孫要素  |
 
 
-Separate your steps with `/`. Use two (`//`) if you don't want to select direct children.
+ステップは `/` で区切ります。直接の子だけを選びたくない場合は `//` を使います。
 
-### Steps
+### ステップ
 
 ```bash
 //div
@@ -129,8 +129,8 @@ Separate your steps with `/`. Use two (`//`) if you don't want to select direct 
 //[@id='link']
 ```
 
-A step may have an element name (`div`) and [predicates](#predicates) (`[...]`). Both are optional.
-They can also be these other things:
+ステップは要素名（`div`）と[述語](#述語)（`[...]`）から成り、どちらも省略可能です。
+以下のような形式も使えます：
 
 ```bash
 //a/text()     #=> "Go home"
@@ -138,10 +138,10 @@ They can also be these other things:
 //a/*          #=> All a's child elements
 ```
 
-Predicates
+述語
 ----------
 
-### Predicates
+### 述語
 
 ```bash
 //div[true()]
@@ -149,9 +149,9 @@ Predicates
 //div[@class="head"][@id="top"]
 ```
 
-Restricts a nodeset only if some condition is true. They can be chained.
+条件が真のときだけノードセットを残します。述語は連結できます。
 
-### Operators
+### 演算子
 
 ```bash
 # Comparison
@@ -166,9 +166,9 @@ Restricts a nodeset only if some condition is true. They can be chained.
 //div[(x and y) or not(z)]
 ```
 
-Use comparison and logic operators to make conditionals.
+比較・論理演算子で条件を作ります。
 
-### Using nodes
+### ノードの利用
 
 ```bash
 # Use them inside functions
@@ -181,9 +181,9 @@ Use comparison and logic operators to make conditionals.
 //ul[li]
 ```
 
-You can use nodes inside predicates.
+ノードは述語内で直接使えます。
 
-### Indexing
+### インデックス
 
 ```bash
 //a[1]                  # first <a>
@@ -193,29 +193,29 @@ You can use nodes inside predicates.
 //ol/li[position()>1]   # :not(:first-of-type)
 ```
 
-Use `[]` with a number, or `last()` or `position()`.
+`[]` 内で数値、`last()`、`position()` を使って指定します。
 
-### Chaining order
+### 連結順序
 
 ```bash
 a[1][@href='/']
 a[@href='/'][1]
 ```
 
-Order is significant, these two are different.
+順序によって結果が変わります。
 
-### Nesting predicates
+### 入れ子述語
 
 ```
 //section[.//h1[@id='hi']]
 ```
 
-This returns `<section>` if it has an `<h1>` descendant with `id='hi'`.
+`<section>` が id='hi' の `<h1>` を子孫に持つ場合に一致します。
 
-Functions
+関数
 ---------
 
-### Node functions
+### ノード関数
 
 ```bash
 name()                     # //[starts-with(name(), 'h')]
@@ -230,13 +230,13 @@ count()                    # //table[count(tr)=1]
 position()                 # //ol/li[position()=2]
 ```
 
-### Boolean functions
+### ブール関数
 
 ```bash
 not(expr)                  # button[not(starts-with(text(),"Submit"))]
 ```
 
-### String functions
+### 文字列関数
 
 ```bash
 contains()                 # font[contains(@class,"head")]
@@ -254,7 +254,7 @@ normalize-space()
 string-length()
 ```
 
-### Type conversion
+### 型変換
 
 ```bash
 string()
@@ -262,10 +262,10 @@ number()
 boolean()
 ```
 
-Axes
+軸
 ----
 
-### Using axes
+### 軸の使い方
 
 ```bash
 //ul/li                       # ul > li
@@ -275,13 +275,13 @@ Axes
 //ul/ancestor-or-self::li     # $('ul').closest('li')
 ```
 
-Steps of an expression are separated by `/`, usually used to pick child nodes. That's not always true: you can specify a different "axis" with `::`.
+ステップは通常 `/` で子要素を選びますが、`::` で別の軸を指定できます。
 
 | `//` | `ul` | `/child::` | `li` |
 | ---  | ---  | ---        | ---  |
-| Axis | Step | Axis       | Step |
+| 軸   | ステップ | 軸      | ステップ |
 
-### Child axis
+### 子軸
 
 ```bash
 # both the same
@@ -289,7 +289,7 @@ Steps of an expression are separated by `/`, usually used to pick child nodes. T
 //child::ul/child::li/child::a
 ```
 
-`child::` is the default axis. This makes `//a/b/c` work.
+`child::` がデフォルト軸です。これにより `//a/b/c` が動作します。
 
 ```bash
 # both the same
@@ -304,7 +304,7 @@ Steps of an expression are separated by `/`, usually used to pick child nodes. T
 //ul[count(child::li) > 2]
 ```
 
-### Descendant-or-self axis
+### 子孫または自身の軸
 
 ```bash
 # both the same
@@ -312,7 +312,7 @@ Steps of an expression are separated by `/`, usually used to pick child nodes. T
 //div/descendant-or-self::h4
 ```
 
-`//` is short for the `descendant-or-self::` axis.
+`//` は `descendant-or-self::` 軸の省略形です。
 
 ```bash
 # both the same
@@ -320,38 +320,38 @@ Steps of an expression are separated by `/`, usually used to pick child nodes. T
 //ul/descendant-or-self::[last()]
 ```
 
-### Other axes
+### その他の軸
 
-| Axis                 | Abbrev | Notes                                            |
-| ---                  | ---    | ---                                              |
-| `ancestor`           |        |                                                  |
-| `ancestor-or-self`   |        |                                                  |
-| `attribute`          | `@`    | `@href` is short for `attribute::href`           |
-| `child`              |        | `div` is short for `child::div`                  |
-| `descendant`         |        |                                                  |
-| `descendant-or-self` | `//`   | `//` is short for `/descendant-or-self::node()/` |
-| `namespace`          |        |                                                  |
-| `self`               | `.`    | `.` is short for `self::node()`                  |
-| `parent`             | `..`   | `..` is short for `parent::node()`               |
-| `following`          |        |                                                  |
-| `following-sibling`  |        |                                                  |
-| `preceding`          |        |                                                  |
-| `preceding-sibling`  |        |                                                  |
+| 軸                   | 略記 | 備考                                            |
+| ---                  | ---  | ---                                              |
+| `ancestor`           |      |                                                  |
+| `ancestor-or-self`   |      |                                                  |
+| `attribute`          | `@`  | `@href` は `attribute::href` の省略形            |
+| `child`              |      | `div` は `child::div` の省略形                   |
+| `descendant`         |      |                                                  |
+| `descendant-or-self` | `//` | `//` は `/descendant-or-self::node()/` の省略形  |
+| `namespace`          |      |                                                  |
+| `self`               | `.`  | `.` は `self::node()` の省略形                   |
+| `parent`             | `..` | `..` は `parent::node()` の省略形                |
+| `following`          |      |                                                  |
+| `following-sibling`  |      |                                                  |
+| `preceding`          |      |                                                  |
+| `preceding-sibling`  |      |                                                  |
 
-There are other axes you can use.
+他にも軸があります。
 
-### Unions
+### 和集合
 
 ```bash
 //a | //span
 ```
 
-Use `|` to join two expressions.
+`|` で 2 つの式結果を結合します。
 
-More examples
+さらに例
 -------------
 
-### Examples
+### 例
 
 ```bash
 //*                 # all elements
@@ -362,39 +362,39 @@ count(//*)          # count all elements
 //ul/li/..          # use .. to select a parent
 ```
 
-### Find a parent
+### 親要素を探す
 
 ```bash
 //section[h1[@id='section-name']]
 ```
-Finds a `<section>` that directly contains `h1#section-name`
+`h1#section-name` を直接含む `<section>` を探します。
 
 ```bash
 //section[//h1[@id='section-name']]
 ```
 
-Finds a `<section>` that contains `h1#section-name`.
-(Same as above, but uses descendant-or-self instead of child)
+`h1#section-name` を含む `<section>` を探します。
+（上と同じ結果ですが、child ではなく descendant-or-self を使います）
 
-### Closest
+### 最も近い祖先
 
 ```bash
 ./ancestor-or-self::[@class="box"]
 ```
 
-Works like jQuery's `$().closest('.box')`.
+jQuery の `$().closest('.box')` と同等です。
 
-### Attributes
+### 属性
 
 ```bash
 //item[@price > 2*@discount]
 ```
 
-Finds `<item>` and check its attributes
+`<item>` を探し、その属性をチェックします。
 
-## Testing
+## テスト
 
-### Browser console
+### ブラウザのコンソール
 
 ```js
 $x("//div")

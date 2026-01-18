@@ -1,7 +1,7 @@
 # waitElement
->The array["exist", "not exist"] contains "selector or xpath of element must exist (for some lazyload element)" & "selector or xpath of element must not exist (for some loading placeholder which need scroll into view to load)"
+>Mảng `["exist", "not exist"]` gồm selector/XPath của phần tử phải tồn tại (lazyload) và phần tử không được tồn tại (placeholder cần biến mất).
 
-Example:
+Ví dụ:
 --
 ```json
 "waitElement": [
@@ -9,12 +9,12 @@ Example:
     "#popular.fade:not(.in)"
 ]
 ```
->Repeated checking before ".summary" appeared and "#popular.fade:not(.in)" disappeared.
+>Lặp kiểm tra đến khi ".summary" xuất hiện và "#popular.fade:not(.in)" biến mất.
 
 ```json
 "waitElement": ".summary"
 ```
->Repeated checking before ".summary" appeared
+>Lặp kiểm tra đến khi ".summary" xuất hiện.
 
 ```json
 "waitElement": "!#popular.fade:not(.in)"
@@ -26,6 +26,6 @@ Example:
     "#popular.fade:not(.in)"
 ]
 ```
->Repeated checking before "#popular.fade:not(.in)" disappeared.
+>Lặp kiểm tra đến khi "#popular.fade:not(.in)" biến mất.
 
-*When you set 'waitElement', it's same as the 'wait', that means current rule will effect when url is matched. You can leave a "" when you don't want to set "exist" or "not exist", when you set a "not exist", pagetual will try to trigger lazy load of target element*
+*`waitElement` tương tự `wait`: quy tắc sẽ áp dụng khi URL khớp. Nếu không cần "exist", để "". Khi đặt "not exist", Pagetual sẽ cố kích hoạt lazyload của phần tử mục tiêu.*

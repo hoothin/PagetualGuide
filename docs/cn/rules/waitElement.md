@@ -1,7 +1,7 @@
 # waitElement
->The array["exist", "not exist"] contains "selector or xpath of element must exist (for some lazyload element)" & "selector or xpath of element must not exist (for some loading placeholder which need scroll into view to load)"
+>数组 `["exist", "not exist"]`，包含“必须存在的元素 selector/XPath（用于懒加载）”与“必须不存在的元素 selector/XPath（用于等待占位消失）”。
 
-Example:
+示例：
 --
 ```json
 "waitElement": [
@@ -9,12 +9,12 @@ Example:
     "#popular.fade:not(.in)"
 ]
 ```
->Repeated checking before ".summary" appeared and "#popular.fade:not(.in)" disappeared.
+>持续检查直到 `.summary` 出现且 `#popular.fade:not(.in)` 消失。
 
 ```json
 "waitElement": ".summary"
 ```
->Repeated checking before ".summary" appeared
+>持续检查直到 `.summary` 出现。
 
 ```json
 "waitElement": "!#popular.fade:not(.in)"
@@ -26,6 +26,6 @@ Example:
     "#popular.fade:not(.in)"
 ]
 ```
->Repeated checking before "#popular.fade:not(.in)" disappeared.
+>持续检查直到 `#popular.fade:not(.in)` 消失。
 
-*When you set 'waitElement', it's same as the 'wait', that means current rule will effect when url is matched. You can leave a "" when you don't want to set "exist" or "not exist", when you set a "not exist", pagetual will try to trigger lazy load of target element*
+*设置 `waitElement` 与 `wait` 类似，表示当 URL 匹配时才生效。若只需设置“必须不存在”，可在“必须存在”处留空 ""；当设置“必须不存在”时，Pagetual 会尝试触发目标元素的懒加载。*

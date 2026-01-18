@@ -1,10 +1,10 @@
 # enable
->0 means stop action when all matched
+>設為 0 代表匹配後不啟用此規則。
 
-Example:
+範例：
 --
 ```json
 "enable": 0
 ```
 
-*When you want to stop pager on a lot of sites with same features, Or you just do not want to enable a rule after write it, you can set enable to 0.*
+*當你想在一批相同特徵的網站上停止分頁，或暫時不啟用某條規則時，可將 enable 設為 0。*

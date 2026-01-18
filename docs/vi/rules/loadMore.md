@@ -1,10 +1,10 @@
 # loadMore
->Selector of "load more" button you want to auto click
+>Selector của nút “load more” cần click tự động.
 
-Example:
+Ví dụ:
 --
 ```json
 "loadMore": ".loadMore"
 ```
 
-Will click in advance while the button appears after current screen.
+Sẽ click sớm khi nút xuất hiện dưới màn hình hiện tại.

@@ -1,14 +1,14 @@
 # stopSign
->Stop to load next page when matching this sign
+>Dừng tải trang tiếp theo khi điều kiện khớp.
 
-Example1:
+Ví dụ 1:
 --
 ```json
 "stopSign": ["#pagenum", ".disable"] 
 ```
->Stop when "#pagenum" don't exist or ".disable" exist.
+>Dừng khi "#pagenum" không tồn tại hoặc ".disable" tồn tại.
 
-Example2:
+Ví dụ 2:
 --
 ```json
 "stopSign": [
@@ -22,9 +22,9 @@ Example2:
     ]
 ]
 ```
->Stop when number in "#pagenum" matching 1st group of `(\\d+)` by RegExp == number matching 1st group of `\\/(\\d+)`
+>Dừng khi số trong nhóm 1 của `(\\d+)` bằng số trong nhóm 1 của `\\/(\\d+)` ở "#pagenum".
 
-Example3:
+Ví dụ 3:
 --
 ```json
 "stopSign": ["#pagenum", ".disable",
@@ -51,12 +51,11 @@ Example3:
     ]
 }
 ```
->Stop when matching rule-1 or rule-2
+>Dừng khi khớp quy tắc 1 hoặc quy tắc 2.
 
-Example4:
+Ví dụ 4:
 --
 ```json
 "stopSign": "if (doc.querySelector('.disable')) return true; if (nextLink.className === 'disable') return true; return false;" 
 ```
->Stop when stopSign(doc, nextLink) return true
-
+>Dừng khi stopSign(doc, nextLink) trả về true.

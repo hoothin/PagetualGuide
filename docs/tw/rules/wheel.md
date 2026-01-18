@@ -1,10 +1,10 @@
 # wheel
->Set to true so the next page action will only effect when the mouse wheel roll
+>設為 true 後，只有在滑鼠滾輪捲動時才會觸發下一頁動作。
 
-Example:
+範例：
 --
 ```json
 "wheel": true
 ```
 
-*Sometimes the page will auto scroll to bottom when click load more button, and then repeat over and over, set wheel to true so you can prevent it*
+*有些頁面點擊「載入更多」會自動捲到底部並反覆觸發，設為 true 可避免此問題。*

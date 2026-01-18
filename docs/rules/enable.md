@@ -1,5 +1,5 @@
 # enable
->0 means stop action when all matched
+>Set to 0 to keep the rule disabled even if it matches.
 
 Example:
 --
@@ -7,4 +7,4 @@ Example:
 "enable": 0
 ```
 
-*When you want to stop pager on a lot of sites with same features, Or you just do not want to enable a rule after write it, you can set enable to 0.*
+*Use this to stop paging on similar sites or to temporarily disable a rule you just wrote.*

@@ -1,7 +1,7 @@
 # nextLinkByUrl
->If there is no next element, you can use this to generate a href from current url, [0] means RegExp string, [1] means replace string, [2] means selector or xpath of the element which must include, [3] means selector or xpath of the element which must not include, you can use {} to eval simple code like + - * /.
+>當頁面不存在 nextLink 時，可由目前 URL 產生下一頁連結。[0] 為正則字串，[1] 為取代字串，[2] 為必須存在的元素 selector/XPath，[3] 為必須不存在的元素 selector/XPath。可用 {} 進行簡單運算（+ - * /）。
 
-Example1:
+範例 1：
 --
 ```json
 "nextLinkByUrl": [
@@ -9,9 +9,9 @@ Example1:
     "&page={$1+1}"
 ]
 ```
->Create a next link "http://abc.xxx/d?page=2" from URL of current page: "http://abc.xxx/d?page=1"
+>由目前 URL `http://abc.xxx/d?page=1` 產生下一頁 `http://abc.xxx/d?page=2`。
 
-Example2:
+範例 2：
 --
 ```json
 "nextLinkByUrl": [
@@ -21,4 +21,4 @@ Example2:
     ".disable>button"
 ]
 ```
->Create a next link "http://abc.xxx/d?page=2&pn=10" from URL of current page: "http://abc.xxx/d?page=1&pn=1". Stop if element '.article>.item' is not found or '.disable>button' is encountered.
+>由 `http://abc.xxx/d?page=1&pn=1` 產生 `http://abc.xxx/d?page=2&pn=10`。若找不到 `.article>.item` 或遇到 `.disable>button` 則停止。

@@ -1,22 +1,22 @@
 # css
->Add css so you can show some hidden element, start with "inIframe:" then this css will effect only in next iframe page
+>Añade CSS para mostrar elementos ocultos. Si empieza con `inIframe:`, ese CSS solo afecta al next iframe.
 
-Example1:
+Ejemplo 1:
 --
 ```json
 "css": ".card-lazy{display:none}"
 ```
 
-Example2:
+Ejemplo 2:
 --
 ```json
 "css": "inIframe:.card-lazy{display:none}"
 ```
->Add css to next iframes only.
+>Solo añade CSS a los iframes siguientes.
 
-Example3:
+Ejemplo 3:
 --
 ```json
 "css": ".card-lazy{display:block}inIframe:.card-lazy{display:none}"
 ```
->Add `.card-lazy{display:block}` to current page and add `.card-lazy{display:none}` to next iframes.
+>Añade `.card-lazy{display:block}` a la página actual y `.card-lazy{display:none}` a los iframes siguientes.

@@ -1,7 +1,7 @@
 # child script
->If the site has some limit for code eval. You can make a child script with function under object window.
+>Se o site limita eval de código, você pode criar um child script com funções no objeto window.
 
-Example 1: Single rule for current site
+Exemplo 1: Regra única para o site atual
 --
 ```js
 // ==UserScript==
@@ -29,10 +29,10 @@ Example 1: Single rule for current site
     }
 })();
 ```
->You can omit the url with single rule since the script itself already includes the filtering.
+>Em regra única, o próprio script já inclui o filtro, então a url pode ser omitida.
 
 
-Example 2: Rules collection for sites
+Exemplo 2: Coleção de regras para vários sites
 --
 ```js
 // ==UserScript==

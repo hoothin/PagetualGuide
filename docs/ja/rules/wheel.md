@@ -1,10 +1,10 @@
 # wheel
->Set to true so the next page action will only effect when the mouse wheel roll
+>true にすると、マウスホイールの操作があったときのみ次ページ動作を実行します。
 
-Example:
+例：
 --
 ```json
 "wheel": true
 ```
 
-*Sometimes the page will auto scroll to bottom when click load more button, and then repeat over and over, set wheel to true so you can prevent it*
+*「もっと読み込む」ボタンのクリックで自動スクロールが繰り返される場合に有効です。*

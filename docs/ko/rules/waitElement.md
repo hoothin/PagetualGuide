@@ -1,5 +1,5 @@
 # waitElement
->배열["exist", "not exist"]에는 "존재해야 하는 요소의 선택자 또는 xpath (일부 지연 로드 요소의 경우)" 및 "존재하지 않아야 하는 요소의 선택자 또는 xpath (로드하기 위해 뷰로 스크롤해야 하는 일부 로딩 플레이스홀더의 경우)"가 포함됩니다.
+>배열 `["exist", "not exist"]`로 지정합니다. “반드시 존재해야 하는 요소 selector/XPath(지연 로딩용)”와 “반드시 존재하지 않아야 하는 요소 selector/XPath(플레이스홀더 제거 대기)”를 함께 사용합니다.
 
 예시:
 --
@@ -9,12 +9,12 @@
     "#popular.fade:not(.in)"
 ]
 ```
->".summary"가 나타나고 "#popular.fade:not(.in)"이 사라지기 전에 반복적으로 확인합니다.
+>`.summary`가 나타나고 `#popular.fade:not(.in)`이 사라질 때까지 반복 확인합니다.
 
 ```json
 "waitElement": ".summary"
 ```
->".summary"가 나타나기 전까지 반복 확인
+>`.summary`가 나타날 때까지 반복 확인합니다.
 
 ```json
 "waitElement": "!#popular.fade:not(.in)"
@@ -26,6 +26,6 @@
     "#popular.fade:not(.in)"
 ]
 ```
->"#popular.fade:not(.in)"가 사라지기 전까지 반복 확인.
+>`#popular.fade:not(.in)`이 사라질 때까지 반복 확인합니다.
 
-*`waitElement`를 설정하면 `wait`와 동일하며, 이는 URL이 일치할 때 현재 규칙이 적용됨을 의미합니다. `exist` 또는 `not exist`를 설정하지 않으려면 ""를 비워둘 수 있으며, `not exist`를 설정하면 pagetual은 대상 요소의 지연 로드를 트리거하려고 시도합니다.*
+*`waitElement`는 `wait`와 동일하게 URL 매칭 시 규칙이 적용됩니다. “존재하지 않음”만 지정하려면 “존재함”을 ""로 비워둘 수 있습니다. “존재하지 않음”을 지정하면 Pagetual이 대상 요소의 지연 로딩을 유도하려고 합니다.*

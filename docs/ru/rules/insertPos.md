@@ -1,10 +1,10 @@
 # insertPos
->1 means insert before, 2 or "in" means just append to the bottom of target, default value is 1
+>1 — вставить перед; 2 или "in" — добавить в конец цели. Значение по умолчанию — 1.
 
-Example:
+Пример:
 --
 ```json
 "insertPos": "in"
 ```
 
-*Effect after `insert` is set*
+*Работает после установки `insert`*

@@ -1,14 +1,14 @@
 # stopSign
->Stop to load next page when matching this sign
+>条件に一致したら次ページの読み込みを停止します。
 
-Example1:
+例 1：
 --
 ```json
 "stopSign": ["#pagenum", ".disable"] 
 ```
->Stop when "#pagenum" don't exist or ".disable" exist.
+>`#pagenum` が存在しない、または `.disable` が存在する場合に停止します。
 
-Example2:
+例 2：
 --
 ```json
 "stopSign": [
@@ -22,9 +22,9 @@ Example2:
     ]
 ]
 ```
->Stop when number in "#pagenum" matching 1st group of `(\\d+)` by RegExp == number matching 1st group of `\\/(\\d+)`
+>`#pagenum` の `(\\d+)` の 1 つ目のグループと `\\/(\\d+)` の 1 つ目のグループが一致したら停止します。
 
-Example3:
+例 3：
 --
 ```json
 "stopSign": ["#pagenum", ".disable",
@@ -51,12 +51,11 @@ Example3:
     ]
 }
 ```
->Stop when matching rule-1 or rule-2
+>ルール 1 またはルール 2 に一致したら停止します。
 
-Example4:
+例 4：
 --
 ```json
 "stopSign": "if (doc.querySelector('.disable')) return true; if (nextLink.className === 'disable') return true; return false;" 
 ```
->Stop when stopSign(doc, nextLink) return true
-
+>stopSign(doc, nextLink) が true を返したら停止します。

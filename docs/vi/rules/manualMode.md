@@ -1,7 +1,7 @@
 # manualMode
->Set to true to enable manual mode, then paging will stop, right arrow (or 'pagetual.next' event) will be bound to click next link.
+>Đặt true để bật chế độ thủ công. Việc phân trang dừng lại, phím mũi tên phải (hoặc sự kiện `pagetual.next`) được gắn với click nextLink.
 
-Example:
+Ví dụ:
 --
 ```json
 "manualMode": true

@@ -1,10 +1,10 @@
 # lockScroll
->Set to true if you don't want the page to auto scroll when navigate to next page
+>设为 true 可阻止跳转下一页时页面自动滚动。
 
-Example:
+示例：
 --
 ```json
 "lockScroll": true
 ```
 
-*Sometimes the page will auto scroll when navigate to next page, set this prop to true so you can prevent it*
+*有些页面在跳转时会自动滚动，设为 true 可避免这种行为。*

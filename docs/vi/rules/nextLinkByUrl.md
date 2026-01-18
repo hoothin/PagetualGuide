@@ -1,7 +1,7 @@
 # nextLinkByUrl
->If there is no next element, you can use this to generate a href from current url, [0] means RegExp string, [1] means replace string, [2] means selector or xpath of the element which must include, [3] means selector or xpath of the element which must not include, you can use {} to eval simple code like + - * /.
+>Nếu không có nextLink, bạn có thể tạo href từ URL hiện tại. [0] là RegExp, [1] là chuỗi thay thế, [2] là selector/XPath bắt buộc tồn tại, [3] là selector/XPath bắt buộc không tồn tại. Có thể dùng {} để tính toán đơn giản (+ - * /).
 
-Example1:
+Ví dụ 1:
 --
 ```json
 "nextLinkByUrl": [
@@ -9,9 +9,9 @@ Example1:
     "&page={$1+1}"
 ]
 ```
->Create a next link "http://abc.xxx/d?page=2" from URL of current page: "http://abc.xxx/d?page=1"
+>Tạo `http://abc.xxx/d?page=2` từ URL hiện tại `http://abc.xxx/d?page=1`.
 
-Example2:
+Ví dụ 2:
 --
 ```json
 "nextLinkByUrl": [
@@ -21,4 +21,4 @@ Example2:
     ".disable>button"
 ]
 ```
->Create a next link "http://abc.xxx/d?page=2&pn=10" from URL of current page: "http://abc.xxx/d?page=1&pn=1". Stop if element '.article>.item' is not found or '.disable>button' is encountered.
+>Tạo `http://abc.xxx/d?page=2&pn=10` từ `http://abc.xxx/d?page=1&pn=1`. Dừng nếu không có `.article>.item` hoặc gặp `.disable>button`.

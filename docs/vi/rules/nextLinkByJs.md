@@ -1,11 +1,11 @@
 # nextLinkByJs (doc)
->Use this to eval javaScript code and return target url of next page with doc (document of every page loaded)
+>Chạy JavaScript và trả về URL của trang tiếp theo. `doc` là document của mỗi trang đã tải.
 
-Example:
+Ví dụ:
 --
 ```json
 "nextLinkByJs": "let n=doc.querySelector('a.curr+a');if(n)return n.href.replace(/^javascript:.*\\((\\d+)'\\);/,'$1_.html');"
 ```
->The params `doc` means document of every page loaded, this code means checking the element "a.curr+a" and return a link from its href when it exists, stop otherwise.
+>`doc` là document của từng trang. Mã này kiểm tra `a.curr+a` và trả về link từ href nếu có; nếu không thì dừng.
 
->You can construct a post data body using the `#p{x=1&y=2}` approach, just like returning `https://www.xxx.com/pageAjax#p{x=1&y=2}`.
+>Bạn có thể tạo POST body bằng `#p{x=1&y=2}`, ví dụ `https://www.xxx.com/pageAjax#p{x=1&y=2}`.

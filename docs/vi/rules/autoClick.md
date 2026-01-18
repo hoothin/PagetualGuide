@@ -1,10 +1,10 @@
 # autoClick
->The css selector or xpath of element which you want to click automatically
+>CSS selector hoặc XPath của phần tử cần tự động click.
 
-Example:
+Ví dụ:
 --
 ```json
 "autoClick": "#btn-sky"
 ```
 
-*Will click only once*
+*Chỉ click một lần*

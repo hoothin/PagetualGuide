@@ -1,18 +1,18 @@
 # wait (doc)
->The time to wait for page ready when you are sure the url match the site, you can also use a javaScript code which return a boolean to check if the page is ready instead
+>等待页面就绪的时间（毫秒）。若能确定 URL 匹配该站点，也可提供返回布尔值的 JavaScript 以判断是否就绪。
 
-Example1:
+示例 1：
 --
 ```json
 "wait": 500
 ```
->Check every 500ms before the rule is matched.
+>每 500ms 检查一次，直到规则匹配。
 
-Example2:
+示例 2：
 --
 ```json
 "wait": "await fetch('https://xxx.xxx');let img=doc.querySelector('ul.list img');return img!=null"
 ```
->Repeated checking before the code return true. The `doc` means the document of the site, and the code means checking presence of the element "ul.list img".
+>持续检查直到代码返回 true。`doc` 表示站点 document，此示例用于检测 `ul.list img` 是否存在。
 
-*When you set 'wait', that means current rule will effect when url is matched.*
+*设置 `wait` 后，表示当 URL 匹配时才生效该规则。*

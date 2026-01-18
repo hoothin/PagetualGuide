@@ -1,4 +1,4 @@
-# Xpath Cheat Sheet
+# Guia rápido de XPath
 
 ## Seletores
 
@@ -6,38 +6,38 @@
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1`                         | `//h1`                                                   | [?](#prefixes)          |
-| `div p`                      | `//div//p`                                               | [?](#axes)              |
-| `ul > li`                    | `//ul/li`                                                | [?](#axes)              |
+| `h1`                         | `//h1`                                                   | [?](#prefixos)          |
+| `div p`                      | `//div//p`                                               | [?](#eixos)             |
+| `ul > li`                    | `//ul/li`                                                | [?](#eixos)             |
 | `ul > li > a`                | `//ul/li/a`                                              |                         |
 | `div > *`                    | `//div/*`                                                |                         |
-| `:root`                      | `/`                                                      | [?](#prefixes)          |
+| `:root`                      | `/`                                                      | [?](#prefixos)          |
 | `:root > body`               | `/body`                                                  |                         |
 
 
-### Seletores de atributo
+### Seletores por atributo
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `#id`                        | `//*[@id="id"]`                                           | [?](#predicates)        |
-| `.class`                     | `//*[@class="class"]` *...[meio que](#class-check)*          |                         |
+| `#id`                        | `//*[@id="id"]`                                        | [?](#predicados)        |
+| `.class`                     | `//*[@class="class"]` *...[kinda](#class-check)*        |                         |
 | `input[type="submit"]`       | `//input[@type="submit"]`                                |                         |
-| `a#abc[for="xyz"]`           | `//a[@id="abc"][@for="xyz"]`                             | [?](#chaining-order)    |
+| `a#abc[for="xyz"]`           | `//a[@id="abc"][@for="xyz"]`                             | [?](#ordem-de-encadeamento) |
 | `a[rel]`                     | `//a[@rel]`                                              |                         |
-| `a[href^='/']`               | `//a[starts-with(@href, '/')]`                           | [?](#string-functions)  |
+| `a[href^='/']`               | `//a[starts-with(@href, '/')]`                           | [?](#funções-de-string) |
 | `a[href$='pdf']`             | `//a[ends-with(@href, '.pdf')]`                          |                         |
 | `a[href*='://']`             | `//a[contains(@href, '://')]`                            |                         |
-| `a[rel~='help']`             | `//a[contains(@rel, 'help')]` *...[meio que](#class-check)* |                         |
+| `a[rel~='help']`             | `//a[contains(@rel, 'help')]` *...[kinda](#class-check)* |                         |
 
 
 ### Seletores de ordem
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `ul > li:first-of-type`      | `//ul/li[1]`                                             | [?](#indexing)          |
+| `ul > li:first-of-type`      | `//ul/li[1]`                                             | [?](#indexação)         |
 | `ul > li:nth-of-type(2)`     | `//ul/li[2]`                                             |                         |
 | `ul > li:last-of-type`       | `//ul/li[last()]`                                        |                         |
-| `li#id:first-of-type`        | `//li[1][@id="id"]`                                      | [?](#chaining-order)    |
+| `li#id:first-of-type`        | `//li[1][@id="id"]`                                      | [?](#ordem-de-encadeamento) |
 | `a:first-child`              | `//*[1][name()="a"]`                                     |                         |
 | `a:last-child`               | `//*[last()][name()="a"]`                                |                         |
 
@@ -46,7 +46,7 @@
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1 ~ ul`                    | `//h1/following-sibling::ul`                             | [?](#using-axes)        |
+| `h1 ~ ul`                    | `//h1/following-sibling::ul`                             | [?](#uso-de-eixos)      |
 | `h1 + ul`                    | `//h1/following-sibling::ul[1]`                          |                         |
 | `h1 ~ #id`                   | `//h1/following-sibling::[@id="id"]`                     |                         |
 
@@ -55,24 +55,24 @@
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `$('ul > li').parent()`      | `//ul/li/..`                                             | [?](#other-axes)        |
+| `$('ul > li').parent()`      | `//ul/li/..`                                             | [?](#outros-eixos)      |
 | `$('li').closest('section')` | `//li/ancestor-or-self::section`                         |                         |
-| `$('a').attr('href')`        | `//a/@href`                                              | [?](#steps)             |
+| `$('a').attr('href')`        | `//a/@href`                                              | [?](#passos)            |
 | `$('span').text()`           | `//span/text()`                                          |                         |
 
 
-### Outras coisas
+### Outros
 
 | CSS                          | Xpath                                                    | ?                       |
 | ----                         | ----                                                     | --                      |
-| `h1:not([id])`               | `//h1[not(@id)]`                                         | [?](#boolean-functions) |
-| Correspondência de texto     | `//button[text()="Submit"]`                              | [?](#operators)         |
-| Correspondência de texto (substring) | `//button[contains(text(),"Go")]`                        |                         |
-| Aritmética                   | `//product[@price > 2.50]`                               |                         |
+| `h1:not([id])`               | `//h1[not(@id)]`                                         | [?](#funções-booleanas) |
+| Correspondência de texto     | `//button[text()="Submit"]`                              | [?](#operadores)        |
+| Correspondência (substring)  | `//button[contains(text(),"Go")]`                        |                         |
+| Comparação numérica          | `//product[@price > 2.50]`                               |                         |
 | Tem filhos                   | `//ul[*]`                                                |                         |
-| Tem filhos (específico)      | `//ul[li]`                                               |                         |
-| Lógica OU                    | `//a[@name or @href]`                                    | [?](#operators)         |
-| União (une resultados)       | `//a \| //div`                                           | [?](#unions)            |
+| Tem filho específico         | `//ul[li]`                                               |                         |
+| Lógica OR                    | `//a[@name or @href]`                                    | [?](#operadores)        |
+| União (combina resultados)   | `//a \| //div`                                           | [?](#uniões)            |
 
 
 <style>
@@ -89,7 +89,7 @@ table.xp tr>:nth-child(3) {width: 10%; text-align:right;}
 //div[contains(concat(' ',normalize-space(@class),' '),' foobar ')]
 ```
 
-Xpath doesn't have the "check if part of space-separated list" operator, so this is the workaround.
+Xpath não tem um operador para “verificar se faz parte de uma lista separada por espaços”. Esta é a forma usual.
 
 Expressões
 -----------
@@ -98,31 +98,28 @@ Expressões
 
 | `//` | `ul` | `/`  | `a[@id='link']` |
 | ---  | ---  | ---  | ---             |
-| Eixo | Passo | Eixo | Passo            |
-
-
-Begin your expression with any of these.
+| Eixo | Passo | Eixo | Passo           |
 
 ### Prefixos
 
-| Prefixo | Exemplo               | Onde     |
-| ---     | ---                   | Qualquer lugar |
-| `//`    | `//hr[@class='edge']` | Qualquer lugar |
-| `./`    | `./a`                 | Relativo |
-| `/`     | `/html/body/div`      | Raiz     |
+| Prefixo | Exemplo               | Significado |
+| ---     | ---                   | ---         |
+| `//`    | `//hr[@class='edge']` | Em qualquer lugar |
+| `./`    | `./a`                 | Relativo    |
+| `/`     | `/html/body/div`      | Raiz        |
 
 
-Comece sua expressão com qualquer um desses.
+Você pode começar sua expressão com qualquer um desses prefixos.
 
 ### Eixos
 
-| Eixo | Exemplo             | O que      |
-| ---  | ---                 | O que      |
-| `/`  | `//ul/li/a`         | Filho      |
+| Eixo | Exemplo              | Significado |
+| ---  | ---                  | ---         |
+| `/`  | `//ul/li/a`          | Filho       |
 | `//` | `//[@id="list"]//a` | Descendente |
 
 
-Separe seus passos com `/`. Use dois (`//`) se você não quiser selecionar filhos diretos.
+Separe os passos com `/`. Use `//` quando não quiser apenas filhos diretos.
 
 ### Passos
 
@@ -132,13 +129,13 @@ Separe seus passos com `/`. Use dois (`//`) se você não quiser selecionar filh
 //[@id='link']
 ```
 
-Um passo pode ter um nome de elemento (`div`) e [predicados](#predicates) (`[...]`). Ambos são opcionais.
-Eles também podem ser estas outras coisas:
+Um passo pode ter um nome de elemento (`div`) e [predicados](#predicados) (`[...]`). Ambos são opcionais.
+Também pode ser:
 
 ```bash
 //a/text()     #=> "Go home"
 //a/@href      #=> "index.html"
-//a/*          #=> Todos os elementos filhos de a
+//a/*          #=> All a's child elements
 ```
 
 Predicados
@@ -152,47 +149,47 @@ Predicados
 //div[@class="head"][@id="top"]
 ```
 
-Restringe um conjunto de nós apenas se alguma condição for verdadeira. Eles podem ser encadeados.
+Restringe o nodeset apenas se a condição for verdadeira. Predicados podem ser encadeados.
 
 ### Operadores
 
 ```bash
-# Comparação
+# Comparison
 //a[@id = "xyz"]
 //a[@id != "xyz"]
 //a[@price > 25]
 ```
 
 ```bash
-# Lógica (and/or)
+# Logic (and/or)
 //div[@id="head" and position()=2]
 //div[(x and y) or not(z)]
 ```
 
-Use operadores de comparação e lógica para criar condicionais.
+Use operadores de comparação e lógica para criar condições.
 
-### Usando nós
+### Usar nós
 
 ```bash
-# Use-os dentro de funções
+# Use them inside functions
 //ul[count(li) > 2]
 //ul[count(li[@class='hide']) > 0]
 ```
 
 ```bash
-# Isso retorna `<ul>` que tem um filho `<li>`
+# This returns `<ul>` that has a `<li>` child
 //ul[li]
 ```
 
-Você pode usar nós dentro de predicados.
+Você pode usar nós diretamente nos predicados.
 
 ### Indexação
 
 ```bash
-//a[1]                  # primeira <a>
-//a[last()]             # última <a>
-//ol/li[2]              # segunda <li>
-//ol/li[position()=2]   # o mesmo que acima
+//a[1]                  # first <a>
+//a[last()]             # last <a>
+//ol/li[2]              # second <li>
+//ol/li[position()=2]   # same as above
 //ol/li[position()>1]   # :not(:first-of-type)
 ```
 
@@ -205,7 +202,7 @@ a[1][@href='/']
 a[@href='/'][1]
 ```
 
-A ordem é significativa, estes dois são diferentes.
+A ordem importa; essas duas expressões são diferentes.
 
 ### Predicados aninhados
 
@@ -213,12 +210,12 @@ A ordem é significativa, estes dois são diferentes.
 //section[.//h1[@id='hi']]
 ```
 
-Isso retorna `<section>` se tiver um descendente `<h1>` com `id='hi'`.
+Retorna `<section>` se tiver um `<h1>` descendente com id='hi'.
 
 Funções
 ---------
 
-### Funções de Nó
+### Funções de nó
 
 ```bash
 name()                     # //[starts-with(name(), 'h')]
@@ -257,7 +254,7 @@ normalize-space()
 string-length()
 ```
 
-### Conversão de tipo
+### Conversão de tipos
 
 ```bash
 string()
@@ -268,7 +265,7 @@ boolean()
 Eixos
 ----
 
-### Usando eixos
+### Uso de eixos
 
 ```bash
 //ul/li                       # ul > li
@@ -278,47 +275,47 @@ Eixos
 //ul/ancestor-or-self::li     # $('ul').closest('li')
 ```
 
-Os passos de uma expressão são separados por `/`, geralmente usados para selecionar nós filhos. Isso nem sempre é verdade: você pode especificar um "eixo" diferente com `::`.
+Os passos normalmente usam `/` para selecionar filhos, mas você pode especificar outro eixo com `::`.
 
 | `//` | `ul` | `/child::` | `li` |
 | ---  | ---  | ---        | ---  |
-| Eixo | Passo | Eixo       | Passo |
+| Eixo | Passo | Eixo      | Passo |
 
-### Eixo filho
+### Eixo child
 
 ```bash
-# ambos iguais
+# both the same
 //ul/li/a
 //child::ul/child::li/child::a
 ```
 
-`child::` é o eixo padrão. Isso faz com que `//a/b/c` funcione.
+`child::` é o eixo padrão. Por isso `//a/b/c` funciona.
 
 ```bash
-# ambos iguais
-# isso funciona porque `child::li` é verdadeiro, então o predicado é bem-sucedido
+# both the same
+# this works because `child::li` is truthy, so the predicate succeeds
 //ul[li]
 //ul[child::li]
 ```
 
 ```bash
-# ambos iguais
+# both the same
 //ul[count(li) > 2]
 //ul[count(child::li) > 2]
 ```
 
-### Eixo descendente-ou-self
+### Eixo descendant-or-self
 
 ```bash
-# ambos iguais
+# both the same
 //div//h4
 //div/descendant-or-self::h4
 ```
 
-`//` é a abreviação para o eixo `descendant-or-self::`.
+`//` é a forma abreviada do eixo `descendant-or-self::`.
 
 ```bash
-# ambos iguais
+# both the same
 //ul//[last()]
 //ul/descendant-or-self::[last()]
 ```
@@ -326,22 +323,22 @@ Os passos de uma expressão são separados por `/`, geralmente usados para selec
 ### Outros eixos
 
 | Eixo                 | Abrev | Notas                                            |
-| ---                  | ---    | ---                                              |
-| `ancestor`           |        |                                                  |
-| `ancestor-or-self`   |        |                                                  |
-| `attribute`          | `@`    | `@href` é a abreviação de `attribute::href`      |
-| `child`              |        | `div` é a abreviação de `child::div`             |
-| `descendant`         |        |                                                  |
-| `descendant-or-self` | `//`   | `//` é a abreviação de `/descendant-or-self::node()/` |
-| `namespace`          |        |                                                  |
-| `self`               | `.`    | `.` é a abreviação de `self::node()`             |
-| `parent`             | `..`   | `..` é a abreviação de `parent::node()`          |
-| `following`          |        |                                                  |
-| `following-sibling`  |        |                                                  |
-| `preceding`          |        |                                                  |
-| `preceding-sibling`  |        |                                                  |
+| ---                  | ---   | ---                                              |
+| `ancestor`           |       |                                                  |
+| `ancestor-or-self`   |       |                                                  |
+| `attribute`          | `@`   | `@href` é abreviação de `attribute::href`        |
+| `child`              |       | `div` é abreviação de `child::div`               |
+| `descendant`         |       |                                                  |
+| `descendant-or-self` | `//`  | `//` é abreviação de `/descendant-or-self::node()/` |
+| `namespace`          |       |                                                  |
+| `self`               | `.`   | `.` é abreviação de `self::node()`               |
+| `parent`             | `..`  | `..` é abreviação de `parent::node()`            |
+| `following`          |       |                                                  |
+| `following-sibling`  |       |                                                  |
+| `preceding`          |       |                                                  |
+| `preceding-sibling`  |       |                                                  |
 
-Existem outros eixos que você pode usar.
+Há outros eixos disponíveis.
 
 ### Uniões
 
@@ -357,12 +354,12 @@ Mais exemplos
 ### Exemplos
 
 ```bash
-//*                 # todos os elementos
-count(//*)          # contar todos os elementos
-(//h1)[1]/text()    # texto do primeiro cabeçalho h1
-//li[span]          # encontrar um <li> com um <span> dentro dele
-                    # ...expande para //li[child::span]
-//ul/li/..          # usar .. para selecionar um pai
+//*                 # all elements
+count(//*)          # count all elements
+(//h1)[1]/text()    # text of the first h1 heading
+//li[span]          # find a <li> with an <span> inside it
+                    # ...expands to //li[child::span]
+//ul/li/..          # use .. to select a parent
 ```
 
 ### Encontrar um pai
@@ -370,22 +367,22 @@ count(//*)          # contar todos os elementos
 ```bash
 //section[h1[@id='section-name']]
 ```
-Encontra uma `<section>` que contém diretamente `h1#section-name`
+Encontra um `<section>` que contém diretamente `h1#section-name`.
 
 ```bash
 //section[//h1[@id='section-name']]
 ```
 
-Encontra uma `<section>` que contém `h1#section-name`.
-(O mesmo que acima, mas usa descendente-ou-self em vez de filho)
+Encontra um `<section>` que contém `h1#section-name`.
+(Mesmo resultado, mas usando descendant-or-self em vez de child)
 
-### Mais Próximo
+### Closest
 
 ```bash
 ./ancestor-or-self::[@class="box"]
 ```
 
-Funciona como o jQuery's `$().closest('.box')`.
+Funciona como `$().closest('.box')` do jQuery.
 
 ### Atributos
 
@@ -393,9 +390,9 @@ Funciona como o jQuery's `$().closest('.box')`.
 //item[@price > 2*@discount]
 ```
 
-Encontra `<item>` e verifica seus atributos
+Encontra `<item>` e verifica seus atributos.
 
-## Testando
+## Testes
 
 ### Console do navegador
 

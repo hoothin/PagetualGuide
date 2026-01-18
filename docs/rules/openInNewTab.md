@@ -1,5 +1,5 @@
 # openInNewTab
->Set to true to make all links to open in new tabs, false to make them open in self.
+>Set to true to open all links in new tabs; false to open in the current tab.
 
 Example:
 --

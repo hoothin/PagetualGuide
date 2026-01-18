@@ -1,13 +1,13 @@
 # pageElement
->Selector or xpath of main content which need to insert, you can let it to be a array to contains multiple page elements. You may leave it empty because it will be generated automatically.
+>Selector hoặc XPath của nội dung chính cần chèn. Có thể là mảng nhiều pageElement. Có thể để trống vì sẽ tự tạo.
 
-Example1:
+Ví dụ 1:
 --
 ```json
 "pageElement": ".Context>.Article"
 ```
 
-Example2:
+Ví dụ 2:
 --
 ```json
 "pageElement": [
@@ -16,4 +16,4 @@ Example2:
     ".Context3>.Article"
 ]
 ```
->When there are multiple nextLinks and multiple pageElements on one page, you can use a array to include all of them. And switch them by click "switch next link".
+>Khi có nhiều nextLink và pageElement trên cùng trang, bạn có thể đưa vào mảng và chuyển bằng "switch next link".

@@ -1,9 +1,9 @@
 # rate
->The multi-windowHeight which you can set to 2 or 3 while some sites load next page slowly
+>Multiplier of windowHeight. Set 2 or 3 when the next page loads slowly.
 
 Example:
 --
 ```json
 "rate": 3
 ```
->Start to load next page when the height between scrollTop of page body and bottom of page less than 3 * windowHeight.
+>Start loading the next page when the distance between scrollTop and the bottom is less than `3 * windowHeight`.

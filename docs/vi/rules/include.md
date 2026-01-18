@@ -1,18 +1,18 @@
 # include
->Selector or xpath of the element which must include
+>Selector hoặc XPath của phần tử bắt buộc phải tồn tại.
 
-Example1:
+Ví dụ 1:
 --
 ```json
 "include": "div.content"
 ```
->Ignore current rule when the site don't include the element `div.content`
+>Bỏ qua quy tắc khi trang không có `div.content`.
 
-Example2:
+Ví dụ 2:
 --
 ```json
 "include": "//a[contains(@href,'-') and text()='next']"
 ```
->Ignore current rule when the site don't include the element `//a[contains(@href,'-') and text()='next']`
+>Bỏ qua quy tắc khi trang không có `//a[contains(@href,'-') and text()='next']`.
 
-*Sometimes a site has dynamic content, the next link will be different. You can add the "include" on this situation.*
+*Nếu nội dung động khiến nextLink thay đổi, dùng include.*

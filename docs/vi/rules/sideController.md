@@ -1,7 +1,7 @@
 # sideController
->Show or hide toolbar of sideController.
+>Hiển thị hoặc ẩn thanh công cụ sideController.
 
-Example:
+Ví dụ:
 --
 ```json
 "sideController": true

@@ -1,7 +1,7 @@
 # nextLinkByUrl
->다음 요소가 없는 경우, 현재 URL에서 href를 생성하는 데 사용할 수 있습니다.은 정규식 문자열을 의미하고,은 대체 문자열을 의미하며,는 반드시 포함해야 하는 요소의 선택자 또는 xpath를 의미하고,은 포함해서는 안 되는 요소의 선택자 또는 xpath를 의미합니다. + - * /와 같은 간단한 코드를 평가하려면 {}를 사용할 수 있습니다.
+>nextLink가 없을 때 현재 URL에서 다음 링크를 생성합니다.[0]은 정규식 문자열, [1]은 치환 문자열, [2]는 반드시 존재해야 하는 요소 selector/XPath, [3]은 반드시 존재하지 않아야 하는 요소 selector/XPath입니다. {} 안에서 간단한 계산(+ - * /)이 가능합니다.
 
-예시1:
+예시 1:
 --
 ```json
 "nextLinkByUrl": [
@@ -9,9 +9,9 @@
     "&page={$1+1}"
 ]
 ```
->현재 페이지의 URL "http://abc.xxx/d?page=1"에서 다음 링크 "http://abc.xxx/d?page=2"를 생성합니다.
+>현재 URL `http://abc.xxx/d?page=1`에서 `http://abc.xxx/d?page=2`를 생성합니다.
 
-예시2:
+예시 2:
 --
 ```json
 "nextLinkByUrl": [
@@ -21,5 +21,4 @@
     ".disable>button"
 ]
 ```
->현재 페이지 URL "http://abc.xxx/d?page=1&pn=1"에서 다음 링크 "http://abc.xxx/d?page=2&pn=10"를 생성합니다. '.article>.item' 요소가 없거나 '.disable>button'이 발견되면 중지합니다.
-
+> `http://abc.xxx/d?page=1&pn=1`에서 `http://abc.xxx/d?page=2&pn=10`을 생성합니다. `.article>.item`이 없거나 `.disable>button`을 만나면 중지합니다.

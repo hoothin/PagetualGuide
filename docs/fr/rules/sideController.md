@@ -1,7 +1,7 @@
 # sideController
->Show or hide toolbar of sideController.
+>Affiche ou masque la barre d’outils sideController.
 
-Example:
+Exemple :
 --
 ```json
 "sideController": true

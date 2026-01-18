@@ -1,10 +1,10 @@
 # preloadImages(doc)
->Analyze the page and return an array of image's urls that need to be preloaded.
+>Phân tích trang và trả về mảng URL ảnh cần preload.
 
-Example:
+Ví dụ:
 --
 ```json
 "preloadImages": "return ['1.jpg']"
 ```
 
-*Make sure you have enabled preload option*
+*Đảm bảo đã bật tuỳ chọn preload*

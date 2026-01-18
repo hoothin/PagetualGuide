@@ -1,7 +1,7 @@
 # sideController
->Show or hide toolbar of sideController.
+>顯示或隱藏 sideController 工具列。
 
-Example:
+範例：
 --
 ```json
 "sideController": true

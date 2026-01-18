@@ -1,15 +1,15 @@
 # action
->0 means load url and insert with static html, 1 means load by iframe so that dynamic javaScript code on page may effect, 2 means force insert iframe to bottom
+>0 は URL を読み込んで静的 HTML として挿入、1 は iframe で読み込んでページ内の動的 JavaScript を実行、2 は完全な iframe をページ下部に強制挿入します。
 
-Example:
+例：
 --
 ```json
 "action": 1
 ```
 
 + action: 0
-Fetch the url of next link and get the static html without any dynamic handling, it's the default action and the most fast action.
+nextLink の URL を取得して静的 HTML を直接挿入します。動的処理は行わず、デフォルトかつ最速です。
 + action: 1
-Load url in a iframe and get content after loading completed, it's for the situation when contents are loaded after page open.
+iframe で URL を読み込み、読み込み完了後に内容を取得します。ページ表示後に内容が生成される場合に適します。
 + action: 2
-Create a iframe of full page of next link. Trim the page and insert into current page.
+nextLink に対応するページ全体の iframe を作成し、トリミングして現在のページ下部に挿入します。

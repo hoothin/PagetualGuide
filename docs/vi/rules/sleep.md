@@ -1,7 +1,7 @@
 # sleep
->Sleep time (ms) when load next page if site is limited by time interval
+>Thời gian chờ (ms) khi tải trang tiếp theo nếu site giới hạn theo khoảng thời gian.
 
-Example:
+Ví dụ:
 --
 ```json
 "sleep": 1000

@@ -1,14 +1,14 @@
 # nextLink
->Selector or xpath of next page link, disable when set to 0, you can let it to be a array to contains multiple next links. You may leave it empty because it will be generated automatically.
+>Selector or XPath of the next page link. Disabled when set to 0. Can be an array of multiple nextLink. You may leave it empty because it will be generated automatically.
 
-Example1:
+Example 1:
 --
 ```json
 "nextLink": ".page-next>a"
 ```
 
 
-Example2:
+Example 2:
 --
 ```json
 "nextLink": [
@@ -17,4 +17,4 @@ Example2:
     ".page3-next>a"
 ]
 ```
->When there are multiple nextLinks on one page, you can use a array to include all of them. And switch them by click "switch next link"
+>If there are multiple nextLink on one page, put them in an array and switch using "switch next link".

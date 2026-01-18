@@ -1,10 +1,10 @@
 # lockScroll
->Set to true if you don't want the page to auto scroll when navigate to next page
+>Defina como true se não quiser rolagem automática ao navegar para a próxima página.
 
-Example:
+Exemplo:
 --
 ```json
 "lockScroll": true
 ```
 
-*Sometimes the page will auto scroll when navigate to next page, set this prop to true so you can prevent it*
+*Algumas páginas rolam automaticamente ao navegar; true evita isso.*

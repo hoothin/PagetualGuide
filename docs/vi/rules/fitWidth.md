@@ -1,10 +1,10 @@
 # fitWidth
->Set to false if you find the pageElement get the wrong small width
+>Đặt false nếu pageElement bị hẹp bất thường.
 
-Example:
+Ví dụ:
 --
 ```json
 "fitWidth": false
 ```
 
-*Effect only when action==2*
+*Chỉ có hiệu lực khi action==2*

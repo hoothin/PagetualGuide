@@ -1,10 +1,10 @@
 # enable
->0 means stop action when all matched
+>Если установлено в 0, правило не активируется даже при совпадении.
 
-Example:
+Пример:
 --
 ```json
 "enable": 0
 ```
 
-*When you want to stop pager on a lot of sites with same features, Or you just do not want to enable a rule after write it, you can set enable to 0.*
+*Если хотите остановить пагинацию на множестве похожих сайтов или временно отключить правило, установите enable=0.*

@@ -1,7 +1,7 @@
 # pageElementCss
->The style css which you want to set for every page element.
+>CSS style bạn muốn áp dụng cho mỗi pageElement.
 
-Example:
+Ví dụ:
 --
 ```json
 "pageElementCss": "color: red"

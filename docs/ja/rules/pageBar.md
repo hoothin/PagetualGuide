@@ -1,16 +1,16 @@
 # pageBar (pageBar)
->The javaScript code to change pageBar, 0 means hide
+>pageBar を変更するための JavaScript。0 を設定すると非表示。
 
-Example1:
+例 1：
 --
 ```json
 "pageBar": "pageBar.classList.add('j_thread_list');"
 ```
->Add class "j_thread_list" to all page bars.
+>すべての pageBar に `j_thread_list` クラスを追加します。
 
-Example2:
+例 2：
 --
 ```json
 "pageBar": 0
 ```
->Hide all page bars.
+>すべての pageBar を非表示にします。

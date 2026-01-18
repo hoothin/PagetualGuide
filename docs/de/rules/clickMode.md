@@ -1,7 +1,7 @@
 # clickMode
->Stop turning page and click nextlink after scrolled to bottom.
+>Stoppt das automatische Umblättern und klickt nextLink, sobald unten gescrollt wurde.
 
-Example:
+Beispiel:
 --
 ```json
 "clickMode": true

@@ -1,5 +1,5 @@
 # sideController
->Show or hide toolbar of sideController.
+>Show or hide the sideController toolbar.
 
 Example:
 --

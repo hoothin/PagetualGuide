@@ -1,18 +1,18 @@
 # wait (doc)
->The time to wait for page ready when you are sure the url match the site, you can also use a javaScript code which return a boolean to check if the page is ready instead
+>Tempo de espera até a página ficar pronta. Se você tem certeza que a URL corresponde, também pode usar JavaScript que retorne booleano.
 
-Example1:
+Exemplo 1:
 --
 ```json
 "wait": 500
 ```
->Check every 500ms before the rule is matched.
+>Verifica a cada 500ms antes de aplicar a regra.
 
-Example2:
+Exemplo 2:
 --
 ```json
 "wait": "await fetch('https://xxx.xxx');let img=doc.querySelector('ul.list img');return img!=null"
 ```
->Repeated checking before the code return true. The `doc` means the document of the site, and the code means checking presence of the element "ul.list img".
+>Repete a verificação até o código retornar true. `doc` é o documento do site e o exemplo verifica `ul.list img`.
 
-*When you set 'wait', that means current rule will effect when url is matched.*
+*Ao definir `wait`, a regra é aplicada quando a URL corresponde.*

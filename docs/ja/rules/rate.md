@@ -1,9 +1,9 @@
 # rate
->The multi-windowHeight which you can set to 2 or 3 while some sites load next page slowly
+>次ページ読み込みを開始する距離のしきい値（windowHeight の倍率）。読み込みが遅いサイトでは 2 や 3 を指定します。
 
-Example:
+例：
 --
 ```json
 "rate": 3
 ```
->Start to load next page when the height between scrollTop of page body and bottom of page less than 3 * windowHeight.
+>ページの scrollTop と下端の距離が `3 * windowHeight` 未満になったら次ページを読み込みます。

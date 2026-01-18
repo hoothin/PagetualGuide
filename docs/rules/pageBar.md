@@ -1,14 +1,14 @@
 # pageBar (pageBar)
->The javaScript code to change pageBar, 0 means hide
+>JavaScript to modify the pageBar. 0 means hide.
 
-Example1:
+Example 1:
 --
 ```json
 "pageBar": "pageBar.classList.add('j_thread_list');"
 ```
->Add class "j_thread_list" to all page bars.
+>Adds class "j_thread_list" to all page bars.
 
-Example2:
+Example 2:
 --
 ```json
 "pageBar": 0

@@ -1,7 +1,7 @@
 # insert
->Which position you want to insert, you can let it to be a array to contains multiple positions.
+>挿入先の位置。配列にすれば複数の位置を指定できます。
 
-Example:
+例：
 --
 ```json
 "insert": "ul#feed-main"

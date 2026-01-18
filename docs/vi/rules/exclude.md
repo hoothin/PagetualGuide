@@ -1,18 +1,18 @@
 # exclude
->Selector or xpath of the element which must not include
+>Selector hoặc XPath của phần tử không được tồn tại.
 
-Example1:
+Ví dụ 1:
 --
 ```json
 "exclude": "div.content"
 ```
->Ignore current rule when the site include the element `div.content`
+>Bỏ qua quy tắc khi trang có `div.content`.
 
-Example2:
+Ví dụ 2:
 --
 ```json
 "exclude": "//a[contains(@href,'-') and text()='next']"
 ```
->Ignore current rule when the site include the element `//a[contains(@href,'-') and text()='next']`
+>Bỏ qua quy tắc khi trang có `//a[contains(@href,'-') and text()='next']`.
 
-*Sometimes a site has dynamic content, the next link will be different. You can add the "exclude" on this situation.*
+*Nếu nội dung động khiến nextLink thay đổi, dùng exclude.*

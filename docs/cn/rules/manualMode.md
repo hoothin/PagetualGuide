@@ -1,7 +1,7 @@
 # manualMode
->Set to true to enable manual mode, then paging will stop, right arrow (or 'pagetual.next' event) will be bound to click next link.
+>设为 true 启用手动模式，分页将停止，右箭头（或触发 `pagetual.next` 事件）用于点击 nextLink。
 
-Example:
+示例：
 --
 ```json
 "manualMode": true

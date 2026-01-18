@@ -1,18 +1,18 @@
 # include
->Selector or xpath of the element which must include
+>必须存在的元素（selector 或 XPath）。
 
-Example1:
+示例 1：
 --
 ```json
 "include": "div.content"
 ```
->Ignore current rule when the site don't include the element `div.content`
+>当页面不包含元素 `div.content` 时忽略此规则。
 
-Example2:
+示例 2：
 --
 ```json
 "include": "//a[contains(@href,'-') and text()='next']"
 ```
->Ignore current rule when the site don't include the element `//a[contains(@href,'-') and text()='next']`
+>当页面不包含元素 `//a[contains(@href,'-') and text()='next']` 时忽略此规则。
 
-*Sometimes a site has dynamic content, the next link will be different. You can add the "include" on this situation.*
+*有些站点内容是动态的，nextLink 会变化，可用 include 进行限定。*

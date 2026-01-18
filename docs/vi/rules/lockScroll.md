@@ -1,10 +1,10 @@
 # lockScroll
->Set to true if you don't want the page to auto scroll when navigate to next page
+>Đặt true nếu không muốn trang tự cuộn khi chuyển sang trang tiếp theo.
 
-Example:
+Ví dụ:
 --
 ```json
 "lockScroll": true
 ```
 
-*Sometimes the page will auto scroll when navigate to next page, set this prop to true so you can prevent it*
+*Một số trang tự cuộn khi chuyển trang; true sẽ ngăn điều này.*

@@ -1,7 +1,7 @@
 # child script
->If the site has some limit for code eval. You can make a child script with function under object window.
+>如果站點限制程式碼 eval，可在子腳本中把函式掛到 window 物件下。
 
-Example 1: Single rule for current site
+範例 1：目前站點單條規則
 --
 ```js
 // ==UserScript==
@@ -29,10 +29,10 @@ Example 1: Single rule for current site
     }
 })();
 ```
->You can omit the url with single rule since the script itself already includes the filtering.
+>單條規則時腳本本身已包含過濾條件，可省略 url。
 
 
-Example 2: Rules collection for sites
+範例 2：多站點規則集合
 --
 ```js
 // ==UserScript==

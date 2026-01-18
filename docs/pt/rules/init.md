@@ -1,11 +1,11 @@
 # init (doc, win, iframe, click, enter, input, sleep)
->The javaScript code to run only once with current main page or mirror iframe with doc:(document of main page or mirror iframe). If you want to run some code only once, or you want to mirror your status on main page to iframe, try this.
+>Código JavaScript executado apenas uma vez na página principal ou no iframe espelho. Use para tarefas únicas ou para espelhar o estado da página principal no iframe.
 
-Example:
+Exemplo:
 --
 ```json
 "init": "if (iframe == null) return; await click('#btn'); await input('#input', 'here you are'); await enter('#input');"
 ```
->While extracting content in mirror iframe, first click '#btn', then input words 'here you are' to '#input', press 'enter' on '#input' at last.
+>Ao extrair conteúdo no iframe espelho, clique em `#btn`, digite `here you are` em `#input` e pressione Enter em `#input`.
 
-*This code will run only once, user this to finish work which you want to run only one time*
+*Este código roda apenas uma vez.*

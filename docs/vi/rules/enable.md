@@ -1,10 +1,10 @@
 # enable
->0 means stop action when all matched
+>Đặt 0 thì quy tắc sẽ không kích hoạt dù có khớp.
 
-Example:
+Ví dụ:
 --
 ```json
 "enable": 0
 ```
 
-*When you want to stop pager on a lot of sites with same features, Or you just do not want to enable a rule after write it, you can set enable to 0.*
+*Khi muốn dừng pager trên nhiều site có đặc điểm giống nhau hoặc tạm tắt quy tắc, đặt enable=0.*

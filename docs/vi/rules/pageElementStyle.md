@@ -1,10 +1,10 @@
 # pageElementStyle
->Custom cssText of style for pageElement
+>style.cssText tuỳ chỉnh cho pageElement.
 
-Example:
+Ví dụ:
 --
 ```json
 "pageElementStyle": "font-size: xx-large;"
 ```
 
-*Use this to change the style of main content on current page, for example,  increase font sizes of main content*
+*Dùng để đổi style nội dung chính của trang hiện tại, ví dụ tăng cỡ chữ.*

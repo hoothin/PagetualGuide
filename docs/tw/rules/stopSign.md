@@ -1,14 +1,14 @@
 # stopSign
->Stop to load next page when matching this sign
+>符合條件時停止載入下一頁。
 
-Example1:
+範例 1：
 --
 ```json
 "stopSign": ["#pagenum", ".disable"] 
 ```
->Stop when "#pagenum" don't exist or ".disable" exist.
+>`#pagenum` 不存在或 `.disable` 存在時停止。
 
-Example2:
+範例 2：
 --
 ```json
 "stopSign": [
@@ -22,9 +22,9 @@ Example2:
     ]
 ]
 ```
->Stop when number in "#pagenum" matching 1st group of `(\\d+)` by RegExp == number matching 1st group of `\\/(\\d+)`
+>當 `#pagenum` 中匹配 `(\\d+)` 的第 1 組與匹配 `\\/(\\d+)` 的第 1 組數字相等時停止。
 
-Example3:
+範例 3：
 --
 ```json
 "stopSign": ["#pagenum", ".disable",
@@ -51,12 +51,11 @@ Example3:
     ]
 }
 ```
->Stop when matching rule-1 or rule-2
+>符合規則 1 或規則 2 時停止。
 
-Example4:
+範例 4：
 --
 ```json
 "stopSign": "if (doc.querySelector('.disable')) return true; if (nextLink.className === 'disable') return true; return false;" 
 ```
->Stop when stopSign(doc, nextLink) return true
-
+>當 stopSign(doc, nextLink) 回傳 true 時停止。

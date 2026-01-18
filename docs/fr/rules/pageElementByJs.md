@@ -1,11 +1,11 @@
 # pageElementByJs (over, pageNum)
->Use this to eval javaScript code and create the elements whatever you want to insert, a over(eles) is needed to callback with elements array for insert. pageNum means the number of current page.
+>Évalue du JavaScript et crée les éléments à insérer. Un over(eles) est nécessaire pour renvoyer le tableau d’éléments. pageNum correspond au numéro de page courant.
 
-Example:
+Exemple :
 --
 ```json
 "pageElementByJs": "fetch(url.replace(/&offset=\\d+/,'') + '&offset=' + (pageNum + 1), {headers:{'X-Requested-With': 'XMLHttpRequest'}}).then(res => res.json()).then(res => {over(eles)})"
 ```
->Create elements and use `over` to return them after loaded.
+>Crée les éléments et utilise `over` pour les renvoyer après chargement.
 
-*When there are no next link on current page, you can set this prop to create new elements for inserting into.*
+*Quand il n’y a pas de nextLink sur la page courante, vous pouvez utiliser cette option pour créer les éléments à insérer.*

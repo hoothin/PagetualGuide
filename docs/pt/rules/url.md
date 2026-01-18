@@ -1,9 +1,9 @@
 # url
->RegExp for the url of target site. To ensure performance, the url will be truncated to the first 500 characters for comparison.
+>RegExp para a URL do site alvo. Para garantir desempenho, a URL é truncada nos primeiros 500 caracteres para comparação.
 
-Example:
+Exemplo:
 --
 ```json
 "url": "^https://abc\\.com/\\d+"
 ```
->When the url matches the RegExp `/^https://abc\.com/\d+/`, current rule will take effect.
+>Quando a URL corresponde ao RegExp `/^https://abc\.com/\d+/`, esta regra entra em vigor.

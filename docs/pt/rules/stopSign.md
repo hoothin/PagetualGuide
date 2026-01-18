@@ -1,14 +1,14 @@
 # stopSign
->Stop to load next page when matching this sign
+>Para de carregar a próxima página quando esta condição for atendida.
 
-Example1:
+Exemplo 1:
 --
 ```json
 "stopSign": ["#pagenum", ".disable"] 
 ```
->Stop when "#pagenum" don't exist or ".disable" exist.
+>Para quando "#pagenum" não existe ou ".disable" existe.
 
-Example2:
+Exemplo 2:
 --
 ```json
 "stopSign": [
@@ -22,9 +22,9 @@ Example2:
     ]
 ]
 ```
->Stop when number in "#pagenum" matching 1st group of `(\\d+)` by RegExp == number matching 1st group of `\\/(\\d+)`
+>Para quando o número do 1º grupo `(\\d+)` corresponde ao 1º grupo de `\\/(\\d+)` em "#pagenum".
 
-Example3:
+Exemplo 3:
 --
 ```json
 "stopSign": ["#pagenum", ".disable",
@@ -51,12 +51,11 @@ Example3:
     ]
 }
 ```
->Stop when matching rule-1 or rule-2
+>Para quando a regra 1 ou a regra 2 corresponder.
 
-Example4:
+Exemplo 4:
 --
 ```json
 "stopSign": "if (doc.querySelector('.disable')) return true; if (nextLink.className === 'disable') return true; return false;" 
 ```
->Stop when stopSign(doc, nextLink) return true
-
+>Para quando stopSign(doc, nextLink) retorna true.

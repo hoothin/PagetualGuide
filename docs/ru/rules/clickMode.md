@@ -1,7 +1,7 @@
 # clickMode
->Stop turning page and click nextlink after scrolled to bottom.
+>Останавливает автопереход и кликает nextLink после прокрутки до низа.
 
-Example:
+Пример:
 --
 ```json
 "clickMode": true

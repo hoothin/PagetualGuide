@@ -1,7 +1,7 @@
 # waitElement
->The array["exist", "not exist"] contains "selector or xpath of element must exist (for some lazyload element)" & "selector or xpath of element must not exist (for some loading placeholder which need scroll into view to load)"
+>Массив `["exist", "not exist"]` со selector/XPath элемента, который должен существовать (lazyload), и элемента, который не должен существовать (placeholder должен исчезнуть).
 
-Example:
+Пример:
 --
 ```json
 "waitElement": [
@@ -9,12 +9,12 @@ Example:
     "#popular.fade:not(.in)"
 ]
 ```
->Repeated checking before ".summary" appeared and "#popular.fade:not(.in)" disappeared.
+>Повторяет проверку, пока ".summary" не появится и "#popular.fade:not(.in)" не исчезнет.
 
 ```json
 "waitElement": ".summary"
 ```
->Repeated checking before ".summary" appeared
+>Повторяет проверку, пока ".summary" не появится.
 
 ```json
 "waitElement": "!#popular.fade:not(.in)"
@@ -26,6 +26,6 @@ Example:
     "#popular.fade:not(.in)"
 ]
 ```
->Repeated checking before "#popular.fade:not(.in)" disappeared.
+>Повторяет проверку, пока "#popular.fade:not(.in)" не исчезнет.
 
-*When you set 'waitElement', it's same as the 'wait', that means current rule will effect when url is matched. You can leave a "" when you don't want to set "exist" or "not exist", when you set a "not exist", pagetual will try to trigger lazy load of target element*
+*`waitElement` работает как `wait`: правило применяется при совпадении URL. Если не нужно "exist", оставьте "". При "not exist" Pagetual попытается вызвать lazyload целевого элемента.*

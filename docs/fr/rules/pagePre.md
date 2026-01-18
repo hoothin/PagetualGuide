@@ -1,10 +1,10 @@
 # pagePre (response, doc)
->The javaScript code to run after get response from URL of next link, you can modify the text response content and return it, You can also return an array of pageElement directly
+>Code JavaScript exécuté après avoir obtenu la réponse de l’URL du nextLink. Vous pouvez modifier le texte de réponse et le retourner, ou retourner directement un tableau de pageElement.
 
-Example:
+Exemple :
 --
 ```json
 "pagePre": "return decodeURI(response).replace(/[\\\\]/g,'')"
 ```
 
-*Only effect when `action`==0 or `action`==1*
+*Effet uniquement lorsque `action`==0 ou `action`==1*

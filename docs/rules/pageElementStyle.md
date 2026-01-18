@@ -1,5 +1,5 @@
 # pageElementStyle
->Custom cssText of style for pageElement
+>Custom style.cssText for pageElement.
 
 Example:
 --
@@ -7,4 +7,4 @@ Example:
 "pageElementStyle": "font-size: xx-large;"
 ```
 
-*Use this to change the style of main content on current page, for example,  increase font sizes of main content*
+*Use this to change the style of the main content on the current page, e.g., increase font size.*

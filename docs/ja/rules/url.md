@@ -1,9 +1,9 @@
 # url
->RegExp for the url of target site. To ensure performance, the url will be truncated to the first 500 characters for comparison.
+>対象サイトの URL 用 RegExp。性能のため、URL は先頭 500 文字のみ比較します。
 
-Example:
+例：
 --
 ```json
 "url": "^https://abc\\.com/\\d+"
 ```
->When the url matches the RegExp `/^https://abc\.com/\d+/`, current rule will take effect.
+>URL が RegExp `/^https://abc\.com/\d+/` に一致するとルールが有効になります。

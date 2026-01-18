@@ -1,7 +1,7 @@
 # pageInit (doc, eles)
->The javaScript code to run with every page inserted with doc:(document of every page loaded) and eles:(elements found with rule), run before inserted, you can trigger event like onView()
+>Código JavaScript que se ejecuta antes de insertar cada página, usando doc (documento de cada página cargada) y eles (elementos encontrados). Puedes disparar eventos como onView().
 
-Example:
+Ejemplo:
 --
 ```json
 "pageInit": "let ops=doc.querySelectorAll('op');[].forEach.call(ops,op=>{img.src=op.value;imgCon.appendChild(img)})"

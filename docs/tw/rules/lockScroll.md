@@ -1,10 +1,10 @@
 # lockScroll
->Set to true if you don't want the page to auto scroll when navigate to next page
+>設為 true 可防止切換下一頁時頁面自動捲動。
 
-Example:
+範例：
 --
 ```json
 "lockScroll": true
 ```
 
-*Sometimes the page will auto scroll when navigate to next page, set this prop to true so you can prevent it*
+*有些頁面在跳轉時會自動捲動，設為 true 可避免此行為。*

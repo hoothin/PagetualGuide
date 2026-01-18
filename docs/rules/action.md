@@ -1,5 +1,5 @@
 # action
->0 means load url and insert with static html, 1 means load by iframe so that dynamic javaScript code on page may effect, 2 means force insert iframe to bottom
+>0 loads the URL and inserts static HTML. 1 loads via iframe so the page’s dynamic JavaScript can run. 2 forces a full‑page iframe to be inserted at the bottom.
 
 Example:
 --
@@ -8,8 +8,8 @@ Example:
 ```
 
 + action: 0
-Fetch the url of next link and get the static html without any dynamic handling, it's the default action and the most fast action.
+Fetch the nextLink URL and insert static HTML with no dynamic handling. Default and fastest.
 + action: 1
-Load url in a iframe and get content after loading completed, it's for the situation when contents are loaded after page open.
+Load the URL in an iframe and grab the content after it finishes loading. Use when content appears after page open.
 + action: 2
-Create a iframe of full page of next link. Trim the page and insert into current page.
+Create a full‑page iframe of the nextLink page, trim it, and insert it at the bottom of the current page.

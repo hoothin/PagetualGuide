@@ -1,10 +1,10 @@
 # fitWidth
->Set to false if you find the pageElement get the wrong small width
+>Auf false setzen, wenn pageElement eine zu geringe Breite bekommt.
 
-Example:
+Beispiel:
 --
 ```json
 "fitWidth": false
 ```
 
-*Effect only when action==2*
+*Wirkt nur, wenn action==2*

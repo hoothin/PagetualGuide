@@ -1,7 +1,7 @@
 # clickMode
->Stop turning page and click nextlink after scrolled to bottom.
+>Dừng tự động lật trang và click nextLink khi cuộn đến cuối.
 
-Example:
+Ví dụ:
 --
 ```json
 "clickMode": true

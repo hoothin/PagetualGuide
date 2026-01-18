@@ -1,14 +1,14 @@
 # replaceElement
->Selector or xpath of element which you want to replace with new one, can be a array
+>Selector o XPath del elemento que quieres reemplazar; puede ser un arreglo.
 
-Example1:
+Ejemplo 1:
 --
 ```json
 "replaceElement": "#page"
 ```
 
 
-Example2:
+Ejemplo 2:
 --
 ```json
 "replaceElement": ["#page1", "#page2"]

@@ -1,7 +1,7 @@
 # child script
->If the site has some limit for code eval. You can make a child script with function under object window.
+>サイトが code eval を制限している場合、子スクリプトで window オブジェクト配下に関数を置けます。
 
-Example 1: Single rule for current site
+例 1：現在サイトの単一ルール
 --
 ```js
 // ==UserScript==
@@ -29,10 +29,10 @@ Example 1: Single rule for current site
     }
 })();
 ```
->You can omit the url with single rule since the script itself already includes the filtering.
+>単一ルールではスクリプト自体にフィルタ条件が含まれるため、url は省略できます。
 
 
-Example 2: Rules collection for sites
+例 2：複数サイト向けルール集
 --
 ```js
 // ==UserScript==

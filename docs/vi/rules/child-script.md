@@ -1,7 +1,7 @@
 # child script
->If the site has some limit for code eval. You can make a child script with function under object window.
+>Nếu site hạn chế eval code, bạn có thể tạo child script với các hàm dưới object window.
 
-Example 1: Single rule for current site
+Ví dụ 1: Quy tắc đơn cho site hiện tại
 --
 ```js
 // ==UserScript==
@@ -29,10 +29,10 @@ Example 1: Single rule for current site
     }
 })();
 ```
->You can omit the url with single rule since the script itself already includes the filtering.
+>Với quy tắc đơn, có thể bỏ url vì script đã có lọc.
 
 
-Example 2: Rules collection for sites
+Ví dụ 2: Bộ quy tắc cho nhiều site
 --
 ```js
 // ==UserScript==

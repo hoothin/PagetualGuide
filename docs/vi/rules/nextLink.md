@@ -1,14 +1,14 @@
 # nextLink
->Selector or xpath of next page link, disable when set to 0, you can let it to be a array to contains multiple next links. You may leave it empty because it will be generated automatically.
+>Selector hoặc XPath của link trang tiếp theo. Đặt 0 để tắt. Có thể là mảng nhiều nextLink. Có thể để trống vì sẽ tự tạo.
 
-Example1:
+Ví dụ 1:
 --
 ```json
 "nextLink": ".page-next>a"
 ```
 
 
-Example2:
+Ví dụ 2:
 --
 ```json
 "nextLink": [
@@ -17,4 +17,4 @@ Example2:
     ".page3-next>a"
 ]
 ```
->When there are multiple nextLinks on one page, you can use a array to include all of them. And switch them by click "switch next link"
+>Khi có nhiều nextLink trên một trang, bạn có thể đưa vào mảng và chuyển bằng "switch next link".

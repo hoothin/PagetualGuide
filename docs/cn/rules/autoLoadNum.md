@@ -1,9 +1,9 @@
 # autoLoadNum
->The amount of pages for auto turning after page opening
+>页面打开后自动翻页的数量。
 
-Example:
+示例：
 --
 ```json
 "autoLoadNum": 5
 ```
->Auto load next 5 pages after page opening.
+>页面打开后自动加载接下来的 5 页。

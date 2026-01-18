@@ -1,7 +1,7 @@
 # sleep
->Sleep time (ms) when load next page if site is limited by time interval
+>載入下一頁前的等待時間（毫秒），用於需要時間間隔的站點。
 
-Example:
+範例：
 --
 ```json
 "sleep": 1000

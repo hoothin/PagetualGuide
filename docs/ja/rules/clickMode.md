@@ -1,7 +1,7 @@
 # clickMode
->Stop turning page and click nextlink after scrolled to bottom.
+>ページ下部までスクロールしたら自動めくりを停止し、nextLink のクリックに切り替えます。
 
-Example:
+例：
 --
 ```json
 "clickMode": true

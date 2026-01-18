@@ -1,13 +1,13 @@
 # pageElement
->Selector or xpath of main content which need to insert, you can let it to be a array to contains multiple page elements. You may leave it empty because it will be generated automatically.
+>要插入的主要內容 selector 或 XPath。可設為陣列以包含多個 pageElement，也可留空由系統自動產生。
 
-Example1:
+範例 1：
 --
 ```json
 "pageElement": ".Context>.Article"
 ```
 
-Example2:
+範例 2：
 --
 ```json
 "pageElement": [
@@ -16,4 +16,4 @@ Example2:
     ".Context3>.Article"
 ]
 ```
->When there are multiple nextLinks and multiple pageElements on one page, you can use a array to include all of them. And switch them by click "switch next link".
+>當同一頁存在多個 nextLink 與 pageElement 時，可用陣列包含它們，並透過「切換 next link」進行切換。

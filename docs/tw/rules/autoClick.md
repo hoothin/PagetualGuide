@@ -1,10 +1,10 @@
 # autoClick
->The css selector or xpath of element which you want to click automatically
+>要自動點擊的元素 CSS selector 或 XPath。
 
-Example:
+範例：
 --
 ```json
 "autoClick": "#btn-sky"
 ```
 
-*Will click only once*
+*只會點擊一次*

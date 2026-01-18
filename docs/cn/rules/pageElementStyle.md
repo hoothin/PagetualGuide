@@ -1,10 +1,10 @@
 # pageElementStyle
->Custom cssText of style for pageElement
+>pageElement 的自定义 style.cssText。
 
-Example:
+示例：
 --
 ```json
 "pageElementStyle": "font-size: xx-large;"
 ```
 
-*Use this to change the style of main content on current page, for example,  increase font sizes of main content*
+*用于修改当前页面主内容样式，例如增大字号。*

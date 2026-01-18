@@ -1,10 +1,10 @@
 # delay
->The javaScript code to delay next action until return true, use this prop to get complete page elements with lazy load.
+>用於延遲下一步的 JavaScript，回傳 true 才繼續。可用於等待懶載入內容完整出現。
 
-Example:
+範例：
 --
 ```json
 "delay": "return document.querySelector('#feed_pagenation>li.cur').innerText>=curpage"
 ```
 
-*Sometimes the next page won't load content completely, but half before scroll, use this to check if the page is loaded completely, check only when scrolled to bottom*
+*有時下一頁內容不會一次渲染完整（需捲動才載入），可用此項判斷頁面是否完整載入，僅在捲動到底部後檢查。*

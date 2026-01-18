@@ -1,18 +1,18 @@
 # wait (doc)
->The time to wait for page ready when you are sure the url match the site, you can also use a javaScript code which return a boolean to check if the page is ready instead
+>ページが準備完了になるまで待つ時間（ms）。URL が確実に一致する場合は、true/false を返す JavaScript を指定して判定できます。
 
-Example1:
+例 1：
 --
 ```json
 "wait": 500
 ```
->Check every 500ms before the rule is matched.
+>500ms ごとにチェックして一致するまで待機します。
 
-Example2:
+例 2：
 --
 ```json
 "wait": "await fetch('https://xxx.xxx');let img=doc.querySelector('ul.list img');return img!=null"
 ```
->Repeated checking before the code return true. The `doc` means the document of the site, and the code means checking presence of the element "ul.list img".
+>コードが true を返すまで繰り返しチェックします。`doc` はサイトの document を意味し、この例では `ul.list img` の存在を確認しています。
 
-*When you set 'wait', that means current rule will effect when url is matched.*
+*`wait` を設定すると、URL が一致したときにルールが有効になります。*

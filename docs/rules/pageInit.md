@@ -1,5 +1,5 @@
 # pageInit (doc, eles)
->The javaScript code to run with every page inserted with doc:(document of every page loaded) and eles:(elements found with rule), run before inserted, you can trigger event like onView()
+>JavaScript that runs before inserting each page with doc (document of each loaded page) and eles (elements found by the rule). You can trigger events like onView().
 
 Example:
 --

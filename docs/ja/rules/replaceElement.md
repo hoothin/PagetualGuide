@@ -1,14 +1,14 @@
 # replaceElement
->Selector or xpath of element which you want to replace with new one, can be a array
+>置き換えたい要素の selector または XPath。配列指定も可能。
 
-Example1:
+例 1：
 --
 ```json
 "replaceElement": "#page"
 ```
 
 
-Example2:
+例 2：
 --
 ```json
 "replaceElement": ["#page1", "#page2"]

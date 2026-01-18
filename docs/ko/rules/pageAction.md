@@ -1,7 +1,8 @@
 # pageAction (doc, eles)
->doc:(로드된 모든 페이지의 문서)와 eles:(규칙으로 찾은 요소)와 함께 삽입된 모든 페이지에서 실행할 JavaScript 코드입니다. 삽입 후 실행되며, click()과 같은 함수를 추가할 수 있습니다.
+>각 페이지를 삽입한 뒤 실행되는 JavaScript. `doc`는 로드된 페이지의 document, `eles`는 규칙에 매칭된 요소 배열입니다. click() 등의 함수를 호출할 수 있습니다.
 
 예시:
+--
 ```json
 "pageAction": "let j=document.querySelector('.lazy');eles.forEach(i=>{i.src=i.dataset.srcset;})"
 ```

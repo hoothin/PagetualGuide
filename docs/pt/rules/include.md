@@ -1,18 +1,18 @@
 # include
->Selector or xpath of the element which must include
+>Selector ou XPath do elemento que deve existir.
 
-Example1:
+Exemplo 1:
 --
 ```json
 "include": "div.content"
 ```
->Ignore current rule when the site don't include the element `div.content`
+>Ignora a regra quando o site não contém `div.content`.
 
-Example2:
+Exemplo 2:
 --
 ```json
 "include": "//a[contains(@href,'-') and text()='next']"
 ```
->Ignore current rule when the site don't include the element `//a[contains(@href,'-') and text()='next']`
+>Ignora a regra quando o site não contém `//a[contains(@href,'-') and text()='next']`.
 
-*Sometimes a site has dynamic content, the next link will be different. You can add the "include" on this situation.*
+*Em sites com conteúdo dinâmico onde o nextLink muda, use include.*

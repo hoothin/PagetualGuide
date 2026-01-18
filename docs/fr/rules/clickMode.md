@@ -1,7 +1,7 @@
 # clickMode
->Stop turning page and click nextlink after scrolled to bottom.
+>Arrête le défilement automatique et clique sur nextLink une fois en bas de page.
 
-Example:
+Exemple :
 --
 ```json
 "clickMode": true

@@ -89,7 +89,7 @@ table.xp tr>:nth-child(3) {width: 10%; text-align:right;}
 //div[contains(concat(' ',normalize-space(@class),' '),' foobar ')]
 ```
 
-Xpath doesn't have the "check if part of space-separated list" operator, so this is the workaround.
+XPath doesn't have an operator to check membership in a space‑separated list, so this is the usual workaround.
 
 Expressions
 -----------

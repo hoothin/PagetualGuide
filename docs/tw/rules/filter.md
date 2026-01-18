@@ -1,17 +1,17 @@
 # filter
->Filter the elements inserted from next page.
+>過濾從下一頁插入的元素。
 
-Example:
+範例：
 --
 ```json
 "filter": "20"
 ```
->Remove elements when the count of inner words is less than 20.
+>當元素文字字數少於 20 時移除。
 
 ```json
 "filter": "😈"
 ```
->Remove elements when the inner words contains 😈.
+>當元素文字包含 😈 時移除。
 
 ```json
 "filter": {
@@ -21,4 +21,4 @@ Example:
     "selector": "div#spam"
 }
 ```
->Remove elements when the inner words matched `/spams\d/`, or the count of inner words is less than 20, or the links insert matched `/^https:\/\/spams\.xxx/`, or there is child matched selector "div#spam".
+>當文字符合 `/spams\d/`，或文字字數少於 20，或插入連結符合 `/^https:\/\/spams\.xxx/`，或存在子元素符合 `div#spam` 時移除。

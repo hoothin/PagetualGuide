@@ -1,9 +1,8 @@
 # pageBarText
->Set to 1 so the document title of next page will be shown on pagebar
+>Đặt 1 để hiển thị document title của trang tiếp theo trên pageBar.
 
-Example:
+Ví dụ:
 --
 ```json
 "pageBarText": 1
 ```
-

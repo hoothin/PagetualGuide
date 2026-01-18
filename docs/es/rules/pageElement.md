@@ -1,13 +1,13 @@
 # pageElement
->Selector or xpath of main content which need to insert, you can let it to be a array to contains multiple page elements. You may leave it empty because it will be generated automatically.
+>Selector o XPath del contenido principal a insertar. Puede ser un arreglo con varios pageElement. Puedes dejarlo vacío porque se generará automáticamente.
 
-Example1:
+Ejemplo 1:
 --
 ```json
 "pageElement": ".Context>.Article"
 ```
 
-Example2:
+Ejemplo 2:
 --
 ```json
 "pageElement": [
@@ -16,4 +16,4 @@ Example2:
     ".Context3>.Article"
 ]
 ```
->When there are multiple nextLinks and multiple pageElements on one page, you can use a array to include all of them. And switch them by click "switch next link".
+>Cuando hay múltiples nextLink y pageElement en una misma página, puedes incluirlos en un arreglo y cambiar usando "switch next link".

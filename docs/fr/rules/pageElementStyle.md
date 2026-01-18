@@ -1,10 +1,10 @@
 # pageElementStyle
->Custom cssText of style for pageElement
+>cssText de style personnalisé pour pageElement.
 
-Example:
+Exemple :
 --
 ```json
 "pageElementStyle": "font-size: xx-large;"
 ```
 
-*Use this to change the style of main content on current page, for example,  increase font sizes of main content*
+*Utilisez-le pour modifier le style du contenu principal de la page actuelle, par exemple augmenter la taille de police.*

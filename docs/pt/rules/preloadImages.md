@@ -1,10 +1,10 @@
 # preloadImages(doc)
->Analyze the page and return an array of image's urls that need to be preloaded.
+>Analisa a página e retorna um array de URLs de imagens que precisam ser pré‑carregadas.
 
-Example:
+Exemplo:
 --
 ```json
 "preloadImages": "return ['1.jpg']"
 ```
 
-*Make sure you have enabled preload option*
+*Garanta que a opção preload esteja habilitada*

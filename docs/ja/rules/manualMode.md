@@ -1,7 +1,7 @@
 # manualMode
->Set to true to enable manual mode, then paging will stop, right arrow (or 'pagetual.next' event) will be bound to click next link.
+>true で手動モードを有効化します。ページングは停止し、右矢印（または `pagetual.next` イベント）が nextLink のクリックに割り当てられます。
 
-Example:
+例：
 --
 ```json
 "manualMode": true

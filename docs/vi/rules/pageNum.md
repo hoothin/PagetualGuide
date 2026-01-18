@@ -1,9 +1,9 @@
 # pageNum
->Point the page number with $p in current url, you can use{} to eval result string from page number, like {$p*25+1}
+>Đánh dấu số trang bằng $p trong URL hiện tại. Có thể dùng {} để tính toán chuỗi kết quả, ví dụ {$p*25+1}.
 
-Example:
+Ví dụ:
 --
 ```json
 "pageNum": "&start={15*($p-1)}"
 ```
->Count page num as 2 when url is "&start=15"
+>Đếm trang là 2 khi URL là "&start=15".

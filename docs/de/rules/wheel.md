@@ -1,10 +1,10 @@
 # wheel
->Set to true so the next page action will only effect when the mouse wheel roll
+>Auf true setzen, damit die nächste Seitenaktion nur bei Mausrad‑Bewegung ausgelöst wird.
 
-Example:
+Beispiel:
 --
 ```json
 "wheel": true
 ```
 
-*Sometimes the page will auto scroll to bottom when click load more button, and then repeat over and over, set wheel to true so you can prevent it*
+*Manchmal scrollt die Seite nach „mehr laden“ automatisch und wiederholt sich; wheel=true verhindert das.*

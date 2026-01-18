@@ -1,9 +1,9 @@
 # autoLoadNum
->The amount of pages for auto turning after page opening
+>Nombre de pages à charger automatiquement après l’ouverture de la page.
 
-Example:
+Exemple :
 --
 ```json
 "autoLoadNum": 5
 ```
->Auto load next 5 pages after page opening.
+>Après l’ouverture de la page, charge automatiquement les 5 pages suivantes.

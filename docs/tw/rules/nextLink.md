@@ -1,14 +1,14 @@
 # nextLink
->Selector or xpath of next page link, disable when set to 0, you can let it to be a array to contains multiple next links. You may leave it empty because it will be generated automatically.
+>下一頁連結的 selector 或 XPath。設為 0 代表停用。可設為陣列以包含多個 nextLink，也可留空由系統自動產生。
 
-Example1:
+範例 1：
 --
 ```json
 "nextLink": ".page-next>a"
 ```
 
 
-Example2:
+範例 2：
 --
 ```json
 "nextLink": [
@@ -17,4 +17,4 @@ Example2:
     ".page3-next>a"
 ]
 ```
->When there are multiple nextLinks on one page, you can use a array to include all of them. And switch them by click "switch next link"
+>當同一頁存在多個 nextLink 時，可用陣列包含它們，並透過「切換 next link」進行切換。

@@ -1,7 +1,7 @@
 # openInNewTab
->Set to true to make all links to open in new tabs, false to make them open in self.
+>true で全リンクを新しいタブで開き、false で現在のタブで開きます。
 
-Example:
+例：
 --
 ```json
 "openInNewTab": true

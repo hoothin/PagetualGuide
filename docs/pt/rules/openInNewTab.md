@@ -1,7 +1,7 @@
 # openInNewTab
->Set to true to make all links to open in new tabs, false to make them open in self.
+>Defina como true para abrir todos os links em novas abas; false abre na mesma aba.
 
-Example:
+Exemplo:
 --
 ```json
 "openInNewTab": true

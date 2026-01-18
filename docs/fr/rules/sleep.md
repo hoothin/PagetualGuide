@@ -1,7 +1,7 @@
 # sleep
->Sleep time (ms) when load next page if site is limited by time interval
+>Temps d’attente (ms) avant de charger la page suivante si le site impose un intervalle.
 
-Example:
+Exemple :
 --
 ```json
 "sleep": 1000

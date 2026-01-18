@@ -1,7 +1,7 @@
 # openInNewTab
->Set to true to make all links to open in new tabs, false to make them open in self.
+>Définissez à true pour ouvrir tous les liens dans de nouveaux onglets, false pour ouvrir dans l’onglet actuel.
 
-Example:
+Exemple :
 --
 ```json
 "openInNewTab": true

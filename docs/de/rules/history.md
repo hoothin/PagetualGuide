@@ -1,7 +1,7 @@
 # history
->Set to 0 then history writing will be disable. Set to 1 then history writing will be enable. Set to 2 then history writing will action immediately after splicing. No matter what value is the general option.
+>0 deaktiviert history‑Schreiben, 1 aktiviert, 2 schreibt sofort nach dem Zusammenfügen. Unabhängig vom Wert eine globale Option.
 
-Example:
+Beispiel:
 --
 ```json
 "history": 1

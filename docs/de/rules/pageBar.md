@@ -1,16 +1,16 @@
 # pageBar (pageBar)
->The javaScript code to change pageBar, 0 means hide
+>JavaScript zum Ändern des pageBar. 0 bedeutet ausblenden.
 
-Example1:
+Beispiel 1:
 --
 ```json
 "pageBar": "pageBar.classList.add('j_thread_list');"
 ```
->Add class "j_thread_list" to all page bars.
+>Fügt allen pageBar die Klasse "j_thread_list" hinzu.
 
-Example2:
+Beispiel 2:
 --
 ```json
 "pageBar": 0
 ```
->Hide all page bars.
+>Blendet alle pageBar aus.

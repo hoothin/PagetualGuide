@@ -1,7 +1,7 @@
 # sideController
->Show or hide toolbar of sideController.
+>sideController ツールバーを表示/非表示にします。
 
-Example:
+例：
 --
 ```json
 "sideController": true

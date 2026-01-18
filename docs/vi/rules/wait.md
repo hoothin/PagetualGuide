@@ -1,18 +1,18 @@
 # wait (doc)
->The time to wait for page ready when you are sure the url match the site, you can also use a javaScript code which return a boolean to check if the page is ready instead
+>Thời gian chờ để trang sẵn sàng. Nếu chắc chắn URL khớp, bạn cũng có thể dùng JavaScript trả về boolean để kiểm tra.
 
-Example1:
+Ví dụ 1:
 --
 ```json
 "wait": 500
 ```
->Check every 500ms before the rule is matched.
+>Kiểm tra mỗi 500ms trước khi áp dụng quy tắc.
 
-Example2:
+Ví dụ 2:
 --
 ```json
 "wait": "await fetch('https://xxx.xxx');let img=doc.querySelector('ul.list img');return img!=null"
 ```
->Repeated checking before the code return true. The `doc` means the document of the site, and the code means checking presence of the element "ul.list img".
+>Lặp kiểm tra đến khi code trả về true. `doc` là document của site; ví dụ kiểm tra `ul.list img`.
 
-*When you set 'wait', that means current rule will effect when url is matched.*
+*Khi đặt `wait`, quy tắc sẽ áp dụng khi URL khớp.*

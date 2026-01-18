@@ -1,10 +1,10 @@
 # iframeInit (win, iframe)
->The javaScript code to run as fast as it can before any code in iframe is running.
+>JavaScript, который выполняется как можно раньше до любых скриптов в iframe.
 
-Example:
+Пример:
 --
 ```json
 "iframeInit": "win.self=win.top;"
 ```
 
-*Some site will try to detect if current page is running in a iframe to prevent auto pager. You can use this to make some hack code to fix that.*
+*Некоторые сайты детектят iframe, чтобы блокировать автопейджер. Здесь можно написать обход.*

@@ -1,5 +1,5 @@
 # clickMode
->Stop turning page and click nextlink after scrolled to bottom.
+>Stop auto paging and click nextLink when scrolled to the bottom.
 
 Example:
 --

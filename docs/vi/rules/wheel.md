@@ -1,10 +1,10 @@
 # wheel
->Set to true so the next page action will only effect when the mouse wheel roll
+>Đặt true để hành động trang tiếp theo chỉ chạy khi cuộn bánh xe chuột.
 
-Example:
+Ví dụ:
 --
 ```json
 "wheel": true
 ```
 
-*Sometimes the page will auto scroll to bottom when click load more button, and then repeat over and over, set wheel to true so you can prevent it*
+*Đôi khi trang tự cuộn khi bấm “load more” và lặp lại; wheel=true sẽ tránh điều này.*

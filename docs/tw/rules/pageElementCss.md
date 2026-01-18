@@ -1,7 +1,7 @@
 # pageElementCss
->The style css which you want to set for every page element.
+>為每個 pageElement 設定的 CSS 樣式。
 
-Example:
+範例：
 --
 ```json
 "pageElementCss": "color: red"

@@ -1,16 +1,16 @@
 # pageBar (pageBar)
->The javaScript code to change pageBar, 0 means hide
+>用於修改 pageBar 的 JavaScript。設為 0 則隱藏。
 
-Example1:
+範例 1：
 --
 ```json
 "pageBar": "pageBar.classList.add('j_thread_list');"
 ```
->Add class "j_thread_list" to all page bars.
+>為所有 pageBar 新增 `j_thread_list` 類名。
 
-Example2:
+範例 2：
 --
 ```json
 "pageBar": 0
 ```
->Hide all page bars.
+>隱藏所有 pageBar。

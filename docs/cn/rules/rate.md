@@ -1,9 +1,9 @@
 # rate
->The multi-windowHeight which you can set to 2 or 3 while some sites load next page slowly
+>触发加载下一页的距离阈值（以 windowHeight 为单位）。部分站点加载较慢时可设为 2 或 3。
 
-Example:
+示例：
 --
 ```json
 "rate": 3
 ```
->Start to load next page when the height between scrollTop of page body and bottom of page less than 3 * windowHeight.
+>当页面 scrollTop 到底部的距离小于 `3 * windowHeight` 时开始加载下一页。

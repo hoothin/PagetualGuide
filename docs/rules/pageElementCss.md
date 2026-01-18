@@ -1,5 +1,5 @@
 # pageElementCss
->The style css which you want to set for every page element.
+>CSS style to apply to every pageElement.
 
 Example:
 --

@@ -1,9 +1,9 @@
 # url
->RegExp for the url of target site. To ensure performance, the url will be truncated to the first 500 characters for comparison.
+>RegExp cho URL của site mục tiêu. Để đảm bảo hiệu năng, URL chỉ được cắt 500 ký tự đầu để so sánh.
 
-Example:
+Ví dụ:
 --
 ```json
 "url": "^https://abc\\.com/\\d+"
 ```
->When the url matches the RegExp `/^https://abc\.com/\d+/`, current rule will take effect.
+>Khi URL khớp RegExp `/^https://abc\.com/\d+/`, quy tắc sẽ có hiệu lực.

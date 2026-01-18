@@ -1,5 +1,5 @@
 # loadMore
->Selector of "load more" button you want to auto click
+>Selector of the “load more” button you want to auto‑click.
 
 Example:
 --
@@ -7,4 +7,4 @@ Example:
 "loadMore": ".loadMore"
 ```
 
-Will click in advance while the button appears after current screen.
+Clicks in advance when the button appears below the current screen.

@@ -1,16 +1,16 @@
 # pageBar (pageBar)
->The javaScript code to change pageBar, 0 means hide
+>JavaScript để thay đổi pageBar. 0 nghĩa là ẩn.
 
-Example1:
+Ví dụ 1:
 --
 ```json
 "pageBar": "pageBar.classList.add('j_thread_list');"
 ```
->Add class "j_thread_list" to all page bars.
+>Thêm lớp "j_thread_list" cho tất cả pageBar.
 
-Example2:
+Ví dụ 2:
 --
 ```json
 "pageBar": 0
 ```
->Hide all page bars.
+>Ẩn tất cả pageBar.
