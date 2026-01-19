@@ -88,7 +88,7 @@ div.jsoneditor-value.jsoneditor-invalid {
 }
 </component>
 
-[![discord](/img/discord.png) Discord](https://discord.com/invite/keqypXC6wD "欢迎加入 Discord 群") [![github](/img/github.png) Github](https://github.com/hoothin/UserScripts "点亮 Github 小星星") [![wechat](/img/wechat.png) 关注我的微信公众号](/cn/sponsor.html#关注我的微信公众号↓) [![twitter](/img/twitter.png) Twitter](https://twitter.com/intent/follow?screen_name=HoothinDev "在推特上关注我")
+[![discord](/img/discord.png) Discord](https://discord.com/invite/keqypXC6wD "欢迎加入 Discord 群") [![github](/img/github.png) Github](https://github.com/hoothin/UserScripts "点亮 Github 小星星") [![wechat](/img/wechat.png) 公众号](/cn/sponsor.html#关注我的微信公众号↓ "关注我的微信公众号") [![twitter](/img/twitter.png) Twitter](https://twitter.com/intent/follow?screen_name=HoothinDev "在推特上关注我")
 
 <div id="jsoneditor"></div>
 
