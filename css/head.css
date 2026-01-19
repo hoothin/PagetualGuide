@@ -1,0 +1,23 @@
+.no-sidebar .dropdown-wrapper{
+	display: none
+}
+aside.sidebar>p {
+	text-align: center;
+	max-height: 60px;
+}
+aside.sidebar>p>embed {
+	color-scheme: auto;
+	width: 262px;
+	height: 45px;
+}
+p.sponsors {
+	text-align: center;
+}
+embed#sponsors {
+	color-scheme: auto;
+	width: 100%;
+	min-height: 400px;
+}
+.theme-default-content img {
+    height: auto;
+}

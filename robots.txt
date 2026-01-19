@@ -1,0 +1,5 @@
+
+User-agent:*
+Disallow:
+
+Sitemap: https://pagetual.hoothin.com/sitemap.xml
