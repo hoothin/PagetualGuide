@@ -1,0 +1,1 @@
+import{_ as s,o,c as t,a as e}from"./app-QjLVMi9E.js";const n={},c=e("p",{class:"sponsors"},[e("embed",{wmode:"transparent",id:"sponsors",src:"https://hoothin.com/pagetual/homesponsors.svg"})],-1),r=[c];function a(_,d){return o(),t("div",null,r)}const l=s(n,[["render",a],["__file","index.html.vue"]]);export{l as default};

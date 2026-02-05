@@ -1,0 +1,14 @@
+import{_ as e,o as n,c as a,b as s}from"./app-QjLVMi9E.js";const t={},o=s(`<h1 id="waitelement" tabindex="-1"><a class="header-anchor" href="#waitelement" aria-hidden="true">#</a> waitElement</h1><blockquote><p>数组 <code>[&quot;exist&quot;, &quot;not exist&quot;]</code>，包含“必须存在的元素 selector/XPath（用于懒加载）”与“必须不存在的元素 selector/XPath（用于等待占位消失）”。</p></blockquote><h2 id="示例" tabindex="-1"><a class="header-anchor" href="#示例" aria-hidden="true">#</a> 示例：</h2><div class="language-json line-numbers-mode" data-ext="json"><pre class="language-json"><code><span class="token property">&quot;waitElement&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;.summary&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;#popular.fade:not(.in)&quot;</span>
+<span class="token punctuation">]</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote><p>持续检查直到 <code>.summary</code> 出现且 <code>#popular.fade:not(.in)</code> 消失。</p></blockquote><div class="language-json line-numbers-mode" data-ext="json"><pre class="language-json"><code><span class="token property">&quot;waitElement&quot;</span><span class="token operator">:</span> <span class="token string">&quot;.summary&quot;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote><p>持续检查直到 <code>.summary</code> 出现。</p></blockquote><div class="language-json line-numbers-mode" data-ext="json"><pre class="language-json"><code><span class="token property">&quot;waitElement&quot;</span><span class="token operator">:</span> <span class="token string">&quot;!#popular.fade:not(.in)&quot;</span>
+
+# same as
+
+<span class="token property">&quot;waitElement&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;#popular.fade:not(.in)&quot;</span>
+<span class="token punctuation">]</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote><p>持续检查直到 <code>#popular.fade:not(.in)</code> 消失。</p></blockquote><p><em>设置 <code>waitElement</code> 与 <code>wait</code> 类似，表示当 URL 匹配时才生效。若只需设置“必须不存在”，可在“必须存在”处留空 &quot;&quot;；当设置“必须不存在”时，Pagetual 会尝试触发目标元素的懒加载。</em></p>`,10),i=[o];function l(c,d){return n(),a("div",null,i)}const p=e(t,[["render",l],["__file","waitElement.html.vue"]]);export{p as default};
