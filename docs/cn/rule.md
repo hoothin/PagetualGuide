@@ -92,33 +92,30 @@ div.jsoneditor-value.jsoneditor-invalid {
 
 <div id="jsoneditor"></div>
 
-<table>
-    <tr>
-        <th colspan="5">若您发现永页机有用且有余力，请杯咖啡将令我不胜感激。如果没有，也不用担心 - 开源万岁！💞</th>
-    </tr>
-    <tr>
-        <th><a href="https://paypal.me/hoothin"><img src="https://www.paypal.me/favicon.ico"><br>PayPal</a></th>
-        <th><a href="https://ko-fi.com/hoothin"><img src="https://ko-fi.com/favicon-32x32.png"><br>Ko-fi</a></th>
-        <th><a href="https://afdian.com/@hoothin"><img src="https://static.afdiancdn.com/favicon.ico"><br>爱发电</a></th>
-        <th rowspan="4" width="42%"><img src="https://s2.loli.net/2023/02/06/afTMxeASm48z5vE.jpg" alt="donate"></th>
-        <th rowspan="4" width="23%"><img alt="reward" src="https://s2.loli.net/2024/07/04/1CIsVfT9rxjKwRU.jpg"></th>
-    </tr>
-    <tr>
-        <th colspan="3"><a href="https://discord.com/invite/keqypXC6wD">💬Discord群</a></th>
-    </tr>
-    <tr>
-        <th colspan="3"><a href="https://twitter.com/intent/follow?screen_name=HoothinDev">🕊️twitter</a></th>
-    </tr>
-    <tr>
-        <th colspan="3"><a href="mailto:rixixi@gmail.com">📧E-mail</a></th>
-    </tr>
-    <tr>
-        <th colspan="3">Made with ❤️ by <a href="https://github.com/hoothin">Hoothin</a></th>
-    </tr>
-    <tr>
-        <th colspan="5"><embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="https://hoothin.com/pagetual/sponsors.svg"></th>
-    </tr>
-</table>
+<div class="rule-donate">
+    <div class="rule-donate__intro">若您发现永页机有用且有余力，请杯咖啡将令我不胜感激。如果没有，也不用担心 - 开源万岁！💞</div>
+    <div class="rule-donate__body">
+        <div class="rule-donate__links">
+            <a class="rule-donate__link" href="https://paypal.me/hoothin"><img src="https://www.paypal.me/favicon.ico" alt=""><span>PayPal</span></a>
+            <a class="rule-donate__link" href="https://ko-fi.com/hoothin"><img src="https://ko-fi.com/favicon-32x32.png" alt=""><span>Ko-fi</span></a>
+            <a class="rule-donate__link" href="https://afdian.com/@hoothin"><img src="https://static.afdiancdn.com/favicon.ico" alt=""><span>爱发电</span></a>
+        </div>
+        <div class="rule-donate__image"><img src="https://s2.loli.net/2023/02/06/afTMxeASm48z5vE.jpg" alt="donate"></div>
+        <div class="rule-donate__actions">
+            <div class="rule-donate__item">
+                <span class="fr-reward">
+                    <button class="fr-reward__btn" type="button" onclick="this.nextElementSibling.click()">支付宝领红包，买东西省亿点！</button>
+                    <img class="fr-reward__image" src="https://s2.loli.net/2024/07/04/1CIsVfT9rxjKwRU.jpg" alt="支付宝红包二维码" />
+                </span>
+            </div>
+            <a class="rule-donate__item" href="https://discord.com/invite/keqypXC6wD">💬Discord群</a>
+            <a class="rule-donate__item" href="https://twitter.com/intent/follow?screen_name=HoothinDev">🕊️twitter</a>
+            <a class="rule-donate__item" href="mailto:rixixi@gmail.com">📧E-mail</a>
+            <div class="rule-donate__item">Made with ❤️ by <a href="https://github.com/hoothin">Hoothin</a></div>
+        </div>
+    </div>
+    <div class="rule-donate__sponsors"><embed style="color-scheme: auto; margin: 20px 0; width: 100%;" wmode="transparent" id="sponsors" src="https://hoothin.com/pagetual/sponsors.svg"></div>
+</div>
 
 ```json
 [
