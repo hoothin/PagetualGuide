@@ -21,7 +21,7 @@ title: Chào mừng đến với Pagetual
 </section>
 
 <p name="click2import"></p>
-<pre name="pagetual" style="display: none; border: 1px solid; border-radius: 20px; overflow: hidden;">
+<pre class="fr-card" name="pagetual" style="display: none; overflow: hidden;">
 https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json
 </pre>
 

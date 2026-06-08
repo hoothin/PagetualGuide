@@ -21,7 +21,7 @@ title: 歡迎使用東方永頁機
 </section>
 
 <p name="click2import"></p>
-<pre name="pagetual" style="display: none; border: 1px solid; border-radius: 20px; overflow: hidden;">
+<pre class="fr-card" name="pagetual" style="display: none; overflow: hidden;">
 https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json
 </pre>
 
@@ -58,6 +58,6 @@ https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json
 
 <div class="fr-cta">
   <a class="fr-cta__btn" href="/tw/usage">快速上手</a>
-  <button class="fr-reward__btn" type="button" onclick="this.nextElementSibling.click()">支付寶領紅包，買東西省億點！</button>
+  <button class="fr-reward__btn" type="button" onclick="window.pagetualOpenRewardImage ? window.pagetualOpenRewardImage(this) : this.nextElementSibling.click()">支付寶領紅包，買東西省億點！</button>
   <img class="fr-reward__image" src="https://s2.loli.net/2024/07/04/1CIsVfT9rxjKwRU.jpg" alt="支付寶紅包二維碼" />
 </div>

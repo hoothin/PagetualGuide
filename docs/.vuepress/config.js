@@ -80,6 +80,7 @@ export default {
     ["meta", { name: "keywords", content: 'infinity scroll, infinite scroll, unlimited scroll, endless page, endless scrolling, auto pager, load more, web pagination, never ending scroll, eternal scroll, 東方永頁機, 东方永页机, AutoPagerize, tampermonkey, css selector cheat sheet, userscripts, AutoPager, PageZipper, Auto Pagerize, weAutoPagerize, uAutoPagerize, NextPage, pagination, wedata, SITEINFO, second page, 2nd page, next page, compatibile, manga loader, 自动翻页, Super-preloader, Super_preloaderPlus_one_New_改, super preload, 网页拼页, 加载分页, endless google' }]
   ],
   base: '/',
+  clientConfigFile: path.resolve(__dirname, './client.js'),
   shouldPrefetch: false,
   theme: defaultTheme({
   	locales: {

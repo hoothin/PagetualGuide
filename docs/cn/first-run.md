@@ -21,10 +21,10 @@ title: 欢迎使用东方永页机
 </section>
 
 <p name="click2import"></p>
-<pre name="pagetual" title="这是代理地址，如果是大陆用户可用这个" style="display: none; border: 1px solid; border-radius: 20px; overflow: hidden;">
+<pre class="fr-card" name="pagetual" style="display: none; overflow: hidden;" title="这是代理地址，如果是大陆用户可用这个">
 https://ghfast.top/https://raw.githubusercontent.com/hoothin/UserScripts/master/Pagetual/pagetualRules.json
 </pre>
-<pre name="pagetual" title="这是源地址，发布在 github io" style="display: none; border: 1px solid; border-radius: 20px; overflow: hidden;">
+<pre class="fr-card" name="pagetual" style="display: none; overflow: hidden;" title="这是源地址，发布在 github io">
 https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json
 </pre>
 
@@ -64,6 +64,6 @@ https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json
 
 <div class="fr-cta">
   <a class="fr-cta__btn" href="/cn/usage">上手教程</a>
-  <button class="fr-reward__btn" type="button" onclick="this.nextElementSibling.click()">支付宝领红包，买东西省亿点！</button>
+  <button class="fr-reward__btn" type="button" onclick="window.pagetualOpenRewardImage ? window.pagetualOpenRewardImage(this) : this.nextElementSibling.click()">支付宝领红包，买东西省亿点！</button>
   <img class="fr-reward__image" src="https://s2.loli.net/2024/07/04/1CIsVfT9rxjKwRU.jpg" alt="支付宝红包二维码" />
 </div>

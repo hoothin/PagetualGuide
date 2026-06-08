@@ -104,7 +104,7 @@ div.jsoneditor-value.jsoneditor-invalid {
         <div class="rule-donate__actions">
             <div class="rule-donate__item">
                 <span class="fr-reward">
-                    <button class="fr-reward__btn" type="button" onclick="this.nextElementSibling.click()">支付宝领红包，买东西省亿点！</button>
+                    <button class="fr-reward__btn" type="button" onclick="window.pagetualOpenRewardImage ? window.pagetualOpenRewardImage(this) : this.nextElementSibling.click()">支付宝领红包，买东西省亿点！</button>
                     <img class="fr-reward__image" src="https://s2.loli.net/2024/07/04/1CIsVfT9rxjKwRU.jpg" alt="支付宝红包二维码" />
                 </span>
             </div>
