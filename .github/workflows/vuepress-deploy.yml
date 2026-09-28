@@ -1,16 +1,27 @@
 name: Build and Deploy
 on: [push]
+permissions:
+  contents: write
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v7
 
-    - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BUILD_SCRIPT: npm install && npm run docs:build
-        BUILD_DIR: docs/.vuepress/dist/
-        CNAME: pagetual.hoothin.com
+    - name: Setup Node.js
+      uses: actions/setup-node@v7
+      with:
+        node-version: '22'
+        cache: npm
+
+    - name: Build
+      run: npm install && npm run docs:build
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: docs/.vuepress/dist/
+        cname: pagetual.hoothin.com
