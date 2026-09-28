@@ -1,4 +1,11 @@
 # 고급 사용자 정의
+
+<ScriptNotice>
+
+**이 페이지에서 Pagetual 실행이 감지되지 않았습니다.** [스크립트를 설치하고 활성화](install.html)하거나 [Tampermonkey 공식 안내](https://www.tampermonkey.net/faq.php?q=Q209)에 따라 사용자 스크립트 실행 권한을 허용한 뒤 페이지를 새로고침하세요. 스크립트가 실행되면 이 안내는 자동으로 사라집니다.
+
+</ScriptNotice>
+
 <p name="click2import"></p>
 <pre name="pagetual" style="display: none;">
 https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json

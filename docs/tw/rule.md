@@ -1,4 +1,11 @@
 # 進階自訂
+
+<ScriptNotice>
+
+**尚未偵測到東方永頁機執行。** 請先[安裝並啟用腳本](install.html)，或參照 [Tampermonkey 官方說明](https://www.tampermonkey.net/faq.php?q=Q209) 開啟使用者腳本執行權限，然後重新整理頁面。腳本成功執行後，此提示會自動消失。
+
+</ScriptNotice>
+
 <p name="click2import"></p>
 <pre name="pagetual" style="display: none;">
 https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json

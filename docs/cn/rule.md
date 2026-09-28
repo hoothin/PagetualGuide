@@ -1,4 +1,11 @@
 # 高级自定义
+
+<ScriptNotice>
+
+**尚未检测到东方永页机运行。** 请先[安装并启用脚本](install.html)，或参照 [Tampermonkey 官方说明](https://www.tampermonkey.net/faq.php?q=Q209) 开启用户脚本执行权限，然后刷新页面。脚本运行成功后，此提示会自动消失。
+
+</ScriptNotice>
+
 <p name="click2import"></p>
 <pre name="pagetual" style="display: none;">
 https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json

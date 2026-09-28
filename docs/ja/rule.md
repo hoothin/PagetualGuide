@@ -1,4 +1,11 @@
 # 高度なカスタマイズ
+
+<ScriptNotice>
+
+**このページで東方永頁機の実行を確認できません。** [スクリプトをインストールして有効にする](install.html)か、[Tampermonkey の公式説明](https://www.tampermonkey.net/faq.php?q=Q209)に従ってユーザースクリプトの実行を許可し、ページを再読み込みしてください。スクリプトが実行されると、この案内は自動的に消えます。
+
+</ScriptNotice>
+
 <p name="click2import"></p>
 <pre name="pagetual" style="display: none;">
 https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json

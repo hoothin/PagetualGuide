@@ -1,4 +1,11 @@
 # Quy tắc nâng cao
+
+<ScriptNotice>
+
+**Chưa phát hiện Pagetual chạy trên trang này.** Hãy [cài đặt và bật script](install.html), hoặc làm theo [hướng dẫn của Tampermonkey](https://www.tampermonkey.net/faq.php?q=Q209) để cho phép chạy userscript, rồi tải lại trang. Thông báo này sẽ tự động biến mất khi script chạy.
+
+</ScriptNotice>
+
 <p name="click2import"></p>
 <pre name="pagetual" style="display: none;">
 https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json

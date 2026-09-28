@@ -1,5 +1,12 @@
 # Расширенная настройка
 
+
+<ScriptNotice>
+
+**Pagetual пока не обнаружен на этой странице.** [Установите и включите скрипт](install.html) или разрешите выполнение пользовательских скриптов по [инструкции Tampermonkey](https://www.tampermonkey.net/faq.php?q=Q209), затем обновите страницу. Это уведомление исчезнет автоматически после запуска скрипта.
+
+</ScriptNotice>
+
 <p name="click2import"></p>
 <pre name="pagetual" style="display: none;">
 https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json

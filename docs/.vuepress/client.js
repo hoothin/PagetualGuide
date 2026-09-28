@@ -2,6 +2,7 @@ import { defineClientConfig } from '@vuepress/client';
 import mediumZoom from 'medium-zoom';
 import { nextTick, onMounted, onUnmounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
+import ScriptNotice from './theme/components/ScriptNotice.vue';
 
 const zoomSelector = '.theme-default-content > img, .theme-default-content :not(a) > img';
 const refreshDelays = [0, 80, 220, 500, 900];
@@ -88,6 +89,9 @@ const findRewardButton = (target) => {
 };
 
 export default defineClientConfig({
+	enhance({ app }) {
+		app.component('ScriptNotice', ScriptNotice);
+	},
 	setup() {
 		if (typeof window === 'undefined') {
 			return;

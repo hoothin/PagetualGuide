@@ -1,4 +1,11 @@
 # Erweiterte benutzerdefinierte
+
+<ScriptNotice>
+
+**Pagetual wurde auf dieser Seite noch nicht erkannt.** Bitte [installiere und aktiviere das Skript](install.html) oder erlaube die Ausführung von Benutzerskripten gemäß der [Tampermonkey-Anleitung](https://www.tampermonkey.net/faq.php?q=Q209). Lade danach die Seite neu. Dieser Hinweis verschwindet automatisch, sobald das Skript läuft.
+
+</ScriptNotice>
+
 <p name="click2import"></p>
 <pre name="pagetual" style="display: none;">
 https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json

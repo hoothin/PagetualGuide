@@ -1,4 +1,11 @@
 # Advanced custom
+
+<ScriptNotice>
+
+**Pagetual has not been detected on this page.** Please [install and enable the script](install.html), or follow [Tampermonkey’s instructions](https://www.tampermonkey.net/faq.php?q=Q209) to allow userscripts, then refresh this page. This notice disappears automatically once the script runs.
+
+</ScriptNotice>
+
 <p name="click2import"></p>
 <pre name="pagetual" style="display: none;">
 https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json

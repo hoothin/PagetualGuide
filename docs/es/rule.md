@@ -1,5 +1,12 @@
 # Reglas personalizadas avanzadas
 
+
+<ScriptNotice>
+
+**No se ha detectado Pagetual en esta página.** [Instala y activa el script](install.html), o sigue las [instrucciones de Tampermonkey](https://www.tampermonkey.net/faq.php?q=Q209) para permitir la ejecución de scripts de usuario. Después, recarga la página. Este aviso desaparecerá automáticamente cuando se ejecute el script.
+
+</ScriptNotice>
+
 <p name="click2import"></p>
 <pre name="pagetual" style="display: none;">
 https://hoothin.github.io/UserScripts/Pagetual/pagetualRules.json
